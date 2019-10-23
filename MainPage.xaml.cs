@@ -25,6 +25,7 @@ namespace Grupp1BankApp
         public MainPage()
         {
             this.InitializeComponent();
+			//Comment for commit.
         }
     }
 }
