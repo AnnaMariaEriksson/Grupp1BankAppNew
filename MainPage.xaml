@@ -10,11 +10,17 @@
 
     <Grid>
         <Rectangle HorizontalAlignment="Left" Height="1080" Stroke="Black" VerticalAlignment="Center" Width="200" Fill="#FF17E2E2"/>
-        <TextBox x:Name="Search_Field" HorizontalAlignment="Left" Margin="10,25,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" PlaceholderText="PersonNummer" Width="179"/>
-        <TextBlock x:Name="FnamnText" HorizontalAlignment="Left" Margin="19,109,0,0" Text="Förnamn:" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBlock x:Name="Fnamn" HorizontalAlignment="Left" Margin="87,114,0,0" Text="Null" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="9"/>
-        <TextBlock x:Name="Enamn" HorizontalAlignment="Left" Margin="19,133,0,0" Text="Efternamn:" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBlock x:Name="Enamn1" HorizontalAlignment="Left" Margin="97,138,0,0" Text="Null" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="9"/>
+        <TextBox x:Name="Search_Field" HorizontalAlignment="Left" Margin="10,25,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" PlaceholderText="Personnummer" Width="179"/>
+        <TextBlock x:Name="FnamnText" HorizontalAlignment="Left" Margin="43,111,0,0" Text="Förnamn:" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBlock x:Name="Fnamn" HorizontalAlignment="Left" Margin="132,116,0,0" Text="Null" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="9"/>
+        <TextBlock x:Name="Enamn" HorizontalAlignment="Left" Margin="43,135,0,0" Text="Efternamn:" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBlock x:Name="Enamn1" HorizontalAlignment="Left" Margin="132,138,0,0" Text="Null" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="9" RenderTransformOrigin="0.438,0.417"/>
+        <TextBlock x:Name="Personnummer_info" HorizontalAlignment="Left" Margin="43,185,0,0" Text="Personnummer:" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBlock x:Name="PersonNummer" HorizontalAlignment="Left" Margin="83,209,0,0" Text="Null" TextWrapping="Wrap" VerticalAlignment="Top" />
+        <TextBlock x:Name="NumberOfAcounts_info" HorizontalAlignment="Left" Margin="51,228,0,0" Text="Antal konton:" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBlock x:Name="NumberOfAccounts" HorizontalAlignment="Left" Margin="83,252,0,0" Text="Null" TextWrapping="Wrap" VerticalAlignment="Top" />
+        <Frame x:Name="MainFrame" Content="Frame" Margin="205,10,0,0"/>
+        <Button x:Name="button" Content="Sök" Margin="75,291,0,0" VerticalAlignment="Top" Click="button_Click"/>
 
     </Grid>
 </Page>
