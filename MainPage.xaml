@@ -9,6 +9,12 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="1080" Stroke="Black" VerticalAlignment="Center" Width="200" Fill="#FF17E2E2"/>
+        <TextBox x:Name="Search_Field" HorizontalAlignment="Left" Margin="10,25,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" PlaceholderText="PersonNummer" Width="179"/>
+        <TextBlock x:Name="FnamnText" HorizontalAlignment="Left" Margin="19,109,0,0" Text="Förnamn:" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBlock x:Name="Fnamn" HorizontalAlignment="Left" Margin="87,114,0,0" Text="Null" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="9"/>
+        <TextBlock x:Name="Enamn" HorizontalAlignment="Left" Margin="19,133,0,0" Text="Efternamn:" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBlock x:Name="Enamn1" HorizontalAlignment="Left" Margin="97,138,0,0" Text="Null" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="9"/>
 
     </Grid>
 </Page>
