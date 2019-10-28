@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Grupp1BankApp
 {
 
-    class Account { }
+    
 
    abstract class Customer
    {
