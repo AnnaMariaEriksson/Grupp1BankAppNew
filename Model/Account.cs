@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Grupp1BankApp
 {
-    class Account
+    public class Account
     {
         public enum accountType { }
         public string accountNumber;

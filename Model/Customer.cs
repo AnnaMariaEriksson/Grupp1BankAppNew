@@ -7,21 +7,36 @@ using System.Threading.Tasks;
 namespace Grupp1BankApp
 {
 
-   abstract class Customer
-   {
+    public class Customer
+    {
         public List<Account> CustomerAccounts = new List<Account>();
         private string name;
         private string ssn;
-        
+
         public Customer(string Name, string Ssn)
         {
             name = Name;
             ssn = Ssn;
         }
 
- 
-   
+        
+
+        public string GetSSn { get; set; }
+        
 
 
-   }
+        public string GetName { get; set; }
+
+
+          //if(SSN == berit.GetSSn)
+          //  {
+          //      foreach(Account acc in)
+          //  }
+
+
+
+
+
+
+}
 }

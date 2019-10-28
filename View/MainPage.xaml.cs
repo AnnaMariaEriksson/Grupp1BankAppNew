@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Grupp1BankApp.View;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;

@@ -5,8 +5,8 @@ namespace Grupp1BankApp
 	public class BankLogic
 	{
 
-
-		public bool AddCustomer(string name, long SSN)
+        Customer berit = new Customer("berit", "4324324");
+        public bool AddCustomer(string name, long SSN)
 		{
 			return true;
 			//TODO fix return statement.
@@ -46,8 +46,11 @@ namespace Grupp1BankApp
 			//TODO fix return statement.
 		}
 
-		public string GetAccount(long SSN, int accountID)
+		public string GetAccount(string SSN, int accountID)
 		{
+         
+          
+
 			return "";
 			//TODO fix return statement.
 		}
