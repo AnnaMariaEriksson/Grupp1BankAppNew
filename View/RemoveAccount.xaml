@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="Grupp1BankApp.View.RemoveAccount"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Grupp1BankApp.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <ListView x:Name="ListOfAccountsToRemove" Background="White" FontSize="36" Margin="478,214,477,336" ItemClick="ListOfAccountsToRemove_ItemClick" BorderThickness="5,5,5,5" BorderBrush="Black" FocusVisualPrimaryBrush="#FFF0C6C6"/>
+        <TextBlock x:Name="RemoveAccountLabel" HorizontalAlignment="Center" Margin="0,157,0,0" Text="Ta bort konto" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36"/>
+        <TextBox x:Name="ChosenAccountField" HorizontalAlignment="Left" Margin="478,715,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" PlaceholderText="Valt konto" IsReadOnly="True" IsEnabled="False"/>
+        <TextBox x:Name="PinNumberBoxField" HorizontalAlignment="Left" Margin="904,715,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" RenderTransformOrigin="0.07,0.492" PlaceholderText="PIN nr"/>
+        <Button x:Name="RemoveAccountButton" Content="Ta bort konto" Margin="624,825,0,0" VerticalAlignment="Top" FontSize="36" Click="RemoveAccountButton_Click"/>
+
+    </Grid>
+</Page>
