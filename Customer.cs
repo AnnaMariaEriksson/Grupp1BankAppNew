@@ -10,7 +10,7 @@ namespace Grupp1BankApp
     class Account { }
 
    abstract class Customer
-    {
+   {
         public List<Account> CustomerAccounts = new List<Account>();
         private string name;
         private string ssn;
@@ -19,11 +19,11 @@ namespace Grupp1BankApp
         {
             name = Name;
             ssn = Ssn;
-         }
+        }
 
  
    
 
 
-    }
+   }
 }
