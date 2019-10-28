@@ -24,14 +24,12 @@ namespace Grupp1BankApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public Frame MainFrame = new Frame();
+       
         public static int kebab = 5;
         public MainPage()
         {
             this.InitializeComponent();
-            MainFrame.Name = "Mainframe";
-            MainFrame.Margin = new Thickness (200,0,0,0);
-            Grid.SetColumnSpan(MainFrame, 2);
+            
          
         
         }
@@ -39,10 +37,7 @@ namespace Grupp1BankApp
         
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            AccountMeny accountMeny = new AccountMeny();
-          
-            
-            MainFrame.Content=accountMeny;
+           
             
             
         }
