@@ -12,5 +12,7 @@ namespace Grupp1BankApp
         {
 
         }
+        
+
     }
 }
