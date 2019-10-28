@@ -28,5 +28,12 @@ namespace Grupp1BankApp
             Enamn1.Text = MainPage.kebab.ToString();
         }
 
+        private void Double_Tapped_Text1(object sender, DoubleTappedRoutedEventArgs e)
+        {
+            MainPage accountMeny = new MainPage();
+
+            
+          frame.Content = accountMeny;
+        }
     }
 }

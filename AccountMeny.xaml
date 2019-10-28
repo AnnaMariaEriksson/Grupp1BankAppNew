@@ -9,7 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock x:Name="Enamn1" HorizontalAlignment="Left" Margin="132,138,0,0" Text="tets"  TextWrapping="Wrap" VerticalAlignment="Top" FontSize="40" RenderTransformOrigin="0.438,0.417"/>
+        <Frame x:Name="frame" Content="Frame"/>
+
+        <TextBlock x:Name="Enamn1" HorizontalAlignment="Left" Margin="132,138,0,0" Text="tets"  TextWrapping="Wrap" VerticalAlignment="Top" FontSize="40" RenderTransformOrigin="0.438,0.417" DoubleTapped="Double_Tapped_Text1"/>
 
     </Grid>
 </Page>
