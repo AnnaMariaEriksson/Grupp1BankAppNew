@@ -8,16 +8,19 @@ namespace Grupp1BankApp
 {
     public class Account
     {
-        public enum accountType { }
-        public string accountNumber;
-        public double balance;
-        public double interestRate;
+        public string AccountNumber { get; set; }
+        public double Balance { get; set; }
+        public double InterestRate { get; set; }
 
-        public Account(string AccountNumber, double Balance, double InterestRate)
+
+
+        public Account(string accountNumber, double balance, double interestRate)
         {
             accountNumber = AccountNumber;
             balance = Balance;
             interestRate = InterestRate;
         }
+        
     }
+    
 }
