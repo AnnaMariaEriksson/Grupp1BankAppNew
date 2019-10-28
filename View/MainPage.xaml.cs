@@ -29,7 +29,7 @@ namespace Grupp1BankApp
         public MainPage()
         {
             this.InitializeComponent();
-            
+            MainFrame.Navigate(typeof(NotSelected_Page));
          
         
         }
