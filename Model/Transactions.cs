@@ -9,11 +9,6 @@ namespace Grupp1BankApp
     
     class Transactions
     {
-        private string accountID;
-        private DateTime date;
-        private Enum transactionsType;
-        private double amount;
-        private double balance;
         public Transactions(string AccountID, DateTime Date, Enum TransactionsType, double Amount, double Balance)
         {
             accountID = AccountID;
@@ -22,5 +17,20 @@ namespace Grupp1BankApp
             amount = Amount;
             balance = Balance;
         }
+
+        public string accountID
+            { get; set; }
+
+        public DateTime date
+            { get; set; }
+
+        public Enum transactionsType 
+            { get; set; }
+
+        public double amount
+            { get; set; }
+
+        public double balance
+            { get; set; }
     }
 }
