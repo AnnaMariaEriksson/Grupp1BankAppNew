@@ -13,7 +13,7 @@ namespace Grupp1BankApp
         private string name;
         private string ssn;
 
-        public Customer(string Name, string Ssn)
+        public Customer(string Name, string Ssn, List<Account> accounts)
         {
             name = Name;
             ssn = Ssn;
@@ -27,16 +27,16 @@ namespace Grupp1BankApp
 
         public string GetName { get; set; }
 
+        public List<Account> GetAccounts { get; set; }
 
-          //if(SSN == berit.GetSSn)
-          //  {
-          //      foreach(Account acc in)
-          //  }
+        
 
-
+        
 
 
 
 
-}
+
+
+    }
 }

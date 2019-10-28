@@ -5,7 +5,7 @@ namespace Grupp1BankApp
 	public class BankLogic
 	{
 
-        Customer berit = new Customer("berit", "4324324");
+       
         public bool AddCustomer(string name, long SSN)
 		{
 			return true;
