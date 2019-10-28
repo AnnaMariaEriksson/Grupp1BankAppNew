@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Grupp1BankApp.View;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,25 +23,24 @@ namespace Grupp1BankApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public Frame MainFrame = new Frame();
+       
         public static int kebab = 5;
         public MainPage()
         {
             this.InitializeComponent();
-            MainFrame.Name = "Mainframe";
-            MainFrame.Margin = new Thickness (200,0,0,0);
-            Grid.SetColumnSpan(MainFrame, 2);
-         
-        
+
+            MainFrame.Navigate(typeof(NotSelected_Page));
+
+
         }
 
         
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            AccountMeny accountMeny = new AccountMeny();
-          
-            
-            MainFrame.Content=accountMeny;
+
+
+
+           // MainFrame.Navigate(typeof());
             
             
         }
