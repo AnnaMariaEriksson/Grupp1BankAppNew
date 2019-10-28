@@ -123,7 +123,7 @@
     </Compile>
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Controller\BankLogic.cs" />
-    <Compile Include="SavingsAcount.cs" />
+    <Compile Include="Model\SavingsAcount.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
