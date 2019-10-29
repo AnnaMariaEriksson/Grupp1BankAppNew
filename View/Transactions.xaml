@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="Grupp1BankApp.Transactions"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Grupp1BankApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <ListView Margin="489,253,489,182"/>
+        <ListView x:Name="TransactionList" Margin="489,248,489,187"/>
+        <TextBlock x:Name="Text_Transactions" HorizontalAlignment="Left" Margin="862,89,0,0" Text="Transactions" TextWrapping="Wrap" VerticalAlignment="Top" Height="98" Width="320" FontSize="36"/>
+        <TextBlock x:Name="Text_ValtKonto" HorizontalAlignment="Left" Margin="739,200,0,0" Text="Valt Konto:" TextWrapping="Wrap" VerticalAlignment="Top" Height="57" Width="183" FontSize="36"/>
+        <TextBox HorizontalAlignment="Left" Margin="960,195,0,0" Text="&#xD;&#xA;" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="223" IsReadOnly="True"/>
+
+    </Grid>
+</Page>
