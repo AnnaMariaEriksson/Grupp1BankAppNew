@@ -152,9 +152,6 @@
     <Compile Include="View\MainMeny.xaml.cs">
       <DependentUpon>MainMeny.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\TransferMoney.xaml.cs">
-      <DependentUpon>TransferMoney.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -168,6 +165,9 @@
     </Compile>
     <Compile Include="View\Transactions.xaml.cs">
       <DependentUpon>Transactions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TransferMoney.xaml.cs">
+      <DependentUpon>TransferMoney.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -235,10 +235,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\TransferMoney.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -254,6 +250,10 @@
     <Page Include="View\Transactions.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\TransferMoney.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
