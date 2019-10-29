@@ -123,6 +123,32 @@
     </Compile>
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Controller\BankLogic.cs" />
+    <Compile Include="Model\SavingsAcount.cs" />
+    <Compile Include="obj\ARM\Debug\App.g.cs" />
+    <Compile Include="obj\x86\Debug\AccountMeny.g.cs" />
+    <Compile Include="obj\x86\Debug\AccountMeny.g.i.cs" />
+    <Compile Include="obj\x86\Debug\App.g.cs" />
+    <Compile Include="obj\x86\Debug\App.g.i.cs" />
+    <Compile Include="obj\x86\Debug\View\AccountMeny.g.cs" />
+    <Compile Include="obj\x86\Debug\View\AccountMeny.g.i.cs" />
+    <Compile Include="obj\x86\Debug\View\CreditAccount.g.cs" />
+    <Compile Include="obj\x86\Debug\View\CreditAccount.g.i.cs" />
+    <Compile Include="obj\x86\Debug\View\Deposit.g.cs" />
+    <Compile Include="obj\x86\Debug\View\Deposit.g.i.cs" />
+    <Compile Include="obj\x86\Debug\View\MainMeny.g.cs" />
+    <Compile Include="obj\x86\Debug\View\MainMeny.g.i.cs" />
+    <Compile Include="obj\x86\Debug\View\MainPage.g.cs" />
+    <Compile Include="obj\x86\Debug\View\MainPage.g.i.cs" />
+    <Compile Include="obj\x86\Debug\View\NotSelected_Page.g.cs" />
+    <Compile Include="obj\x86\Debug\View\NotSelected_Page.g.i.cs" />
+    <Compile Include="obj\x86\Debug\View\RemoveAccount.g.cs" />
+    <Compile Include="obj\x86\Debug\View\RemoveAccount.g.i.cs" />
+    <Compile Include="obj\x86\Debug\View\Transactions.g.cs" />
+    <Compile Include="obj\x86\Debug\View\Transactions.g.i.cs" />
+    <Compile Include="obj\x86\Debug\XamlTypeInfo.g.cs" />
+    <Compile Include="View\Deposit.xaml.cs">
+      <DependentUpon>Deposit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MainMeny.xaml.cs">
       <DependentUpon>MainMeny.xaml</DependentUpon>
     </Compile>
@@ -137,6 +163,12 @@
     <Compile Include="View\NotSelected_Page.xaml.cs">
       <DependentUpon>NotSelected_Page.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\RemoveAccount.xaml.cs">
+      <DependentUpon>RemoveAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Transactions.xaml.cs">
+      <DependentUpon>Transactions.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -144,6 +176,39 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\x86\Debug\AppxManifest.xml" />
+    <Content Include="bin\x86\Debug\AppX\AppxManifest.xml" />
+    <Content Include="bin\x86\Debug\AppX\Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="bin\x86\Debug\AppX\Assets\SplashScreen.scale-200.png" />
+    <Content Include="bin\x86\Debug\AppX\Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="bin\x86\Debug\AppX\Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="bin\x86\Debug\AppX\Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="bin\x86\Debug\AppX\Assets\StoreLogo.png" />
+    <Content Include="bin\x86\Debug\AppX\Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="bin\x86\Debug\AppX\entrypoint\Grupp1BankApp.exe" />
+    <Content Include="bin\x86\Debug\AppX\Grupp1BankApp.exe" />
+    <Content Include="bin\x86\Debug\AppX\Grupp1BankApp.xr.xml" />
+    <Content Include="bin\x86\Debug\AppX\Properties\Default.rd.xml" />
+    <Content Include="bin\x86\Debug\AppX\System.Runtime.dll" />
+    <Content Include="bin\x86\Debug\Core\AppxManifest.xml" />
+    <Content Include="bin\x86\Debug\Core\Grupp1BankApp.exe" />
+    <Content Include="bin\x86\Debug\Grupp1BankApp.exe" />
+    <Content Include="bin\x86\Debug\Grupp1BankApp.pdb" />
+    <Content Include="bin\x86\Debug\Grupp1BankApp.xr.xml" />
+    <Content Include="bin\x86\Debug\System.Runtime.dll" />
+    <Content Include="Grupp1BankApp.sln.DotSettings.user" />
+    <Content Include="obj\ARM\Debug\XamlSaveStateFile.xml" />
+    <Content Include="obj\x86\Debug\Grupp1BankApp.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\x86\Debug\Grupp1BankApp.exe" />
+    <Content Include="obj\x86\Debug\Grupp1BankApp.pdb" />
+    <Content Include="obj\x86\Debug\Grupp1BankApp.xr.xml" />
+    <Content Include="obj\x86\Debug\intermediatexaml\Grupp1BankApp.exe" />
+    <Content Include="obj\x86\Debug\intermediatexaml\Grupp1BankApp.pdb" />
+    <Content Include="obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt" />
+    <Content Include="obj\x86\Debug\priconfig.xml" />
+    <Content Include="obj\x86\Debug\ProjectArchitectures.txt" />
+    <Content Include="obj\x86\Debug\qualifiers.txt" />
+    <Content Include="obj\x86\Debug\XamlSaveStateFile.xml" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -158,6 +223,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="obj\x86\Debug\App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Deposit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\MainMeny.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -174,13 +247,73 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\RemoveAccount.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Transactions.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.9</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include=".gitattributes" />
+    <None Include="bin\x86\Debug\App.xbf" />
+    <None Include="bin\x86\Debug\AppX\App.xbf" />
+    <None Include="bin\x86\Debug\AppX\Microsoft.UI.Xaml.Markup.winmd" />
+    <None Include="bin\x86\Debug\AppX\resources.pri" />
+    <None Include="bin\x86\Debug\AppX\View\MainPage.xbf" />
+    <None Include="bin\x86\Debug\AppX\vs.appxrecipe" />
+    <None Include="bin\x86\Debug\AppX\WinMetadata\Windows.winmd" />
+    <None Include="bin\x86\Debug\Grupp1BankApp.build.appxrecipe" />
+    <None Include="bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd" />
+    <None Include="bin\x86\Debug\resources.pri" />
+    <None Include="bin\x86\Debug\View\MainPage.xbf" />
+    <None Include="obj\ARM\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\ARM\Debug\Grupp1BankApp.csprojAssemblyReference.cache" />
+    <None Include="obj\Grupp1BankApp.csproj.nuget.cache" />
+    <None Include="obj\Grupp1BankApp.csproj.nuget.dgspec.json" />
+    <None Include="obj\Grupp1BankApp.csproj.nuget.g.props" />
+    <None Include="obj\Grupp1BankApp.csproj.nuget.g.targets" />
+    <None Include="obj\project.assets.json" />
+    <None Include="obj\x86\Debug\.winmd_cache\%24Microsoft.UI.Xaml.Markup.winmd_636885238160000000.json" />
+    <None Include="obj\x86\Debug\App.xbf" />
+    <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\x86\Debug\embed\embed.resfiles" />
+    <None Include="obj\x86\Debug\embed\embed.resfiles.intermediate" />
+    <None Include="obj\x86\Debug\excluded.layout.resfiles" />
+    <None Include="obj\x86\Debug\excluded.layout.resfiles.intermediate" />
+    <None Include="obj\x86\Debug\filtered.layout.resfiles" />
+    <None Include="obj\x86\Debug\filtered.layout.resfiles.intermediate" />
+    <None Include="obj\x86\Debug\Grupp1BankApp.csproj.CopyComplete" />
+    <None Include="obj\x86\Debug\Grupp1BankApp.csprojAssemblyReference.cache" />
+    <None Include="obj\x86\Debug\pri.resfiles" />
+    <None Include="obj\x86\Debug\pri.resfiles.intermediate" />
+    <None Include="obj\x86\Debug\priconfig.xml.intermediate" />
+    <None Include="obj\x86\Debug\qualifiers.txt.intermediate" />
+    <None Include="obj\x86\Debug\ResourceHandlingTask.state" />
+    <None Include="obj\x86\Debug\resources.resfiles" />
+    <None Include="obj\x86\Debug\resources.resfiles.intermediate" />
+    <None Include="obj\x86\Debug\unfiltered.layout.resfiles" />
+    <None Include="obj\x86\Debug\unfiltered.layout.resfiles.intermediate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\ARM64\Debug\" />
+    <Folder Include="bin\ARM64\Release\" />
+    <Folder Include="bin\ARM\Debug\" />
+    <Folder Include="bin\ARM\Release\" />
+    <Folder Include="bin\x64\Debug\" />
+    <Folder Include="bin\x64\Release\" />
+    <Folder Include="bin\x86\Release\" />
+    <Folder Include="obj\ARM\Debug\intermediatexaml\" />
+    <Folder Include="obj\ARM\Debug\TempPE\" />
+    <Folder Include="obj\x86\Debug\TempPE\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
