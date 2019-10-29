@@ -127,6 +127,9 @@
     <Compile Include="View\AccountMeny.xaml.cs">
       <DependentUpon>AccountMeny.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\CreditAccount.xaml.cs">
+      <DependentUpon>CreditAccount.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -157,6 +160,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="View\AccountMeny.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CreditAccount.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
