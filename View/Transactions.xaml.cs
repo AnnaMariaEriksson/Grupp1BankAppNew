@@ -26,5 +26,15 @@ namespace Grupp1BankApp
         {
             this.InitializeComponent();
         }
+
+        private void TransactionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Text_Transactions_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
