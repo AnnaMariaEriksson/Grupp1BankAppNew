@@ -4,7 +4,17 @@ namespace Grupp1BankApp
 {
 	public class BankLogic
 	{
+		private static BankLogic instance;
 
+		private BankLogic()
+		{
+			
+		}
+
+		public static BankLogic Instance
+		{
+			get { return instance ?? (instance = new BankLogic()); }
+		}
        
         public bool AddCustomer(string name, long SSN)
 		{
