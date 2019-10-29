@@ -13,36 +13,27 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Grupp1BankApp
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class AccountMeny : Page
     {
-        public Frame MainFrame = new Frame();
-        public static int kebab = 5;
-        public MainPage()
+        public AccountMeny()
         {
             this.InitializeComponent();
-            MainFrame.Name = "Mainframe";
-            MainFrame.Margin = new Thickness (200,0,0,0);
-            Grid.SetColumnSpan(MainFrame, 2);
-         
-        
+            Enamn1.Text = MainPage.kebab.ToString();
         }
 
-        
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void Double_Tapped_Text1(object sender, DoubleTappedRoutedEventArgs e)
         {
-            AccountMeny accountMeny = new AccountMeny();
-          
+            MainPage accountMeny = new MainPage();
+
             
-            MainFrame.Content=accountMeny;
-            
-            
+          frame.Content = accountMeny;
         }
     }
 }
