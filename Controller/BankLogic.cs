@@ -8,25 +8,39 @@ namespace Grupp1BankApp
 
 		private BankLogic()
 		{
-			
 		}
 
 		public static BankLogic Instance
 		{
 			get { return instance ?? (instance = new BankLogic()); }
 		}
-       
-        public bool AddCustomer(string name, long SSN)
+
+		private List<Customer> customers;
+
+		public bool AddCustomer(string name, long SSN)
 		{
 			return true;
 			//TODO fix return statement.
 		}
 
-		public List<string> GetCustomers()
+		public void CreateCustomers()
 		{
-			List<string> customersList = new List<string>();
+			var accounts = new List<Account>
+			{
+				new Account("1001", 0, 1)
+			};
+
+			customers = new List<Customer>
+			{
+				new Customer("Kalle Persson", "19820520", accounts)
+			};
+		}
+
+		public List<Customer> GetCustomers()
+		{
+			List<Customer> customersList = new List<Customer>();
+
 			return customersList;
-			//TODO fix return statement.
 		}
 
 		public List<string> GetCustomer(long SSN)
@@ -58,9 +72,6 @@ namespace Grupp1BankApp
 
 		public string GetAccount(string SSN, int accountID)
 		{
-         
-          
-
 			return "";
 			//TODO fix return statement.
 		}

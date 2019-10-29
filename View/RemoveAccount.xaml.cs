@@ -27,6 +27,8 @@ namespace Grupp1BankApp.View
 			this.InitializeComponent();
 		}
 
+		public BankLogic BankLogic { get; set; }
+
 		private void RemoveAccountButton_Click(object sender, RoutedEventArgs e)
 		{
 
