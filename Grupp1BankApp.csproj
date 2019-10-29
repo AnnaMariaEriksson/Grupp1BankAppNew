@@ -123,9 +123,8 @@
     </Compile>
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Controller\BankLogic.cs" />
-    <Compile Include="SavingsAcount.cs" />
-    <Compile Include="View\AccountMeny.xaml.cs">
-      <DependentUpon>AccountMeny.xaml</DependentUpon>
+    <Compile Include="View\MainMeny.xaml.cs">
+      <DependentUpon>MainMeny.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\CreditAccount.xaml.cs">
       <DependentUpon>CreditAccount.xaml</DependentUpon>
@@ -135,8 +134,8 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\Transactions.cs" />
-    <Compile Include="View\RemoveAccount.xaml.cs">
-      <DependentUpon>RemoveAccount.xaml</DependentUpon>
+    <Compile Include="View\NotSelected_Page.xaml.cs">
+      <DependentUpon>NotSelected_Page.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -159,7 +158,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="View\AccountMeny.xaml">
+    <Page Include="View\MainMeny.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -171,7 +170,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\RemoveAccount.xaml">
+    <Page Include="View\NotSelected_Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
