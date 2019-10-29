@@ -14,8 +14,8 @@
             <TextBlock.RenderTransform>
                 <CompositeTransform Rotation="0.18"/>
             </TextBlock.RenderTransform><Run Text="Valt konto"/><Run Text=":"/></TextBlock>
-        <TextBox x:Name="KontoNrReadOnly" HorizontalAlignment="Left" Margin="853,220,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.514,0.551" IsReadOnly="True" TextChanged="TextBox_TextChanged" Height="55" Width="472" FontSize="35" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
-        <TextBlock x:Name="Text_summa" HorizontalAlignment="Left" Margin="493,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="35" Height="56" Width="317" Text="Tillgänglig summa:&#xD;&#xA;" SelectionChanged="Text_summa_SelectionChanged"/>
+        <TextBox x:Name="KontoNrReadOnly" HorizontalAlignment="Left" Margin="853,220,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.514,0.551" IsReadOnly="True"  Height="55" Width="472" FontSize="35" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
+        <TextBlock x:Name="Text_summa" HorizontalAlignment="Left" Margin="493,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="35" Height="56" Width="317" Text="Tillgänglig summa:&#xD;&#xA;" />
         <Button Content="Överför&#xA;" Margin="1167,540,0,0" Height="60" Width="158" FontSize="35" VerticalAlignment="Top"/>
         <TextBlock x:Name="Text_MoneyInsert" HorizontalAlignment="Left" Height="123" Margin="695,77,0,0" Text="Insättning" TextWrapping="Wrap" VerticalAlignment="Top" Width="574" FontSize="60" TextAlignment="Center"/>
         <TextBox HorizontalAlignment="Left" Height="55" Margin="853,345,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="472" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True" FontSize="35"/>
