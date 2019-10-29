@@ -37,8 +37,8 @@ namespace Grupp1BankApp
         
         private void button_Click(object sender, RoutedEventArgs e)
         {
-           
-            
+
+            MainFrame.Navigate(typeof(MainMeny));
             
         }
     }
