@@ -4,9 +4,19 @@ namespace Grupp1BankApp
 {
 	public class BankLogic
 	{
+		private static BankLogic instance;
 
+		private BankLogic()
+		{
+			
+		}
 
-		public bool AddCustomer(string name, long SSN)
+		public static BankLogic Instance
+		{
+			get { return instance ?? (instance = new BankLogic()); }
+		}
+       
+        public bool AddCustomer(string name, long SSN)
 		{
 			return true;
 			//TODO fix return statement.
@@ -46,8 +56,11 @@ namespace Grupp1BankApp
 			//TODO fix return statement.
 		}
 
-		public string GetAccount(long SSN, int accountID)
+		public string GetAccount(string SSN, int accountID)
 		{
+         
+          
+
 			return "";
 			//TODO fix return statement.
 		}
