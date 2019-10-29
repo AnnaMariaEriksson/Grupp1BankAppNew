@@ -26,15 +26,5 @@ namespace Grupp1BankApp.View
         {
             this.InitializeComponent();
         }
-
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void AccountList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
     }
 }

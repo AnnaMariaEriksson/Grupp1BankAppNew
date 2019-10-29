@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="Grupp1BankApp.View.CreditAccount"
+    x:Class="Grupp1BankApp.View.TransferMoney"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Grupp1BankApp.View"
@@ -8,15 +8,15 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <ListView x:Name="AccountList" HorizontalAlignment="Left" Height="438" Margin="692,243,0,0" VerticalAlignment="Top" Width="658" BorderBrush="Black" SelectionChanged="AccountList_SelectionChanged"/>
-        <TextBlock HorizontalAlignment="Left" Height="45" Margin="900,115,0,0" Text="Överför pengar" TextWrapping="Wrap" VerticalAlignment="Top" Width="288" SelectionChanged="TextBlock_SelectionChanged" FontSize="36"/>
-        <TextBox x:Name="ValtKonto1" HorizontalAlignment="Left" Height="66" Margin="689,782,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="337" IsReadOnly="True"/>
-        <TextBox x:Name="ValtKonto2" HorizontalAlignment="Left" Height="66" Margin="1026,782,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="329" IsReadOnly="True"/>
-        <TextBlock x:Name="InfoValtKonto1" HorizontalAlignment="Left" Height="78" Margin="741,686,0,0" Text="Överföra från:" TextWrapping="Wrap" VerticalAlignment="Top" Width="229" FontSize="36"/>
-        <TextBlock x:Name="InfoValtKonto2" HorizontalAlignment="Left" Height="53" Margin="1138,686,0,0" Text="Till:" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="36"/>
-        <TextBox x:Name="PersonligKod" HorizontalAlignment="Left" Height="75" Margin="689,868,0,0" Text="Personlig kod" TextWrapping="Wrap" VerticalAlignment="Top" Width="332" FontSize="36"/>
-        <Button x:Name="SendButton" Content="Överför" Height="75" Margin="1021,868,0,0" VerticalAlignment="Top" Width="334" FontSize="36"/>
+    <Grid x:Name="TransferGrid" BorderBrush="#FFDA680F" BorderThickness="10,10,10,10">
+        <ListView x:Name="AccountList" HorizontalAlignment="Center" Height="438" Margin="0,239,0,0" VerticalAlignment="Top" Width="746" BorderBrush="#FFDA680F" SelectionChanged="AccountList_SelectionChanged" BorderThickness="5,5,5,5"/>
+        <TextBlock HorizontalAlignment="Left" Height="96" Margin="820,104,0,0" Text="Överför pengar" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" SelectionChanged="TextBlock_SelectionChanged" FontSize="60" TextAlignment="Center"/>
+        <TextBox x:Name="ValtKonto1" HorizontalAlignment="Left" Height="72" Margin="579,763,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="352" IsReadOnly="True" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
+        <TextBox x:Name="ValtKonto2" HorizontalAlignment="Left" Height="67" Margin="992,763,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="340" IsReadOnly="True" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
+        <TextBlock x:Name="InfoValtKonto1" HorizontalAlignment="Left" Height="52" Margin="656,701,0,0" Text="Överföra från:" TextWrapping="Wrap" VerticalAlignment="Top" Width="229" FontSize="36"/>
+        <TextBlock x:Name="InfoValtKonto2" HorizontalAlignment="Left" Height="53" Margin="1130,696,0,0" Text="Till:" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="36"/>
+        <TextBox x:Name="PersonligKod" HorizontalAlignment="Left" Height="72" Margin="579,886,0,0" Text="Personlig kod" TextWrapping="Wrap" VerticalAlignment="Top" Width="352" FontSize="36"/>
+        <Button x:Name="SendButton" Content="Överför" Height="70" Margin="1002,884,0,0" VerticalAlignment="Top" Width="339" FontSize="36"/>
 
     </Grid>
 </Page>
