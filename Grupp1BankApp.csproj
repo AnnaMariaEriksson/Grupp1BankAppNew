@@ -116,9 +116,6 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AccountMeny.xaml.cs">
-      <DependentUpon>AccountMeny.xaml</DependentUpon>
-    </Compile>
     <Compile Include="CreditAccount.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="App.xaml.cs">
@@ -149,9 +146,6 @@
     <Compile Include="obj\x86\Debug\View\Transactions.g.cs" />
     <Compile Include="obj\x86\Debug\View\Transactions.g.i.cs" />
     <Compile Include="obj\x86\Debug\XamlTypeInfo.g.cs" />
-    <Compile Include="View\AccountMeny.xaml.cs">
-      <DependentUpon>AccountMeny.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\Deposit.xaml.cs">
       <DependentUpon>Deposit.xaml</DependentUpon>
     </Compile>
@@ -229,15 +223,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="AccountMeny.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="obj\x86\Debug\App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="View\AccountMeny.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

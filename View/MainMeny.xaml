@@ -10,7 +10,7 @@
 
     <Grid>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="101" Margin="313,92,0,0" Text="Välj ett alternativ:" TextWrapping="Wrap" VerticalAlignment="Top" Width="1070" TextAlignment="Center" FontSize="36"/>
-        <Button x:Name="button" Height="153" Margin="104,346,0,0" VerticalAlignment="Top" Width="362" FontSize="36" Content="Sätt in pengar"/>
+        <Button x:Name="button" Height="153" Margin="104,346,0,0" VerticalAlignment="Top" Width="362" FontSize="36" Content="Sätt in pengar" Click="button_Click"/>
         <Button x:Name="button_Copy" Content="Överför pengar" Height="153" Margin="681,346,0,0" VerticalAlignment="Top" Width="362" FontSize="36"/>
         <Button x:Name="button_Copy1" Content="Visa transaktioner" Height="153" Margin="1279,346,0,0" VerticalAlignment="Top" Width="362" FontSize="36"/>
         <Button x:Name="button_Copy2" Height="153" Margin="381,624,0,0" Width="362" Content="Ta bort ett konto" FontSize="36" VerticalAlignment="Top"/>
