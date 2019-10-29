@@ -123,6 +123,9 @@
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Controller\BankLogic.cs" />
     <Compile Include="SavingsAcount.cs" />
+    <Compile Include="View\Transactions.xaml.cs">
+      <DependentUpon>Transactions.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\AccountMeny.xaml.cs">
       <DependentUpon>AccountMeny.xaml</DependentUpon>
     </Compile>
@@ -155,6 +158,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="View\Transactions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\AccountMeny.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
