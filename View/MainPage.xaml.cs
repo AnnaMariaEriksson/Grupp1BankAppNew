@@ -24,22 +24,44 @@ namespace Grupp1BankApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
-       
+
+        List<Account> accounts = new List<Account>();
+        public static string ChoosenAccount;
         public static int kebab = 5;
         public MainPage()
         {
             this.InitializeComponent();
             MainFrame.Navigate(typeof(NotSelected_Page));
-            
-        
+            accounts.Add(Account.ac1);
+            accounts.Add(Account.ac2);
+            accounts.Add(Account.ac3);
+
+
+
+
         }
 
         
         private void button_Click(object sender, RoutedEventArgs e)
         {
-
-            MainFrame.Navigate(typeof(MainMeny));
+            listView.Items.Clear();
+            //  MainFrame.Navigate(typeof(MainMeny));
+            foreach (Account ac in accounts)
+            {
+                try
+                {
+                    listView.Items.Add(ac.AccountNumber);
+                }
+                catch (ArgumentException) { }
+            }
             
+        }
+
+        private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+           ChoosenAccount = listView.SelectedItem.ToString();
+           // test = (Account)sender;            
+            MainFrame.Navigate(typeof(MainMeny));
         }
     }
 }
