@@ -25,6 +25,7 @@ namespace Grupp1BankApp.View
         public Deposit()
         {
             this.InitializeComponent();
+            textbox1.Text = MainPage.ChoosenAccount;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
