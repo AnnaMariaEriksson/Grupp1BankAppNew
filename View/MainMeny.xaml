@@ -9,12 +9,14 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="101" Margin="313,92,0,0" Text="Välj ett alternativ:" TextWrapping="Wrap" VerticalAlignment="Top" Width="1070" TextAlignment="Center" FontSize="36"/>
-        <Button x:Name="deposit_button" Height="153" Margin="104,346,0,0" VerticalAlignment="Top" Width="362" FontSize="36" Content="Sätt in pengar" Click="deposit_Click"/>
-        <Button x:Name="transfer_button" Content="Överför pengar" Height="153" Margin="681,346,0,0" VerticalAlignment="Top" Width="362" FontSize="36" Click="transfer_button_Click"/>
-        <Button x:Name="transactions_button" Content="Visa transaktioner" Height="153" Margin="1279,346,0,0" VerticalAlignment="Top" Width="362" FontSize="36" Click="transactions_button_Click"/>
-        <Button x:Name="remove_button" Height="153" Margin="381,624,0,0" Width="362" Content="Ta bort ett konto" FontSize="36" VerticalAlignment="Top" Click="remove_button_Click"/>
-        <Button x:Name="withraw_button" Height="153" Width="362" Content="Ta ut pengar" FontSize="36" Margin="997,624,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="101" Margin="316,121,0,0" Text="Välj ett alternativ:" TextWrapping="Wrap" VerticalAlignment="Top" Width="1070" TextAlignment="Center" FontSize="36"/>
+        <Button x:Name="deposit_button" Height="153" Margin="97,276,0,0" VerticalAlignment="Top" Width="362" FontSize="36" Content="Sätt in pengar" Click="deposit_Click"/>
+        <Button x:Name="transfer_button" Content="Överför pengar" Height="153" Margin="674,276,0,0" VerticalAlignment="Top" Width="362" FontSize="36" Click="transfer_button_Click"/>
+        <Button x:Name="transactions_button" Content="Visa transaktioner" Height="153" Margin="1272,276,0,0" VerticalAlignment="Top" Width="362" FontSize="36" Click="transactions_button_Click"/>
+        <Button x:Name="remove_button" Height="153" Margin="97,540,0,0" Width="362" Content="Ta bort ett konto" FontSize="36" VerticalAlignment="Top" Click="remove_button_Click"/>
+        <Button x:Name="withraw_button" Height="153" Width="362" Content="Ta ut pengar" FontSize="36" Margin="674,540,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="withraw_button_Copy" Height="153" Width="362" Content="Skapa kund" FontSize="36" Margin="1272,540,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="create_account_button" Height="153" Margin="97,785,0,0" Width="362" Content="Skapa nytt konto" FontSize="36" VerticalAlignment="Top" Click="Create_account"/>
 
     </Grid>
 </Page>
