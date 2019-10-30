@@ -1,21 +1,18 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Grupp1BankApp
 {
 	public class BankLogic
 	{
-		private static BankLogic instance;
+		public List<Customer> customers;
 
-		private BankLogic()
+		private ObservableCollection<Customer> observableCustomers = new ObservableCollection<Customer>();
+
+		public ObservableCollection<Customer> Customers
 		{
+			get { return observableCustomers; }
 		}
-
-		public static BankLogic Instance
-		{
-			get { return instance ?? (instance = new BankLogic()); }
-		}
-
-		private List<Customer> customers;
 
 		public bool AddCustomer(string name, long SSN)
 		{

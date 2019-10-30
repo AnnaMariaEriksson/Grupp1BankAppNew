@@ -20,9 +20,9 @@ namespace Grupp1BankApp
             CustomerAccounts = accounts;
         }
 
-        
 
-        
+
+
 
 
 
