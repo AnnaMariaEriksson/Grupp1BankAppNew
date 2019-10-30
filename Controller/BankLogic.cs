@@ -4,43 +4,52 @@ namespace Grupp1BankApp
 {
 	public class BankLogic
 	{
-		private static BankLogic instance;
-
-		private BankLogic()
+        //	private static BankLogic instance;
+       static List<Customer> customerList = new List<Customer>();
+        public static List<Account> accounts = new List<Account>();
+        public static Account ac1 = new Account("4535352644", 55, 55);
+        public static Account ac2 = new Account("456987866644", 55, 55);
+        public static Account ac3 = new Account("45986554644", 55, 55);
+        private BankLogic()
 		{
-		}
+       
+            
+        }
+       
+      
 
-		public static BankLogic Instance
+
+        //public static BankLogic Instance
+        //{
+        //	get { return instance ?? (instance = new BankLogic()); }
+        //}
+
+     
+
+		public static bool AddCustomer()
 		{
-			get { return instance ?? (instance = new BankLogic()); }
-		}
+            
 
-		private List<Customer> customers;
-
-		public bool AddCustomer(string name, long SSN)
-		{
+            
+            
 			return true;
 			//TODO fix return statement.
 		}
 
-		public void CreateCustomers()
+		public static void CreateCustomer()
 		{
-			var accounts = new List<Account>
-			{
-				new Account("1001", 0, 1)
-			};
+            accounts.Add(ac1);
+            accounts.Add(ac2);
+            accounts.Add(ac3);
+            Customer NyCustomer = new Customer("Pelle", "432452234", accounts);
+            customerList.Add(NyCustomer);
+        }
 
-			customers = new List<Customer>
-			{
-				new Customer("Kalle Persson", "19820520", accounts)
-			};
-		}
-
-		public List<Customer> GetCustomers()
+		public static List<Customer> GetCustomers()
 		{
-			List<Customer> customersList = new List<Customer>();
+            List<Customer> cust = customerList;
 
-			return customersList;
+			return cust;
 		}
 
 		public List<string> GetCustomer(long SSN)
