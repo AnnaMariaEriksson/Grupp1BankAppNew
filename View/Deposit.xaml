@@ -16,7 +16,7 @@
             </TextBlock.RenderTransform><Run Text="Valt konto"/><Run Text=":"/></TextBlock>
         <TextBox x:Name="textbox1" HorizontalAlignment="Left" Margin="607,223,0,0" Text="Konto" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.514,0.551" IsReadOnly="True" TextChanged="TextBox_TextChanged" Width="207"/>
         <TextBlock HorizontalAlignment="Left" Margin="479,345,0,0" Text="Summa:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
-        <TextBox HorizontalAlignment="Left" Margin="607,338,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="sum" HorizontalAlignment="Left" Margin="607,338,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" TextChanged="TextBox_TextChanged"/>
         <Button Content="Slutför&#xD;&#xA;" Margin="607,467,0,0" VerticalAlignment="Top"/>
 
     </Grid>
