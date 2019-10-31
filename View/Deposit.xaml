@@ -9,15 +9,17 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="607,101,0,0" Text="Sätt in pengar" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="380" FontSize="36" IsReadOnly="True"/>
-        <TextBlock HorizontalAlignment="Left" Margin="462,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="34" Width="97" FontSize="20" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+        <TextBlock HorizontalAlignment="Left" Margin="501,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="34" Width="97" FontSize="20" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
             <TextBlock.RenderTransform>
                 <CompositeTransform Rotation="0.18"/>
             </TextBlock.RenderTransform><Run Text="Valt konto"/><Run Text=":"/></TextBlock>
-        <TextBox x:Name="textbox1" HorizontalAlignment="Left" Margin="607,223,0,0" Text="Konto" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.514,0.551" IsReadOnly="True" TextChanged="TextBox_TextChanged" Width="207"/>
-        <TextBlock HorizontalAlignment="Left" Margin="479,345,0,0" Text="Summa:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
-        <TextBox x:Name="sum" HorizontalAlignment="Left" Margin="607,338,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" TextChanged="TextBox_TextChanged"/>
-        <Button Content="Slutför&#xD;&#xA;" Margin="607,467,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textbox1" HorizontalAlignment="Left" Margin="626,223,0,0" Text="Konto" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.514,0.551" IsReadOnly="True" TextChanged="TextBox_TextChanged" Width="207"/>
+        <TextBlock HorizontalAlignment="Left" Margin="518,398,0,0" Text="Summa:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Height="47"/>
+        <TextBox x:Name="sum" HorizontalAlignment="Left" Margin="626,398,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" TextChanged="TextBox_TextChanged"/>
+        <Button Content="Slutför&#xD;&#xA;" Margin="627,605,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="423,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Height="62" SelectionChanged="TextBlock_SelectionChanged"><Run Text="Tillgänglig summa"/><Run Text=":"/><LineBreak/><Run/></TextBlock>
+        <TextBox HorizontalAlignment="Left" Margin="626,53,0,0" Text="Sätt in pengar&#xD;&#xA;" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="Tillsumma" HorizontalAlignment="Left" Margin="626,309,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="33"/>
 
     </Grid>
 </Page>
