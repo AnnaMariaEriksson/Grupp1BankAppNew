@@ -37,8 +37,6 @@ namespace Grupp1BankApp
             this.InitializeComponent();
             MainFrame.Navigate(typeof(NotSelected_Page));
 
-
-            
             foreach (Customer cust in BankLogic.GetCustomers()) {
                 comboBox.Items.Add(cust.SSN);
                     }
@@ -65,7 +63,7 @@ namespace Grupp1BankApp
                     {
                         try
                         {
-                            listView.Items.Add(ac.AccountNumber);
+                            listView.Items.Add(ac.AccountNumber + " \nSaldo: " + ac.Balance + "kr");
                         }
                         catch (ArgumentException) { }
                     }
@@ -76,7 +74,7 @@ namespace Grupp1BankApp
                 }
             }
            
-            //  MainFrame.Navigate(typeof(MainMeny));
+            
 
 
 
@@ -87,19 +85,28 @@ namespace Grupp1BankApp
 
         private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-           ChoosenAccount = listView.SelectedItem.ToString();
+            try
+            {
+                ChoosenAccount = listView.SelectedItem.ToString();
+            }
+            catch (NullReferenceException) { }
            // test = (Account)sender;            
             MainFrame.Navigate(typeof(MainMeny));
         }
 
         private void addCustomer_button_Click(object sender, RoutedEventArgs e)
         {
-            
+            MainFrame.Navigate(typeof(CreateCustomer));
         }
 
         private void Ssn_Selected(object sender, SelectionChangedEventArgs e)
         {
             Search_Field.Text = comboBox.Text;
+        }
+
+        private void addCustomer_button_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(CreateAccount));
         }
     }
 }

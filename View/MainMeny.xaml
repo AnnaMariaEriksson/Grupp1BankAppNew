@@ -16,7 +16,6 @@
         <Button x:Name="remove_button" Height="153" Margin="97,540,0,0" Width="362" Content="Ta bort ett konto" FontSize="36" VerticalAlignment="Top" Click="remove_button_Click"/>
         <Button x:Name="withraw_button" Height="153" Width="362" Content="Ta ut pengar" FontSize="36" Margin="674,540,0,0" VerticalAlignment="Top"/>
         <Button x:Name="withraw_button_Copy" Height="153" Width="362" Content="Skapa kund" FontSize="36" Margin="1272,540,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="create_account_button" Height="153" Margin="97,785,0,0" Width="362" Content="Skapa nytt konto" FontSize="36" VerticalAlignment="Top" Click="Create_account"/>
         <Image x:Name="LogoImage" HorizontalAlignment="Left" Height="165" Margin="1682,861,0,0" VerticalAlignment="Top" Width="169"
                 Source="/Assets/Icon2.png" Canvas.ZIndex="4">
         </Image>
