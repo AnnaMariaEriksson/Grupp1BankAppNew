@@ -30,8 +30,6 @@ namespace Grupp1BankApp
 		{
             
 
-            
-            
 			return true;
 			//TODO fix return statement.
 		}

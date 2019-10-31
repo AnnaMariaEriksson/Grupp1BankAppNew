@@ -94,5 +94,10 @@ namespace Grupp1BankApp
         {
 
         }
+
+        private void Ssn_Selected(object sender, SelectionChangedEventArgs e)
+        {
+            Search_Field.Text = comboBox.Text;
+        }
     }
 }
