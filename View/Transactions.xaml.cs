@@ -26,5 +26,6 @@ namespace Grupp1BankApp
         {
             this.InitializeComponent();
         }
+
     }
 }
