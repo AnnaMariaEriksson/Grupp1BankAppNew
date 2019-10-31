@@ -28,9 +28,6 @@ namespace Grupp1BankApp
             ValtKonto_Transaction.Text = MainPage.ChoosenAccount;
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            
         }
     }
 }
