@@ -8,12 +8,19 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid x:Name="RemoveAccountGrid" BorderBrush="#FFDA680F" BorderThickness="10,10,10,10">
-        <TextBlock x:Name="RemoveAccountLabel" HorizontalAlignment="Left" Margin="854,80,0,0" Text="Ta bort konto:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36"/>
-        <TextBox x:Name="ChosenAccountField" HorizontalAlignment="Center" Margin="0,166,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" PlaceholderText="Valt konto" IsReadOnly="True" IsEnabled="False" Width="562" TextAlignment="Center"/>
-        <TextBox x:Name="PinNumberBoxField" HorizontalAlignment="Left" Margin="965,868,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" RenderTransformOrigin="0.07,0.492" PlaceholderText="Personlig kod" Width="276" TextAlignment="Center"/>
-        <Button x:Name="RemoveAccountButton" Content="Ta bort konto" Margin="678,868,0,0" VerticalAlignment="Top" FontSize="36" Click="RemoveAccountButton_Click"/>
-        <ListView HorizontalAlignment="Center" Height="549" VerticalAlignment="Center" Width="842" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
+    <Grid>
+
+
+
+
+        <ListView x:Name="ListOfAccountsToRemove" Background="White" FontSize="36" Margin="478,214,477,336" ItemClick="ListOfAccountsToRemove_ItemClick" BorderThickness="5,5,5,5" BorderBrush="Black" FocusVisualPrimaryBrush="#FFF0C6C6" />
+
+       
+
+        <TextBlock x:Name="RemoveAccountLabel" HorizontalAlignment="Center" Margin="0,157,0,0" Text="Ta bort konto" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36"/>
+        <TextBox x:Name="ChosenAccountField" HorizontalAlignment="Left" Margin="768,842,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" PlaceholderText="Valt konto" IsReadOnly="True" IsEnabled="False"/>
+        <TextBox x:Name="PinNumberBoxField" HorizontalAlignment="Left" Margin="1045,847,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" RenderTransformOrigin="0.07,0.492" PlaceholderText="PIN nr"/>
+        <Button x:Name="RemoveAccountButton" Content="Ta bort konto" Margin="833,781,0,0" VerticalAlignment="Top" FontSize="36" Click="RemoveAccountButton_Click"/>
 
     </Grid>
 </Page>

@@ -8,18 +8,16 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid x:Name="InsättningsGrid" BorderBrush="#FFDA680F" BorderThickness="10,10,10,10">
-        <TextBox HorizontalAlignment="Left" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="236" FontSize="36" Margin="853,540,0,0"/>
-        <TextBlock HorizontalAlignment="Left" Margin="545,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="51" Width="182" FontSize="35" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Margin="607,101,0,0" Text="Sätt in pengar" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="380" FontSize="36" IsReadOnly="True"/>
+        <TextBlock HorizontalAlignment="Left" Margin="462,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="34" Width="97" FontSize="20" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
             <TextBlock.RenderTransform>
                 <CompositeTransform Rotation="0.18"/>
             </TextBlock.RenderTransform><Run Text="Valt konto"/><Run Text=":"/></TextBlock>
-        <TextBox x:Name="KontoNrReadOnly" HorizontalAlignment="Left" Margin="853,220,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.514,0.551" IsReadOnly="True"  Height="55" Width="472" FontSize="35" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
-        <TextBlock x:Name="Text_summa" HorizontalAlignment="Left" Margin="493,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="35" Height="56" Width="317" Text="Tillgänglig summa:&#xD;&#xA;" />
-        <Button Content="Överför&#xA;" Margin="1167,540,0,0" Height="60" Width="158" FontSize="35" VerticalAlignment="Top"/>
-        <TextBlock x:Name="Text_MoneyInsert" HorizontalAlignment="Left" Height="123" Margin="695,77,0,0" Text="Insättning" TextWrapping="Wrap" VerticalAlignment="Top" Width="574" FontSize="60" TextAlignment="Center"/>
-        <TextBox HorizontalAlignment="Left" Height="55" Margin="853,345,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="472" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True" FontSize="35"/>
-        <TextBlock x:Name="Text_överförsumma" HorizontalAlignment="Left" Height="60" Margin="491,540,0,0" Text="Insättnings summa" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" FontSize="35"/>
+        <TextBox x:Name="textbox1" HorizontalAlignment="Left" Margin="607,223,0,0" Text="Konto" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.514,0.551" IsReadOnly="True" TextChanged="TextBox_TextChanged" Width="207"/>
+        <TextBlock HorizontalAlignment="Left" Margin="479,345,0,0" Text="Summa:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox HorizontalAlignment="Left" Margin="607,338,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="207"/>
+        <Button Content="Slutför&#xD;&#xA;" Margin="607,467,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>
