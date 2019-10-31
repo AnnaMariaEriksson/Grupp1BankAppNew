@@ -27,7 +27,9 @@ namespace Grupp1BankApp.View
 		{
 			this.InitializeComponent();
 			BankLogic = new BankLogic();
-		}
+            ChosenAccountField.Text = MainPage.ChoosenAccount;
+
+        }
 
 		public Customer MyCustomer { get; set; }
 
@@ -40,5 +42,10 @@ namespace Grupp1BankApp.View
 		{
 			//ChosenAccountField.Text = ListOfAccountsToRemove.SelectedValue.ToString();
 		}
-	}
+
+        private void ChosenAccountField_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+    }
 }
