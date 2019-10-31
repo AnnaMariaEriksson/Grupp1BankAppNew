@@ -1,5 +1,4 @@
-﻿using Grupp1BankApp.View;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace Grupp1BankApp
@@ -8,16 +7,17 @@ namespace Grupp1BankApp
 	{
 
         //	private static BankLogic instance;
-       static List<Customer> customerList = new List<Customer>();
+        static List<Customer> customerList = new List<Customer>();
         public static List<Account> accounts = new List<Account>();
-        public static Account ac1 = new Account("4535352644", 55, 55);
-        public static Account ac2 = new Account("456987866644", 55, 55);
-        public static Account ac3 = new Account("45986554644", 55, 55);
+        
         public BankLogic()
 		{
        
             
         }
+       
+      
+
 
         //public static BankLogic Instance
         //{
@@ -26,20 +26,25 @@ namespace Grupp1BankApp
 
      
 
-		public static bool AddCustomer()
+		public static bool AddCustomer(string name, string SSN)
 		{
-			return true;
-			//TODO fix return statement.
-		}
+            Customer NyCustomer = new Customer(name, SSN, accounts);
+            customerList.Add(NyCustomer); 
 
-		public static void CreateCustomer()
-		{
-            accounts.Add(ac1);
-            accounts.Add(ac2);
-            accounts.Add(ac3);
-            Customer NyCustomer = new Customer("Pelle", "432452234", accounts);
-            customerList.Add(NyCustomer);
+            if  (NyCustomer.SSN == SSN)
+            {
+                return false;
+            }
+
+            else
+            {
+                return true;
+            }
+
+            
         }
+
+		
 
 		public static List<Customer> GetCustomers()
 		{
@@ -58,6 +63,8 @@ namespace Grupp1BankApp
 
 		public bool ChangeCustomerName(string name, long SSN)
 		{
+            MainPage.ChoosenCustomer.Name = name;
+
 			return true;
 			//TODO fix return statement.
 		}
@@ -82,20 +89,8 @@ namespace Grupp1BankApp
 		}
         
 
-		public static bool DepositMoney(string accountID, double amount)
+		public bool Deposit(long SSN, int accountID, double amount)
 		{
-            
-            
-            foreach (Account acc in MainPage.ChoosenCustomer.CustomerAccounts)
-            {
-                if(acc.AccountNumber == accountID)
-                {
-                    acc.Balance += amount;
-                }
-            }
-
-                
-
 			return true;
 			//TODO fix return statement.
 		}
