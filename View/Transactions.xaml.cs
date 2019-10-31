@@ -31,10 +31,5 @@ namespace Grupp1BankApp
         {
 
         }
-
-        private void Text_Transactions_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
