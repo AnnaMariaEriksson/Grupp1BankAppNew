@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Grupp1BankApp.View;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace Grupp1BankApp
@@ -81,8 +82,20 @@ namespace Grupp1BankApp
 		}
         
 
-		public bool Deposit(long SSN, int accountID, double amount)
+		public static bool DepositMoney(string accountID, double amount)
 		{
+            
+            
+            foreach (Account acc in MainPage.ChoosenCustomer.CustomerAccounts)
+            {
+                if(acc.AccountNumber == accountID)
+                {
+                    acc.Balance += amount;
+                }
+            }
+
+                
+
 			return true;
 			//TODO fix return statement.
 		}
