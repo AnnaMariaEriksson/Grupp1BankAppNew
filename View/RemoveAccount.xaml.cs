@@ -22,12 +22,14 @@ namespace Grupp1BankApp.View
 	/// </summary>
 	public sealed partial class RemoveAccount : Page
 	{
+		public BankLogic BankLogic { get; set; }
 		public RemoveAccount()
 		{
 			this.InitializeComponent();
+			BankLogic = new BankLogic();
 		}
 
-		public BankLogic BankLogic { get; set; }
+		public Customer MyCustomer { get; set; }
 
 		private void RemoveAccountButton_Click(object sender, RoutedEventArgs e)
 		{

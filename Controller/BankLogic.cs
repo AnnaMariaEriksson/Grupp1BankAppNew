@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Grupp1BankApp
 {
 	public class BankLogic
 	{
+
         //	private static BankLogic instance;
        static List<Customer> customerList = new List<Customer>();
         public static List<Account> accounts = new List<Account>();
@@ -27,6 +29,7 @@ namespace Grupp1BankApp
      
 
 		public static bool AddCustomer()
+
 		{
             
 
