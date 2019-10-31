@@ -24,8 +24,8 @@ namespace Grupp1BankApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
-
-      
+        
+        public static Customer ChoosenCustomer;
         public static string ChoosenAccount;
         public static int kebab = 5;
         
@@ -38,7 +38,7 @@ namespace Grupp1BankApp
             MainFrame.Navigate(typeof(NotSelected_Page));
 
 
-            BankLogic.CreateCustomer();
+           
 
 
             
@@ -58,7 +58,7 @@ namespace Grupp1BankApp
             {
                 if(cust.SSN == Search_Field.Text)
                 {
-            
+                    ChoosenCustomer = cust;
                     foreach (Account ac in cust.CustomerAccounts)
                     {
                         try
