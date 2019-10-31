@@ -10,12 +10,13 @@
 
     <Grid BorderBrush="#FFDA680F" BorderThickness="10,10,10,10">
         <ListView Margin="489,253,489,182"/>
-
-        <ListView x:Name="TransactionList" Margin="489,248,489,125" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
-        <TextBlock x:Name="Text_Transactions" HorizontalAlignment="Left" Margin="810,69,0,0" Text="Transactions" TextWrapping="Wrap" VerticalAlignment="Top" Height="98" Width="320" FontSize="60" TextAlignment="Center"/>
-        <TextBlock x:Name="Text_ValtKonto" HorizontalAlignment="Left" Margin="664,189,0,0" Text="Valt Konto:" TextWrapping="Wrap" VerticalAlignment="Top" Height="57" Width="183" FontSize="36"/>
-        <TextBox x:Name="ValtKonto_Transaction" HorizontalAlignment="Left" Margin="873,194,0,0" Text="&#xD;&#xA;" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="397" IsReadOnly="True" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" TextChanged="TextBox_TextChanged"/>
-
+        <ListView x:Name="TransactionList" Margin="481,263,461,76" SelectionChanged="TransactionList_SelectionChanged" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
+        <TextBlock x:Name="Text_Transactions" HorizontalAlignment="Left" Margin="820,10,0,0" Text="Transactions" TextWrapping="Wrap" VerticalAlignment="Top" Height="98" Width="320" FontSize="60" TextAlignment="Center"/>
+        <TextBlock x:Name="Text_ValtKonto" HorizontalAlignment="Left" Margin="714,197,0,0" Text="Valt Konto:" TextWrapping="Wrap" VerticalAlignment="Top" Height="57" Width="183" FontSize="36" TextAlignment="Center"/>
+        <TextBox HorizontalAlignment="Left" Margin="959,202,0,0" Text="&#xD;&#xA;" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="397" IsReadOnly="True" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" TextAlignment="Left"/>
+        <Image x:Name="LogoImage" HorizontalAlignment="Left" Height="165" Margin="1694,863,0,0" VerticalAlignment="Top" Width="169"
+                Source="/Assets/chrome_8o2swHasiU.png" Canvas.ZIndex="4">
+        </Image>
 
     </Grid>
 </Page>
