@@ -40,7 +40,11 @@ namespace Grupp1BankApp
 
             BankLogic.CreateCustomer();
 
-       
+
+            
+            foreach (Customer cust in BankLogic.GetCustomers()) {
+                comboBox.Items.Add(cust.SSN);
+                    }
 
            
     }
