@@ -27,11 +27,31 @@ namespace Grupp1BankApp.View
             this.InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void deposit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Deposit));
+
+
+        }
+
+        private void transactions_button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Transactions));
+        }
+
+        private void transfer_button_Click(object sender, RoutedEventArgs e)
+        {
+          //  this.Frame.Navigate(typeof());
+        }
+
+        private void remove_button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(RemoveAccount));
+        }
+
+        private void Create_account(object sender, RoutedEventArgs e)
         {
 
-         
-            
         }
     }
 }
