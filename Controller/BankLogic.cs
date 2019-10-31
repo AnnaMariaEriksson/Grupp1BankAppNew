@@ -7,11 +7,9 @@ namespace Grupp1BankApp
 	{
 
         //	private static BankLogic instance;
-       static List<Customer> customerList = new List<Customer>();
+        static List<Customer> customerList = new List<Customer>();
         public static List<Account> accounts = new List<Account>();
-        public static Account ac1 = new Account("4535352644", 55, 55);
-        public static Account ac2 = new Account("456987866644", 55, 55);
-        public static Account ac3 = new Account("45986554644", 55, 55);
+        
         public BankLogic()
 		{
        
@@ -28,23 +26,25 @@ namespace Grupp1BankApp
 
      
 
-		public static bool AddCustomer()
-
+		public static bool AddCustomer(string name, string SSN)
 		{
+            Customer NyCustomer = new Customer(name, SSN, accounts);
+            customerList.Add(NyCustomer); 
+
+            if  (NyCustomer.SSN == SSN)
+            {
+                return false;
+            }
+
+            else
+            {
+                return true;
+            }
+
             
-
-			return true;
-			//TODO fix return statement.
-		}
-
-		public static void CreateCustomer()
-		{
-            accounts.Add(ac1);
-            accounts.Add(ac2);
-            accounts.Add(ac3);
-            Customer NyCustomer = new Customer("Pelle", "432452234", accounts);
-            customerList.Add(NyCustomer);
         }
+
+		
 
 		public static List<Customer> GetCustomers()
 		{
@@ -63,6 +63,8 @@ namespace Grupp1BankApp
 
 		public bool ChangeCustomerName(string name, long SSN)
 		{
+            MainPage.ChoosenCustomer.Name = name;
+
 			return true;
 			//TODO fix return statement.
 		}
