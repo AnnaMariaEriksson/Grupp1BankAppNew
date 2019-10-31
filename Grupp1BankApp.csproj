@@ -117,7 +117,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Controller\BankLogic.cs" />
-    <Compile Include="CreditAccount.cs" />
+    <Compile Include="Model\CreditAccount.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
