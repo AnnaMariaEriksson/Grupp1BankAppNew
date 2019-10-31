@@ -17,9 +17,6 @@ namespace Grupp1BankApp
        
             
         }
-       
-      
-
 
         //public static BankLogic Instance
         //{
@@ -29,10 +26,7 @@ namespace Grupp1BankApp
      
 
 		public static bool AddCustomer()
-
 		{
-            
-
 			return true;
 			//TODO fix return statement.
 		}
