@@ -38,7 +38,7 @@ namespace Grupp1BankApp
             MainFrame.Navigate(typeof(NotSelected_Page));
 
 
-            BankLogic.CreateCustomer();
+            
             foreach (Customer cust in BankLogic.GetCustomers()) {
                 comboBox.Items.Add(cust.SSN);
                     }
