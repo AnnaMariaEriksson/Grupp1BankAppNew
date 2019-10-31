@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,17 +26,39 @@ namespace Grupp1BankApp.View
         public Deposit()
         {
             this.InitializeComponent();
-            textbox1.Text = MainPage.ChoosenAccount;
+            ChoosenAccText.Text = MainPage.ChoosenAccount;
+            sumValue.Visibility = Visibility.Collapsed;
+            sumText.Visibility = Visibility.Collapsed;
+            Account TempAccount;
+            List<Account> TempAccounts = MainPage.ChoosenCustomer.CustomerAccounts;
+               foreach(Account ac in TempAccounts)
+            {
+                if(ac.AccountNumber == ChoosenAccText.Text)
+                {
+                    TempAccount = ac;
+                    Balance_Text.Text = ac.Balance.ToString();
+                } 
+            }
+                  
+                
+            
+           
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
+         
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private  void Button_Click(object sender, RoutedEventArgs e)
         {
-            BankLogic.DepositMoney(textbox1.Text, double.Parse(sum.Text));
+            BankLogic.DepositMoney(MainPage.ChoosenAccount, double.Parse(sum.Text));
+            sumValue.Text = sum.Text;
+            sumValue.Visibility = Visibility.Visible;
+            sumText.Visibility = Visibility.Visible;
+            Thread.Sleep(200);
+            //var _Frame = Window.Current.Content as Frame;
+            //_Frame.Navigate(typeof(MainPage));
         }
     }
 }

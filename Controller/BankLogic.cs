@@ -73,7 +73,7 @@ namespace Grupp1BankApp
 		{
 			List<string> removedCustomers = new List<string>();
 			return removedCustomers;
-			//TODO fix return statement.
+		
 		}
 
 		public int AddSavingsAccount(long SSN)
@@ -94,14 +94,23 @@ namespace Grupp1BankApp
                 } 
             }
             return acc;
-			//TODO fix return statement.
+			
 		}
         
 
-		public bool Deposit(long SSN, int accountID, double amount)
+		public static bool DepositMoney( string accountID, double amount)
 		{
+
+            foreach(Account ac in MainPage.ChoosenCustomer.CustomerAccounts)
+            {
+                if(ac.AccountNumber == accountID)
+                {
+                    ac.Balance = ac.Balance + amount;
+                }
+            }
+
 			return true;
-			//TODO fix return statement.
+			
 		}
 
 		public bool Withdraw(long SSN, int accountID, double amount)
@@ -116,11 +125,33 @@ namespace Grupp1BankApp
 			//TODO fix return statement.
 		}
 
-		public int AddCreditAccount(long SSN)
-		{
-			return 0;
-			//TODO fix return statement.
-		}
+        public static bool AddCreditAccount(string AccNumber,Customer cust)
+        {
+            
+                Account NewAccount = new Account(AccNumber, 0, 0.5);
+                cust.CustomerAccounts.Add(NewAccount);
+
+
+            //try
+            //{
+            //    foreach (Account ac in cust.CustomerAccounts)
+            //    {
+            //        if (ac.AccountNumber == AccNumber)
+            //        {
+            //            cust.CustomerAccounts.Remove(NewAccount);
+            //            return false;
+            //        }
+
+
+            //    }
+            //}
+            //catch (System.InvalidOperationException) { }
+
+           
+            return true;
+            //TODO fix return statement.
+        }
+
 
 		public List<string> GetTransactions(long SSN, int accountID)
 		{
