@@ -48,5 +48,10 @@ namespace Grupp1BankApp.View
         {
             this.Frame.Navigate(typeof(RemoveAccount));
         }
+
+        private void Create_account(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
