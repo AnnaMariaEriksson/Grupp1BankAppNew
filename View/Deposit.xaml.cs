@@ -32,5 +32,10 @@ namespace Grupp1BankApp.View
         {
             
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            BankLogic.DepositMoney(textbox1.Text, double.Parse(sum.Text));
+        }
     }
 }
