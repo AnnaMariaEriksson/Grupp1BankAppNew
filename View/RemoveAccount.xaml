@@ -18,7 +18,7 @@
        
 
         <TextBlock x:Name="RemoveAccountLabel" HorizontalAlignment="Center" Margin="0,157,0,0" Text="Ta bort konto" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36"/>
-        <TextBox x:Name="ChosenAccountField" HorizontalAlignment="Left" Margin="768,842,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" PlaceholderText="Valt konto" IsReadOnly="True" IsEnabled="False"/>
+        <TextBox x:Name="ChosenAccountField" HorizontalAlignment="Left" Margin="768,842,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" PlaceholderText="Valt konto" IsReadOnly="True" IsEnabled="False" TextChanged="ChosenAccountField_TextChanged"/>
         <TextBox x:Name="PinNumberBoxField" HorizontalAlignment="Left" Margin="1045,847,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" RenderTransformOrigin="0.07,0.492" PlaceholderText="PIN nr"/>
         <Button x:Name="RemoveAccountButton" Content="Ta bort konto" Margin="833,781,0,0" VerticalAlignment="Top" FontSize="36" Click="RemoveAccountButton_Click"/>
 
