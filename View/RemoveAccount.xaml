@@ -12,7 +12,11 @@
 
 
 
+
         <ListView x:Name="ListOfAccountsToRemove" Background="White" FontSize="36" Margin="478,214,477,336" ItemClick="ListOfAccountsToRemove_ItemClick" BorderThickness="5,5,5,5" BorderBrush="Black" FocusVisualPrimaryBrush="#FFF0C6C6" />
+
+       
+
         <TextBlock x:Name="RemoveAccountLabel" HorizontalAlignment="Center" Margin="0,157,0,0" Text="Ta bort konto" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36"/>
         <TextBox x:Name="ChosenAccountField" HorizontalAlignment="Left" Margin="768,842,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" PlaceholderText="Valt konto" IsReadOnly="True" IsEnabled="False"/>
         <TextBox x:Name="PinNumberBoxField" HorizontalAlignment="Left" Margin="1045,847,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" RenderTransformOrigin="0.07,0.492" PlaceholderText="PIN nr"/>
