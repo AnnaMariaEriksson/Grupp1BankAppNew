@@ -92,7 +92,7 @@ namespace Grupp1BankApp
 
         private void addCustomer_button_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void Ssn_Selected(object sender, SelectionChangedEventArgs e)
