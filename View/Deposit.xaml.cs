@@ -28,9 +28,5 @@ namespace Grupp1BankApp.View
             textbox1.Text = MainPage.ChoosenAccount;
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
     }
 }
