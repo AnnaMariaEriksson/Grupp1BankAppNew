@@ -84,7 +84,6 @@ namespace Grupp1BankApp
 
 		public string GetAccount(string SSN, int accountID)
 		{
-
 			return "";
 			//TODO fix return statement.
 		}
