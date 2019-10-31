@@ -26,7 +26,13 @@ namespace Grupp1BankApp.View
 		public RemoveAccount()
 		{
 			this.InitializeComponent();
-			BankLogic = new BankLogic();
+			BankLogic.CreateCustomer();
+			List<Customer> customers = BankLogic.GetCustomers();
+
+			foreach (Customer customer in customers)
+			{
+				ListOfAccountsToRemove.Items.Add(customer);
+			}
 		}
 
 		public Customer MyCustomer { get; set; }
