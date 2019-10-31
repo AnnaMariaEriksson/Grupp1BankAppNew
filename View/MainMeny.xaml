@@ -6,9 +6,9 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="1900" MinWidth="1920">
 
-    <Grid>
+    <Grid Width="1920">
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="101" Margin="316,121,0,0" Text="Välj ett alternativ:" TextWrapping="Wrap" VerticalAlignment="Top" Width="1070" TextAlignment="Center" FontSize="36"/>
         <Button x:Name="button" Height="153" Margin="97,276,0,0" VerticalAlignment="Top" Width="362" FontSize="36" Content="Sätt in pengar" Click="deposit_Click"/>
         <Button x:Name="transfer_button" Content="Överför pengar" Height="153" Margin="674,276,0,0" VerticalAlignment="Top" Width="362" FontSize="36" Click="transfer_button_Click"/>
