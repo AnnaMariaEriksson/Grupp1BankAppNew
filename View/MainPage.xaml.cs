@@ -25,7 +25,7 @@ namespace Grupp1BankApp
     public sealed partial class MainPage : Page
     {
 
-      
+      public static  Customer ChoosenCustomer;
         public static string ChoosenAccount;
         public static int kebab = 5;
         
@@ -39,9 +39,6 @@ namespace Grupp1BankApp
 
 
             BankLogic.CreateCustomer();
-
-
-            
             foreach (Customer cust in BankLogic.GetCustomers()) {
                 comboBox.Items.Add(cust.SSN);
                     }
@@ -58,7 +55,7 @@ namespace Grupp1BankApp
             {
                 if(cust.SSN == Search_Field.Text)
                 {
-            
+                    ChoosenCustomer = cust;
                     foreach (Account ac in cust.CustomerAccounts)
                     {
                         try
@@ -92,7 +89,7 @@ namespace Grupp1BankApp
 
         private void addCustomer_button_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void Ssn_Selected(object sender, SelectionChangedEventArgs e)
