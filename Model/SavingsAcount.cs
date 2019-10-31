@@ -8,9 +8,18 @@ namespace Grupp1BankApp
 {
     class SavingsAcount : Account
     {
+        public double saldo;
+        public double räntesats;
+        public int kontonummer;
+        kontoytyp
+
+
         public SavingsAcount(string AccountNumber, double Balance, double InterestRate) : base(AccountNumber, Balance, InterestRate)
         {
-
+            this.saldo = saldo;
+              
+               
+               
         }
         
 
