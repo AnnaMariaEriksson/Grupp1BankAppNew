@@ -25,6 +25,7 @@ namespace Grupp1BankApp.View
         public MainMeny()
         {
             this.InitializeComponent();
+            textBlock1.Text = "Saldo:" +  MainPage.ChoosenAccountObject.Balance.ToString() + "kr";
         }
 
         private void deposit_Click(object sender, RoutedEventArgs e)

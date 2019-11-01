@@ -23,10 +23,11 @@
         <Button x:Name="button" Content="Välj" Margin="100,301,0,0" Foreground="Orange" VerticalAlignment="Top" Click="button_Click" Background="Black" FocusVisualPrimaryBrush="#FFFFA604" FocusVisualSecondaryBrush="#99FF0000" AutomationProperties.IsRequiredForForm="True" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False"/>
         <ListView x:Name="listView" Margin="20,496,0,235" BorderBrush="Black" BorderThickness="2,2,2,2" SelectionChanged="listView_SelectionChanged" HorizontalAlignment="Left" Width="200"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="76,441,0,0" Text="Välj konto:" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" TextAlignment="Center"/>
-        <Button x:Name="addCustomer_button" Content="Skapa kund" Margin="24,889,0,0" VerticalAlignment="Top" Width="195" Click="addCustomer_button_Click"/>
+        <Button x:Name="addCustomer_button" Content="Skapa kund" Margin="26,850,0,0" VerticalAlignment="Top" Width="195" Click="addCustomer_button_Click"/>
         <ComboBox x:Name="comboBox" Margin="60,71,0,0" Width="120" IsEditable="True" SelectionChanged="Ssn_Selected" FocusVisualPrimaryBrush="#FFFDFAFA"/>
         <Image x:Name="LogoImage1" HorizontalAlignment="Left" Height="80" Margin="82,968,0,0" VerticalAlignment="Top" Width="88" Source="/Assets/Icon2.png"/>
-        <Button x:Name="addCustomer_button_Copy" Content="Skapa konto" Margin="24,931,0,0" VerticalAlignment="Top" Width="195" Click="addCustomer_button_Copy_Click"/>
+        <Button x:Name="addCustomer_button_Copy" Content="Skapa konto" Margin="26,887,0,0" VerticalAlignment="Top" Width="195" Click="addCustomer_button_Copy_Click"/>
+        <Button x:Name="addCustomer_button_Copy1" Content="Ta bort konto" Margin="25,924,0,0" VerticalAlignment="Top" Width="195" Click="RemoveCustomer_button_Click"/>
 
     </Grid>
 </Page>
