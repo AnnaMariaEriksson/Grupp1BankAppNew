@@ -23,26 +23,25 @@ namespace Grupp1BankApp.View
     /// </summary>
     public sealed partial class Deposit : Page
     {
+        string ChoosenAccount = MainPage.ChoosenAccount;
         public Deposit()
         {
             this.InitializeComponent();
-            ChoosenAccText.Text = MainPage.ChoosenAccount;
+            ChoosenAccText.Text = ChoosenAccount;
             sumValue.Visibility = Visibility.Collapsed;
             sumText.Visibility = Visibility.Collapsed;
-            Account TempAccount;
-            List<Account> TempAccounts = MainPage.ChoosenCustomer.CustomerAccounts;
-               foreach(Account ac in TempAccounts)
-            {
-                if(ac.AccountNumber == ChoosenAccText.Text)
-                {
-                    TempAccount = ac;
-                    Balance_Text.Text = ac.Balance.ToString();
-                } 
-            }
-                  
-                
-            
+             
            
+            Balance_Text.Text = MainPage.ChoosenAccountObject.Balance.ToString();
+
+
+
+
+
+
+
+
+
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -52,13 +51,14 @@ namespace Grupp1BankApp.View
 
         private  void Button_Click(object sender, RoutedEventArgs e)
         {
-            BankLogic.DepositMoney(MainPage.ChoosenAccount, double.Parse(sum.Text));
+            
+            BankLogic.DepositMoney(ChoosenAccount, double.Parse(sum.Text));
             sumValue.Text = sum.Text;
             sumValue.Visibility = Visibility.Visible;
             sumText.Visibility = Visibility.Visible;
             Thread.Sleep(200);
-            //var _Frame = Window.Current.Content as Frame;
-            //_Frame.Navigate(typeof(MainPage));
+            var _Frame = Window.Current.Content as Frame;
+            _Frame.Navigate(typeof(MainPage));
         }
     }
 }

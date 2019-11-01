@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace Grupp1BankApp
 {
@@ -96,20 +97,20 @@ namespace Grupp1BankApp
             return acc;
 			
 		}
+
         
-
-		public static bool DepositMoney( string accountID, double amount)
+        public static bool DepositMoney( string account, double amount)
 		{
+            
+           List<Account> accountlist = MainPage.ChoosenCustomer.CustomerAccounts;
 
-            foreach(Account ac in MainPage.ChoosenCustomer.CustomerAccounts)
-            {
-                if(ac.AccountNumber == accountID)
-                {
-                    ac.Balance = ac.Balance + amount;
-                }
-            }
+            Account SearchChoosenAccount = accountlist.FirstOrDefault(choosen => choosen.AccountNumber == account);
 
-			return true;
+            SearchChoosenAccount.Balance += amount;
+              
+           
+
+            return true;
 			
 		}
 

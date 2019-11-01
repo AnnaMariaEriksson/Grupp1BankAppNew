@@ -28,10 +28,10 @@ namespace Grupp1BankApp
       public static  Customer ChoosenCustomer;
         public static string ChoosenAccount;
         public static int kebab = 5;
-        
-       
+        public static Account ChoosenAccountObject;
 
-        
+
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -63,14 +63,20 @@ namespace Grupp1BankApp
                     {
                         try
                         {
-                            listView.Items.Add(ac.AccountNumber + " \nSaldo: " + ac.Balance + "kr");
+                            listView.Items.Add(ac.AccountNumber );
+
+                         
+                            
+
+
+
                         }
                         catch (ArgumentException) { }
                     }
                 }
                 else
                 {
-                    listView.Items.Add("Ingen kund");
+                    listView.Items.Add("Inget konto");
                 }
             }
            
@@ -87,7 +93,13 @@ namespace Grupp1BankApp
         {
             try
             {
-                ChoosenAccount = listView.SelectedItem.ToString();
+                List<Account> accountlist = MainPage.ChoosenCustomer.CustomerAccounts;
+                ChoosenAccount = listView.SelectedItems[0].ToString(); ;
+                ChoosenAccountObject = accountlist.FirstOrDefault(choosen => choosen.AccountNumber == ChoosenAccount);
+               
+
+
+
             }
             catch (NullReferenceException) { }
            // test = (Account)sender;            
@@ -107,6 +119,11 @@ namespace Grupp1BankApp
         private void addCustomer_button_Copy_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(typeof(CreateAccount));
+        }
+
+        private void RemoveCustomer_button_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(RemoveAccount));
         }
     }
 }
