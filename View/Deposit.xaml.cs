@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,20 +23,42 @@ namespace Grupp1BankApp.View
     /// </summary>
     public sealed partial class Deposit : Page
     {
+        string ChoosenAccount = MainPage.ChoosenAccount;
         public Deposit()
         {
             this.InitializeComponent();
-            textbox1.Text = MainPage.ChoosenAccount;
+            ChoosenAccText.Text = ChoosenAccount;
+            sumValue.Visibility = Visibility.Collapsed;
+            sumText.Visibility = Visibility.Collapsed;
+             
+           
+            Balance_Text.Text = MainPage.ChoosenAccountObject.Balance.ToString();
+
+
+
+
+
+
+
+
+
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
+         
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private  void Button_Click(object sender, RoutedEventArgs e)
         {
-            BankLogic.DepositMoney(textbox1.Text, double.Parse(sum.Text));
+            
+            BankLogic.DepositMoney(ChoosenAccount, double.Parse(sum.Text));
+            sumValue.Text = sum.Text;
+            sumValue.Visibility = Visibility.Visible;
+            sumText.Visibility = Visibility.Visible;
+            Thread.Sleep(200);
+            var _Frame = Window.Current.Content as Frame;
+            _Frame.Navigate(typeof(MainPage));
         }
     }
 }

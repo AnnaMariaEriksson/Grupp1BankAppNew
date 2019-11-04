@@ -8,15 +8,15 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid BorderBrush="#FFDA680F" BorderThickness="10,10,10,10">
-        <Image x:Name="LogoImage" HorizontalAlignment="Left" Height="165" Margin="1682,861,0,0" VerticalAlignment="Top" Width="169"
-                Source="/Assets/Icon2.png" Canvas.ZIndex="4">
-        </Image>
-        <TextBlock HorizontalAlignment="Left" Margin="600,350,0,0" Text="Fullständigt namn:" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="300" FontSize="36"/>
-        <TextBlock HorizontalAlignment="Left" Height="60" Margin="600,550,0,0" Text="Personnummer:" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="36"/>
-        <TextBox HorizontalAlignment="Left" Height="60" Margin="1038,350,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
-        <TextBox HorizontalAlignment="Left" Height="60" Margin="1038,550,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
-        <TextBlock HorizontalAlignment="Left" Height="104" Margin="610,39,0,0" Text="Skapa ett konto" TextWrapping="Wrap" VerticalAlignment="Top" Width="682" FontSize="60" TextAlignment="Center"/>
-        <Button Content="Spara" Height="132" Margin="0,810,0,0" VerticalAlignment="Top" Width="362" HorizontalAlignment="Center" FontSize="36"/>
+    <Grid>
+        <Image x:Name="LogoImage" HorizontalAlignment="Left" Height="165" Margin="1692,871,0,0" VerticalAlignment="Top" Width="169"
+            Source="34601bbc-8674-4593-8fc7-8951b21fbc34" Canvas.ZIndex="4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="766,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="300" FontSize="36"><Run Text="Kontonummer"/><Run Text=":"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="60" Margin="754,424,0,0" Text="Personnummer:" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="36"/>
+        <TextBox x:Name="AccountNumber" HorizontalAlignment="Left" Height="60" Margin="687,328,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True"/>
+        <TextBlock HorizontalAlignment="Center" Height="104" Margin="0,49,0,0" Text="Skapa ett konto" TextWrapping="Wrap" VerticalAlignment="Top" Width="682" FontSize="60" TextAlignment="Center"/>
+        <Button  x:Name="create_account_button" Content="Spara" Height="132" Margin="0,820,0,0" VerticalAlignment="Top" Width="362" HorizontalAlignment="Center" FontSize="36" Click="Button_Click"/>
+        <TextBox x:Name="SsnNumber" HorizontalAlignment="Left" Height="60" Margin="687,0,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True"/>
+
     </Grid>
 </Page>

@@ -11,12 +11,16 @@
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="600,350,0,0" Text="Valt konto" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="300" FontSize="36"/>
         <TextBlock HorizontalAlignment="Left" Height="60" Margin="600,550,0,0" Text="Summa:" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="36"/>
-        <TextBox HorizontalAlignment="Left" Height="60" Margin="1038,350,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True"/>
-        <TextBox HorizontalAlignment="Left" Height="60" Margin="1038,550,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
+        <TextBox x:Name="ChoosenAccText" HorizontalAlignment="Left" Height="60" Margin="1038,350,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True"/>
+        <TextBox x:Name="sum" HorizontalAlignment="Left" Height="60" Margin="1038,550,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
         <TextBlock HorizontalAlignment="Left" Height="104" Margin="610,39,0,0" Text="Insättning" TextWrapping="Wrap" VerticalAlignment="Top" Width="682" FontSize="60" TextAlignment="Center"/>
-        <Button Content="Slutför" Height="132" Margin="0,810,0,0" VerticalAlignment="Top" Width="362" HorizontalAlignment="Center" FontSize="36"/>
+        <Button Content="Slutför" Height="132" Margin="0,810,0,0" VerticalAlignment="Top" Width="362" HorizontalAlignment="Center" FontSize="36" Click="Button_Click"/>
         <Image x:Name="LogoImage" HorizontalAlignment="Left" Height="165" Margin="1682,861,0,0" VerticalAlignment="Top" Width="169"
                 Source="/Assets/Icon2.png" Canvas.ZIndex="4">
         </Image>
+        <TextBlock HorizontalAlignment="Left" Margin="600,443,0,0" Text="Nuvarande Saldo:" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="300" FontSize="36"/>
+        <TextBox x:Name="Balance_Text" HorizontalAlignment="Left" Height="60" Margin="1038,443,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True"/>
+        <TextBlock x:Name="sumText" HorizontalAlignment="Left" Height="60" Margin="832,679,0,0" Text="Satte in:" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" FontSize="36"/>
+        <TextBlock x:Name="sumValue" HorizontalAlignment="Left" Height="60" Margin="1038,679,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" FontSize="36"/>
     </Grid>
 </Page>
