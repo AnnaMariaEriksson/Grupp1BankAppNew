@@ -11,15 +11,12 @@ namespace Grupp1BankApp
         public double saldo;
         public double räntesats;
         public int kontonummer;
-        kontoytyp
+       
 
 
         public SavingsAcount(string AccountNumber, double Balance, double InterestRate) : base(AccountNumber, Balance, InterestRate)
         {
-            this.saldo = saldo;
-              
-               
-               
+       
         }
         
 
