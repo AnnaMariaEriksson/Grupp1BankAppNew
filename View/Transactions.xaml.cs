@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,14 +23,23 @@ namespace Grupp1BankApp
     /// </summary>
     public sealed partial class Transactions : Page
     {
+        private ObservableCollection<Transactions> transactions = new ObservableCollection<Transactions>();
         public Transactions()
         {
             this.InitializeComponent();
         }
-
         private void TransactionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            foreach(Account acc in MainPage.ChoosenCustomer.CustomerAccounts)
+            {
+                if(acc.AccountNumber == MainPage.ChoosenAccount)
+                {
+                   foreach(Transactions trans in acc.TransactionList)
+                    {
+                       transactions.Add(trans);
+                    }
+                }
+            }
         }
     }
 }
