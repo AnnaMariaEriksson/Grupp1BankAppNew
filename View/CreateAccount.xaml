@@ -15,7 +15,7 @@
         <TextBlock HorizontalAlignment="Left" Height="60" Margin="754,424,0,0" Text="Personnummer:" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="36"/>
         <TextBox x:Name="AccountNumber" HorizontalAlignment="Left" Height="60" Margin="687,328,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True"/>
         <TextBlock HorizontalAlignment="Center" Height="104" Margin="0,49,0,0" Text="Skapa ett konto" TextWrapping="Wrap" VerticalAlignment="Top" Width="682" FontSize="60" TextAlignment="Center"/>
-        <Button Content="Spara" Height="132" Margin="0,820,0,0" VerticalAlignment="Top" Width="362" HorizontalAlignment="Center" FontSize="36" Click="Button_Click"/>
+        <Button  x:Name="create_account_button" Content="Spara" Height="132" Margin="0,820,0,0" VerticalAlignment="Top" Width="362" HorizontalAlignment="Center" FontSize="36" Click="Button_Click"/>
         <TextBox x:Name="SsnNumber" HorizontalAlignment="Left" Height="60" Margin="687,0,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True"/>
 
     </Grid>
