@@ -8,8 +8,8 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <ListView x:Name="ListOfAccountsToRemove" Background="White" FontSize="36" Margin="478,214,477,336" BorderThickness="5,5,5,5" BorderBrush="Black" FocusVisualPrimaryBrush="#FFF0C6C6"  ItemsSource="{x:Bind AcList}" SelectionChanged="ListOfAccountsToRemove_SelectionChanged" />
+    <Grid BorderBrush="#FFDA680F" BorderThickness="10,10,10,10">
+        <ListView x:Name="ListOfAccountsToRemove" Background="White" FontSize="36" Margin="478,214,477,336" BorderThickness="5,5,5,5" BorderBrush="#FFDA680F" FocusVisualPrimaryBrush="#FFF0C6C6"  ItemsSource="{x:Bind AcList}" SelectionChanged="ListOfAccountsToRemove_SelectionChanged" />
         <TextBlock x:Name="RemoveAccountLabel" HorizontalAlignment="Center" Margin="0,157,0,0" Text="Ta bort konto" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36"/>
         <TextBox x:Name="PinNumberBoxField" HorizontalAlignment="Left" Margin="965,797,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" RenderTransformOrigin="0.07,0.492" PlaceholderText="PIN nr"/>
         <Button x:Name="RemoveAccountButton" Content="Ta bort konto" Margin="727,797,0,0" VerticalAlignment="Top" FontSize="36" Click="RemoveAccountButton_Click"/>

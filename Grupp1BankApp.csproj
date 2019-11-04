@@ -117,7 +117,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Controller\BankLogic.cs" />
-    <Compile Include="Model\AccountType.cs" />
     <Compile Include="Model\CreditAccount.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="App.xaml.cs">
@@ -150,6 +149,9 @@
     </Compile>
     <Compile Include="View\Transactions.xaml.cs">
       <DependentUpon>Transactions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TransferMoney.xaml.cs">
+      <DependentUpon>TransferMoney.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -204,6 +206,10 @@
     <Page Include="View\Transactions.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\TransferMoney.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
