@@ -25,7 +25,7 @@ namespace Grupp1BankApp
     public sealed partial class MainPage : Page
     {
 
-      public static  Customer ChoosenCustomer;
+        public static  Customer ChoosenCustomer;
         public static string ChoosenAccount;
         public static int kebab = 5;
         public static Account ChoosenAccountObject;
