@@ -23,7 +23,7 @@ namespace Grupp1BankApp.View
 	/// </summary>
 	public sealed partial class RemoveAccount : Page
 	{
-        string ChoosenAccount;
+        object ChoosenAccount;
         private ObservableCollection<string> accounts = new ObservableCollection<string>();
         ObservableCollection<string> AcList { get { return accounts; } }
         public RemoveAccount()
@@ -36,20 +36,21 @@ namespace Grupp1BankApp.View
             }
 
         }
+        private void ListOfAccountsToRemove_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ChoosenAccount = ListOfAccountsToRemove.SelectedItem;
+        }
 
-		private void RemoveAccountButton_Click(object sender, RoutedEventArgs e)
+        private void RemoveAccountButton_Click(object sender, RoutedEventArgs e)
 		{
-            int ac = MainPage.ChoosenCustomer.CustomerAccounts.FindIndex(choosen => choosen.AccountNumber == ChoosenAccount);
-           // MainPage.ChoosenCustomer.CustomerAccounts.RemoveAt(ac); 
+            int ac = MainPage.ChoosenCustomer.CustomerAccounts.FindIndex(choosen => choosen.AccountNumber == ChoosenAccount.ToString());
+            MainPage.ChoosenCustomer.CustomerAccounts.RemoveAt(ac); 
             RemoveAccountButton.Content = "Removed!";
-            accounts.Remove(ChoosenAccount);
+            accounts.Remove(ChoosenAccount.ToString());
         }
 
 	
 
-        private void ListOfAccountsToRemove_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            ChoosenAccount = ListOfAccountsToRemove.SelectedItem.ToString();
-        }
+
     }
 }

@@ -94,12 +94,12 @@ namespace Grupp1BankApp
             try
             {
                 List<Account> accountlist = MainPage.ChoosenCustomer.CustomerAccounts;
-                ChoosenAccount = listView.SelectedItems[0].ToString();
-                ChoosenAccountObject = accountlist.FirstOrDefault(choosen => choosen.AccountNumber == ChoosenAccount);
-               
-
-
-
+                try
+                {
+                    ChoosenAccount = listView.SelectedItems[0].ToString();
+                    ChoosenAccountObject = accountlist.FirstOrDefault(choosen => choosen.AccountNumber == ChoosenAccount);
+                }
+                catch (System.Runtime.InteropServices.COMException) { }
             }
             catch (NullReferenceException) { }
            // test = (Account)sender;            
@@ -118,12 +118,20 @@ namespace Grupp1BankApp
 
         private void addCustomer_button_Copy_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(typeof(CreateAccount));
+            try
+            {
+                MainFrame.Navigate(typeof(CreateAccount));
+            }
+            catch (Exception) { }
         }
 
         private void RemoveCustomer_button_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(typeof(RemoveAccount));
+            try
+            {
+                MainFrame.Navigate(typeof(RemoveAccount));
+            }
+            catch (Exception) { }
         }
     }
 }
