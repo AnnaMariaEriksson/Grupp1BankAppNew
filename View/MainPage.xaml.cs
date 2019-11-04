@@ -25,7 +25,7 @@ namespace Grupp1BankApp
     public sealed partial class MainPage : Page
     {
 
-      public static  Customer ChoosenCustomer;
+        public static  Customer ChoosenCustomer;
         public static string ChoosenAccount;
         public static int kebab = 5;
         public static Account ChoosenAccountObject;
@@ -47,9 +47,6 @@ namespace Grupp1BankApp
         
         private void button_Click(object sender, RoutedEventArgs e)
         {
-
-            
-
             listView.Items.Clear();
             List<Customer> customerlist = BankLogic.GetCustomers();
             foreach(Customer cust in customerlist)
