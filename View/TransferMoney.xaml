@@ -10,12 +10,12 @@
 
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="528,586,0,0" Text="Hur mycket vill du överföra:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="739,585,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Height="29"/>
-        <Button Content="slutför&#xD;&#xA;" Margin="919,857,0,0" VerticalAlignment="Top" Width="75" Height="32"/>
+        <TextBox x:Name="textsum" HorizontalAlignment="Left" Margin="739,585,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Height="29"/>
+        <Button Content="slutför&#xD;&#xA;" Margin="919,857,0,0" VerticalAlignment="Top" Width="75" Height="32" Click="Button_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="633,486,0,0" Text="Ditt konto:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="739,486,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="137"/>
+        <TextBox x:Name="choosenccount" HorizontalAlignment="Left" Margin="739,486,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="137"/>
         <TextBlock HorizontalAlignment="Left" Margin="1007,490,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Överför till"/><Run Text=":"/></TextBlock>
-        <TextBox HorizontalAlignment="Left" Margin="1107,486,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
+        <TextBox x:Name="textbox2" HorizontalAlignment="Left" Margin="1107,486,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
         <TextBlock HorizontalAlignment="Left" Margin="880,239,0,0" Text="överföring" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="180" FontSize="36"/>
 
     </Grid>
