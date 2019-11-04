@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Grupp1BankApp
 {
-    public class Account
+    public abstract class Account
     {
         public  string AccountNumber { get; set; }
         public double Balance { get; set; }
