@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Grupp1BankApp
 {
-    class CreditAccount
+    class CreditAccount : Account
     {
         // Attributen i CreditAccount klassen
 
@@ -18,6 +18,7 @@ namespace Grupp1BankApp
 
         //Construktor
         public CreditAccount(double balance, int creditLimit, double interestRate, double deptRate, string accountNumber)
+            : base (accountNumber, balance, interestRate)
         {
             this.balance = balance;
             this.creditLimit = creditLimit;
