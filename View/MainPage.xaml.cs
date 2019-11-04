@@ -28,17 +28,15 @@ namespace Grupp1BankApp
       public static  Customer ChoosenCustomer;
         public static string ChoosenAccount;
         public static int kebab = 5;
-        
-       
+        public static Account ChoosenAccountObject;
 
-        
+
+
         public MainPage()
         {
             this.InitializeComponent();
             MainFrame.Navigate(typeof(NotSelected_Page));
 
-
-            
             foreach (Customer cust in BankLogic.GetCustomers()) {
                 comboBox.Items.Add(cust.SSN);
                     }
@@ -65,18 +63,24 @@ namespace Grupp1BankApp
                     {
                         try
                         {
-                            listView.Items.Add(ac.AccountNumber);
+                            listView.Items.Add(ac.AccountNumber );
+
+                         
+                            
+
+
+
                         }
                         catch (ArgumentException) { }
                     }
                 }
                 else
                 {
-                    listView.Items.Add("Ingen kund");
+                    listView.Items.Add("Inget konto");
                 }
             }
            
-            //  MainFrame.Navigate(typeof(MainMeny));
+            
 
 
 
@@ -87,19 +91,39 @@ namespace Grupp1BankApp
 
         private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-           ChoosenAccount = listView.SelectedItem.ToString();
+            try
+            {
+                List<Account> accountlist = MainPage.ChoosenCustomer.CustomerAccounts;
+                ChoosenAccount = listView.SelectedItems[0].ToString(); ;
+                ChoosenAccountObject = accountlist.FirstOrDefault(choosen => choosen.AccountNumber == ChoosenAccount);
+               
+
+
+
+            }
+            catch (NullReferenceException) { }
            // test = (Account)sender;            
             MainFrame.Navigate(typeof(MainMeny));
         }
 
         private void addCustomer_button_Click(object sender, RoutedEventArgs e)
         {
-            
+            MainFrame.Navigate(typeof(CreateCustomer));
         }
 
         private void Ssn_Selected(object sender, SelectionChangedEventArgs e)
         {
             Search_Field.Text = comboBox.Text;
+        }
+
+        private void addCustomer_button_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(CreateAccount));
+        }
+
+        private void RemoveCustomer_button_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(RemoveAccount));
         }
     }
 }
