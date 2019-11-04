@@ -10,7 +10,6 @@ namespace Grupp1BankApp
    public partial class Transactions
     {
         public static List<Transactions> transactions = new List<Transactions>();
-
         public Transactions(string AccountID, DateTime Date, Enum TransactionsType, double Amount, double Balance)
         {
             accountID = AccountID;
