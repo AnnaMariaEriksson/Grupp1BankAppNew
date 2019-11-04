@@ -20,19 +20,18 @@ namespace Grupp1BankApp.View
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class CreateAccount : Page
+    public sealed partial class CreateCustomer : Page
     {
-        public CreateAccount()
+        public CreateCustomer()
         {
             this.InitializeComponent();
-            Random rand = new Random();
-            AccountNumber.Text = rand.Next(1, 100000).ToString();
-            SsnNumber.Text = MainPage.ChoosenCustomer.SSN;
+            textBlock.Visibility = Visibility.Collapsed;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            BankLogic.AddCreditAccount(AccountNumber.Text, MainPage.ChoosenCustomer);
+            BankLogic.AddCustomer(NameText.Text, SsnText.Text);
+            textBlock.Visibility = Visibility.Visible;
             var _Frame = Window.Current.Content as Frame;
             _Frame.Navigate(typeof(MainPage));
         }
