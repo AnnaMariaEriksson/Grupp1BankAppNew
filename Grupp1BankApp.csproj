@@ -117,6 +117,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Controller\BankLogic.cs" />
+    <Compile Include="Model\AccountType.cs" />
     <Compile Include="Model\CreditAccount.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="App.xaml.cs">
@@ -126,6 +127,9 @@
     <Compile Include="Model\SavingsAcount.cs" />
     <Compile Include="View\CreateAccount.xaml.cs">
       <DependentUpon>CreateAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CreateCustomer.xaml.cs">
+      <DependentUpon>CreateCustomer.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Deposit.xaml.cs">
       <DependentUpon>Deposit.xaml</DependentUpon>
@@ -170,6 +174,10 @@
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
     <Page Include="View\CreateAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CreateCustomer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
