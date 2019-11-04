@@ -89,9 +89,18 @@ namespace Grupp1BankApp
 			//TODO fix return statement.
 		}
 
-		public string GetAccount(string SSN, int accountID)
+		public string GetAccount(Customer cust, string accountID)
 		{
-			return "";
+            string acc = null;
+			foreach (Account ac in cust.CustomerAccounts)
+            {
+                if (accountID == ac.AccountNumber)
+                {
+                    acc =  ac.AccountNumber + " " + ac.Balance + " " + ac.InterestRate;
+                    break;
+                } 
+            }
+            return acc;
 			//TODO fix return statement.
 		}
         
