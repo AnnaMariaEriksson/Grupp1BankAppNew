@@ -94,7 +94,7 @@ namespace Grupp1BankApp
             try
             {
                 List<Account> accountlist = MainPage.ChoosenCustomer.CustomerAccounts;
-                ChoosenAccount = listView.SelectedItems[0].ToString(); ;
+                ChoosenAccount = listView.SelectedItems[0].ToString();
                 ChoosenAccountObject = accountlist.FirstOrDefault(choosen => choosen.AccountNumber == ChoosenAccount);
                
 
