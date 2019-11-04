@@ -15,19 +15,19 @@
         </Grid.ColumnDefinitions>
         <Rectangle Stroke="Black" Fill="#FFDA680F" FocusVisualPrimaryBrush="Black" MinHeight="450" Margin="0,0,178,0"/>
         <TextBox x:Name="Search_Field" HorizontalAlignment="Left" Foreground="Black" Margin="30,26,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" PlaceholderText="Personnummer" Width="179" Height="40" PlaceholderForeground="Black" FocusVisualSecondaryBrush="#99FFFFFF" FocusVisualPrimaryBrush="#FFF4ECEC"/>
-        <TextBlock x:Name="FnamnText" HorizontalAlignment="Left" Foreground="Black" Margin="57,110,0,0" Text="Förnamn:" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FocusVisualPrimaryBrush="#FFD33405"/>
-        <TextBlock x:Name="Fnamn" HorizontalAlignment="Left" Foreground="Black" Margin="164,117,0,0" Text="Null" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="9"/>
-        <TextBlock x:Name="Enamn" HorizontalAlignment="Left" Foreground="Black" Margin="57,135,0,0" Text="Efternamn:" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FocusVisualPrimaryBrush="#FFD33405"/>
-        <TextBlock x:Name="Enamn1" HorizontalAlignment="Left" Foreground="Black" Margin="164,138,0,0" Text="Null" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="9" RenderTransformOrigin="0.438,0.417"/>
-        <TextBlock x:Name="Personnummer_info" HorizontalAlignment="Left" Foreground="Black" Margin="68,185,0,0" Text="Personnummer:" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FocusVisualPrimaryBrush="#FFD33405"/>
-        <TextBlock x:Name="PersonNummer" HorizontalAlignment="Left" Foreground="Black" Margin="108,222,0,0" Text="Null" TextWrapping="Wrap" VerticalAlignment="Top" />
-        <Frame x:Name="MainFrame"  Content="Frame" Margin="246,0,0,0" Foreground="Orange" Background="Black" Grid.ColumnSpan="2"/>
-        <Button x:Name="button" Content="Sök" Margin="100,301,0,0" Foreground="Orange" VerticalAlignment="Top" Click="button_Click" Background="Black" FocusVisualPrimaryBrush="#FFFFA604" FocusVisualSecondaryBrush="#99FF0000" AutomationProperties.IsRequiredForForm="True" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False"/>
+        <TextBlock x:Name="FnamnText" HorizontalAlignment="Left" Foreground="Black" Margin="56,130,0,0" Text="Fullständigt namn:" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FocusVisualPrimaryBrush="#FFD33405"/>
+        <TextBox x:Name="Fnamn" HorizontalAlignment="Left" Foreground="Black" Margin="90,155,0,0" Text="Null" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" TextAlignment="Center"/>
+        <TextBlock x:Name="Personnummer_info" HorizontalAlignment="Left" Foreground="Black" Margin="65,195,0,0" Text="Personnummer:" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FocusVisualPrimaryBrush="#FFD33405"/>
+        <TextBox x:Name="PersonNummer" HorizontalAlignment="Left" Foreground="Black" Margin="90,220,0,0" Text="Null" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" />
+        <Frame x:Name="MainFrame"  Content="Frame" Margin="246,0,0,0" Foreground="Orange"  Grid.ColumnSpan="2"/>
+        <Button x:Name="button" Content="Välj" Margin="100,301,0,0" Foreground="Orange" VerticalAlignment="Top" Click="button_Click" Background="Black" FocusVisualPrimaryBrush="#FFFFA604" FocusVisualSecondaryBrush="#99FF0000" AutomationProperties.IsRequiredForForm="True" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False"/>
         <ListView x:Name="listView" Margin="20,496,0,235" BorderBrush="Black" BorderThickness="2,2,2,2" SelectionChanged="listView_SelectionChanged" HorizontalAlignment="Left" Width="200"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="76,441,0,0" Text="Välj konto:" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" TextAlignment="Center"/>
-        <Button x:Name="addCustomer_button" Content="Button" Margin="24,889,0,0" VerticalAlignment="Top" Width="195" Click="addCustomer_button_Click"/>
+        <Button x:Name="addCustomer_button" Content="Skapa kund" Margin="25,850,0,0" VerticalAlignment="Top" Width="195" Click="addCustomer_button_Click"/>
         <ComboBox x:Name="comboBox" Margin="60,71,0,0" Width="120" IsEditable="True" SelectionChanged="Ssn_Selected" FocusVisualPrimaryBrush="#FFFDFAFA"/>
-        <Image x:Name="LogoImage1" HorizontalAlignment="Left" Height="80" Margin="82,968,0,0" VerticalAlignment="Top" Width="88" Source="/Assets/Icon2.png"/>
+        <Image x:Name="LogoImage1" HorizontalAlignment="Left" Height="80" Margin="82,990,0,0" VerticalAlignment="Top" Width="88" Source="/Assets/Icon2.png"/>
+        <Button x:Name="addCustomer_button_Copy" Content="Skapa konto" Margin="25,900,0,0" VerticalAlignment="Top" Width="195" Click="addCustomer_button_Copy_Click"/>
+        <Button x:Name="addCustomer_button_Copy1" Content="Ta bort konto" Margin="25,950,0,0" VerticalAlignment="Top" Width="195" Click="RemoveCustomer_button_Click"/>
 
     </Grid>
 </Page>

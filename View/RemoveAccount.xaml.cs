@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,30 +23,33 @@ namespace Grupp1BankApp.View
 	/// </summary>
 	public sealed partial class RemoveAccount : Page
 	{
-		public BankLogic BankLogic { get; set; }
-		public RemoveAccount()
+        string ChoosenAccount;
+        private ObservableCollection<string> accounts = new ObservableCollection<string>();
+        ObservableCollection<string> AcList { get { return accounts; } }
+        public RemoveAccount()
 		{
 			this.InitializeComponent();
-			BankLogic = new BankLogic();
-            ChosenAccountField.Text = MainPage.ChoosenAccount;
+
+            foreach(Account ac in MainPage.ChoosenCustomer.CustomerAccounts)
+            {
+                accounts.Add(ac.AccountNumber);
+            }
 
         }
 
-		public Customer MyCustomer { get; set; }
-
 		private void RemoveAccountButton_Click(object sender, RoutedEventArgs e)
 		{
+            int ac = MainPage.ChoosenCustomer.CustomerAccounts.FindIndex(choosen => choosen.AccountNumber == ChoosenAccount);
+           // MainPage.ChoosenCustomer.CustomerAccounts.RemoveAt(ac); 
+            RemoveAccountButton.Content = "Removed!";
+            accounts.Remove(ChoosenAccount);
+        }
 
-		}
+	
 
-		private void ListOfAccountsToRemove_ItemClick(object sender, ItemClickEventArgs e)
-		{
-			//ChosenAccountField.Text = ListOfAccountsToRemove.SelectedValue.ToString();
-		}
-
-        private void ChosenAccountField_TextChanged(object sender, TextChangedEventArgs e)
+        private void ListOfAccountsToRemove_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            ChoosenAccount = ListOfAccountsToRemove.SelectedItem.ToString();
         }
     }
 }
