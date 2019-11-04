@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace Grupp1BankApp
 {
-    public class Account
+    public abstract class Account
     {
+
+        public double interestRate;
+        public double balance;
+        public string accountNumber;
         public string AccountNumber { get; set; }
         public double Balance { get; set; }
+
         public double InterestRate { get; set; }
         public List<Transactions> TransactionList { get; set; }
 
