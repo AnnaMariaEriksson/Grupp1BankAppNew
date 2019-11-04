@@ -8,17 +8,26 @@ namespace Grupp1BankApp
 {
     class SavingsAcount : Account
     {
-        public double saldo;
-        public double räntesats;
-        public int kontonummer;
-       
+        public string accountType;
 
-
-        public SavingsAcount(string AccountNumber, double Balance, double InterestRate) : base(AccountNumber, Balance, InterestRate)
+        public SavingsAcount(string accountNumber, double balance, double InterestRate, string accountType)
+            : base(accountNumber, balance, InterestRate)
         {
-       
+            this.accountType = accountType;
         }
-        
+
+        public string AccountType
+        {
+            get
+            {
+                return accountType;
+            }
+
+            set
+            {
+                accountType = value;
+            }
+        }
 
     }
 }

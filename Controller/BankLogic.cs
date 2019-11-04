@@ -136,8 +136,8 @@ namespace Grupp1BankApp
         public static bool AddCreditAccount(string AccNumber,Customer cust)
         {
             
-                Account NewAccount = new Account(AccNumber, 0, 0.5);
-                cust.CustomerAccounts.Add(NewAccount);
+              //  Account NewAccount = new Account(AccNumber, 0, 0.5);
+                //cust.CustomerAccounts.Add(NewAccount);
 
 
             //try
