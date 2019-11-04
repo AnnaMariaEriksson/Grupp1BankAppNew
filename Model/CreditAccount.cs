@@ -9,39 +9,23 @@ namespace Grupp1BankApp
     class CreditAccount : Account
     {
         // Attributen i CreditAccount klassen
-
-        double balance;
-        int creditLimit;
-        double interestRate;
+        int creditLimit;      
         double deptRate;
-        string accountNumber;
+        string accountType;
+        
 
         //Construktor
-        public CreditAccount(double balance, int creditLimit, double interestRate, double deptRate, string accountNumber)
+        public CreditAccount(double balance, int creditLimit, double interestRate, double deptRate, string accountNumber, string accountType)
             : base (accountNumber, balance, interestRate)
         {
-            this.balance = balance;
+
             this.creditLimit = creditLimit;
-            this.interestRate = interestRate;
             this.deptRate = deptRate;
-            this.accountNumber = accountNumber;
+            this.accountType = accountType;
         }
 
 
         //get-set metoder
-        public double Balance
-        {
-            get
-            {
-                return balance;
-            }
-
-            set
-            {
-                balance = value;
-            }
-        }
-
         public int CeditLimit
         {
             get
@@ -52,19 +36,6 @@ namespace Grupp1BankApp
             set
             {
                 creditLimit = value;
-            }
-        }
-
-        public double InterestRate
-        {
-            get
-            {
-                return interestRate;
-            }
-
-            set
-            {
-                interestRate = value;
             }
         }
 
@@ -81,22 +52,23 @@ namespace Grupp1BankApp
             }
         }
 
-        public string AccountNumber
+        public string AccountType
         {
             get
             {
-                return accountNumber;
+                return accountType;
             }
 
             set
             {
-                accountNumber = value;
+                accountType = value;
             }
         }
 
 
 
-        enum accountType { };
+
+
 
     }
 }
