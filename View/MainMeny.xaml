@@ -8,14 +8,14 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="1900" MinWidth="1920">
 
-    <Grid Width="1920">
+    <Grid Width="1920" BorderBrush="#FFDA680F" BorderThickness="10,9,10,10">
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="101" Margin="316,121,0,0" Text="Välj ett alternativ:" TextWrapping="Wrap" VerticalAlignment="Top" Width="1070" TextAlignment="Center" FontSize="36"/>
         <Button x:Name="button" Height="153" Margin="97,276,0,0" VerticalAlignment="Top" Width="362" FontSize="36" Content="Sätt in pengar" Click="deposit_Click"/>
         <Button x:Name="transfer_button" Content="Överför pengar" Height="153" Margin="674,276,0,0" VerticalAlignment="Top" Width="362" FontSize="36" Click="transfer_button_Click"/>
         <Button x:Name="transactions_button" Content="Visa transaktioner" Height="153" Margin="1272,276,0,0" VerticalAlignment="Top" Width="362" FontSize="36" Click="transactions_button_Click"/>
         <Button x:Name="withraw_button" Height="153" Width="362" Content="Ta ut pengar" FontSize="36" Margin="372,540,0,0" VerticalAlignment="Top"/>
         <Button x:Name="withraw_button_Copy" Height="153" Width="362" Content="Skapa kund" FontSize="36" Margin="960,540,0,0" VerticalAlignment="Top"/>
-        <Image x:Name="LogoImage" HorizontalAlignment="Left" Height="165" Margin="1508,749,0,0" VerticalAlignment="Top" Width="169"
+        <Image x:Name="LogoImage" HorizontalAlignment="Left" Height="165" Margin="1682,861,0,0" VerticalAlignment="Top" Width="169"
                 Source="/Assets/Icon2.png" Canvas.ZIndex="4">
         </Image>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="806,202,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"/>

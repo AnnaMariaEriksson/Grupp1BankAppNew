@@ -47,9 +47,6 @@ namespace Grupp1BankApp
         
         private void button_Click(object sender, RoutedEventArgs e)
         {
-
-            
-
             listView.Items.Clear();
             List<Customer> customerlist = BankLogic.GetCustomers();
             foreach(Customer cust in customerlist)
