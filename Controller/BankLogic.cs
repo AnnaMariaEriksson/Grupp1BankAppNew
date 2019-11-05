@@ -106,19 +106,10 @@ namespace Grupp1BankApp
 		}
 
         
-        public static bool DepositMoney( string account, double amount)
+        public static bool DepositMoney( Account account, double amount)
 		{
-            
-           List<Account> accountlist = MainPage.ChoosenCustomer.CustomerAccounts;
-
-            Account SearchChoosenAccount = accountlist.FirstOrDefault(choosen => choosen.AccountNumber == account);
-
-            SearchChoosenAccount.Balance += amount;
-              
-           
-
+            account.Balance += amount;
             return true;
-			
 		}
 
 		public bool Withdraw(long SSN, int accountID, double amount)
@@ -136,8 +127,8 @@ namespace Grupp1BankApp
         public static bool AddCreditAccount(string AccNumber,Customer cust)
         {
             
-              //  Account NewAccount = new Account(AccNumber, 0, 0.5);
-                //cust.CustomerAccounts.Add(NewAccount);
+                CreditAccount NewAccount = new CreditAccount(0,5000, 0.5,7, AccNumber,"");
+                cust.CustomerAccounts.Add(NewAccount);
 
 
             //try
