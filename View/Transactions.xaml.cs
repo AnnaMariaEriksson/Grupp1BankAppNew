@@ -32,7 +32,7 @@ namespace Grupp1BankApp
         {
             foreach(Account acc in MainPage.ChoosenCustomer.CustomerAccounts)
             {
-                if(acc.AccountNumber == MainPage.ChoosenAccount)
+                if(acc.AccountNumber == MainPage.ChoosenAccount.AccountNumber)
                 {
                    foreach(Transactions trans in acc.TransactionList)
                     {
