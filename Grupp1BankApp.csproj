@@ -153,6 +153,9 @@
     <Compile Include="View\TransferMoney.xaml.cs">
       <DependentUpon>TransferMoney.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\WithdrawMoney.xaml.cs">
+      <DependentUpon>WithdrawMoney.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -208,6 +211,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\TransferMoney.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WithdrawMoney.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
