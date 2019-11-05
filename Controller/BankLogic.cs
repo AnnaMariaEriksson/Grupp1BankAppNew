@@ -108,7 +108,7 @@ namespace Grupp1BankApp
         
         public static bool DepositMoney( Account account, double amount)
 		{
-            account.Balance += amount;
+            account.balance += amount;
             return true;
 		}
 
