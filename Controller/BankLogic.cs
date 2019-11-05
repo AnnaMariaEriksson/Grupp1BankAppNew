@@ -108,22 +108,39 @@ namespace Grupp1BankApp
         
         public static bool DepositMoney( Account account, double amount)
 		{
-            
-           List<Account> accountlist = MainPage.ChoosenCustomer.CustomerAccounts;
 
-            Account SearchChoosenAccount = accountlist.FirstOrDefault(choosen => choosen.AccountNumber == account);
-
-            SearchChoosenAccount.Balance += amount;
-              
-           
+            account.Balance += amount;
 
             return true;
 		}
 
-		public bool Withdraw(string account, double amount)
-		{
-            
-		}
+        public bool Withdraw(Account acc, SavingsAcount FirstWithDraw, double amount)
+        {
+            if (acc.AccountType == "saving")
+            {
+                if (acc.Balance < amount)
+                {
+                    return false;
+                }
+
+                else if (FirstWithDraw.FirstWithDraw == false)
+                {
+                    acc.Balance -= amount;
+                }
+
+                else if (FirstWithDraw.FirstWithDraw == true)
+                {
+                    acc.Balance -= amount * 0.2 - amount;
+                }
+            }
+
+            else if (acc.Balance <= -5000)
+
+                acc.Balance -= amount;
+
+            return true;
+                    
+        }
 
         public static bool AddCreditAccount(string AccNumber,Customer cust)
         {
