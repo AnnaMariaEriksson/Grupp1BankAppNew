@@ -13,17 +13,17 @@
         <TextBlock HorizontalAlignment="Left" Margin="600,350,0,0" Text="Ditt konto:" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="300" FontSize="36"/>
         <TextBlock HorizontalAlignment="Left" Height="60" Margin="600,550,0,0" Text="Summa:" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="36"/>
         <TextBox HorizontalAlignment="Left" Height="60" Margin="1038,350,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True"/>
-        <TextBox HorizontalAlignment="Left" Height="60" Margin="1038,550,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
+        <TextBox x:Name="textsum" HorizontalAlignment="Left" Height="60" Margin="1038,550,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
         <TextBlock HorizontalAlignment="Left" Height="104" Margin="610,39,0,0" Text="Pengaöverföring" TextWrapping="Wrap" VerticalAlignment="Top" Width="682" FontSize="60" TextAlignment="Center"/>
         <Image x:Name="LogoImage" HorizontalAlignment="Left" Height="165" Margin="1682,861,0,0" VerticalAlignment="Top" Width="169"
                 Source="/Assets/Icon2.png" Canvas.ZIndex="4">
         </Image>
         <TextBlock HorizontalAlignment="Left" Margin="595,455,0,0" Text="Överför till:" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="291" FontSize="36"/>
-        <TextBox HorizontalAlignment="Left" Height="60" Margin="1038,455,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True"/>
+        <TextBox x:Name="textbox2" HorizontalAlignment="Left" Height="60" Margin="1038,455,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True"/>
         <TextBlock HorizontalAlignment="Left" Height="60" Margin="595,640,0,0" Text="Överförd summa:" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" FontSize="36"/>
         <TextBlock HorizontalAlignment="Left" Height="60" Margin="1038,640,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="36"/>
         <Button Content="Slutför" Height="130" Margin="0,801,0,0" VerticalAlignment="Top" Width="329" HorizontalAlignment="Center" FontSize="36"/>
-=======
+
    
 
     </Grid>
