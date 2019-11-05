@@ -8,15 +8,23 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="528,586,0,0" Text="Hur mycket vill du överföra:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox x:Name="textsum" HorizontalAlignment="Left" Margin="739,585,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Height="29"/>
-        <Button Content="slutför&#xD;&#xA;" Margin="919,857,0,0" VerticalAlignment="Top" Width="75" Height="32" Click="Button_Click"/>
-        <TextBlock HorizontalAlignment="Left" Margin="633,486,0,0" Text="Ditt konto:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox x:Name="choosenccount" HorizontalAlignment="Left" Margin="739,486,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="137"/>
-        <TextBlock HorizontalAlignment="Left" Margin="1007,490,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Överför till"/><Run Text=":"/></TextBlock>
-        <TextBox x:Name="textbox2" HorizontalAlignment="Left" Margin="1107,486,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
-        <TextBlock HorizontalAlignment="Left" Margin="880,239,0,0" Text="överföring" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="180" FontSize="36"/>
+
+    <Grid BorderBrush="#FFDA680F" BorderThickness="10,10,10,10">
+        <TextBlock HorizontalAlignment="Left" Margin="600,350,0,0" Text="Ditt konto:" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="300" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Height="60" Margin="600,550,0,0" Text="Summa:" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="36"/>
+        <TextBox HorizontalAlignment="Left" Height="60" Margin="1038,350,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True"/>
+        <TextBox HorizontalAlignment="Left" Height="60" Margin="1038,550,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
+        <TextBlock HorizontalAlignment="Left" Height="104" Margin="610,39,0,0" Text="Pengaöverföring" TextWrapping="Wrap" VerticalAlignment="Top" Width="682" FontSize="60" TextAlignment="Center"/>
+        <Image x:Name="LogoImage" HorizontalAlignment="Left" Height="165" Margin="1682,861,0,0" VerticalAlignment="Top" Width="169"
+                Source="/Assets/Icon2.png" Canvas.ZIndex="4">
+        </Image>
+        <TextBlock HorizontalAlignment="Left" Margin="595,455,0,0" Text="Överför till:" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="291" FontSize="36"/>
+        <TextBox HorizontalAlignment="Left" Height="60" Margin="1038,455,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True"/>
+        <TextBlock HorizontalAlignment="Left" Height="60" Margin="595,640,0,0" Text="Överförd summa:" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Height="60" Margin="1038,640,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="36"/>
+        <Button Content="Slutför" Height="130" Margin="0,801,0,0" VerticalAlignment="Top" Width="329" HorizontalAlignment="Center" FontSize="36"/>
+=======
+   
 
     </Grid>
 </Page>
