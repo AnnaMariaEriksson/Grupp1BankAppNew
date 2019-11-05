@@ -8,26 +8,18 @@ namespace Grupp1BankApp
 {
     public class SavingsAcount : Account
     {
-        public string accountType;
+        bool firstWithDraw;
 
         public SavingsAcount(string accountNumber, double balance, double InterestRate, string accountType)
-            : base(accountNumber, balance, InterestRate)
+            : base(accountNumber, balance, InterestRate, accountType)
         {
-            this.accountType = accountType;
+            this.firstWithDraw = false;
         }
 
-        public string AccountType
-        {
-            get
-            {
-                return accountType;
-            }
+        public bool FirstWithDraw { get; set; }
 
-            set
-            {
-                accountType = value;
-            }
-        }
+
+
 
     }
 }

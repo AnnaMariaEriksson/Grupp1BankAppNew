@@ -12,6 +12,8 @@ namespace Grupp1BankApp
         public double interestRate;
         public double balance;
         public string accountNumber;
+
+        public string AccountType { get; set; }
         public string AccountNumber { get; set; }
         public double Balance { get; set; }
 
@@ -20,11 +22,12 @@ namespace Grupp1BankApp
 
         List<Transactions> transactionList = new List<Transactions>();
 
-        public Account(string accountNumber, double balance, double interestRate)
+        public Account(string accountNumber, double balance, double interestRate, string accountType)
         {
             AccountNumber = accountNumber;  
             Balance = balance;  
-            InterestRate = interestRate;   
+            InterestRate = interestRate;
+            AccountType = accountType;
         }
         public string Summary
         {

@@ -121,10 +121,38 @@ namespace Grupp1BankApp
 			
 		}
 
-		public bool Withdraw(string account, double amount)
-		{
+		public bool Withdraw(double amount, Account acc, SavingsAcount firstWithDraw)
+        {
+            if (acc.AccountType == "saving")
+            {
+                if (acc.Balance < amount)
+                {
+                    return false;
+                }
+                else if (firstWithDraw.FirstWithDraw == false)
+                {
+                    acc.Balance -= amount;
+                }
+
+                else if (firstWithDraw.FirstWithDraw == true)
+                {
+                    acc.Balance -= amount * 0.02 - amount;
+                }
+            }
+
+            else if (acc.Balance > -5000)
+            {
+                return false;
+            }
+
+            else
             
-		}
+                acc.Balance -= amount;
+
+            return true;
+            
+        }   
+		
 
         public static bool AddCreditAccount(string AccNumber,Customer cust)
         {
