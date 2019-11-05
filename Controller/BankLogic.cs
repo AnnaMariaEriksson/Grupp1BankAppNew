@@ -9,7 +9,7 @@ namespace Grupp1BankApp
 
         //	private static BankLogic instance;
         static List<Customer> customerList = new List<Customer>();
-        public static List<Account> accounts = new List<Account>();
+        static List<Account> accounts = new List<Account>();
         
         public BankLogic()
 		{
@@ -77,17 +77,17 @@ namespace Grupp1BankApp
 		
 		}
 
-		public int AddSavingsAccount(long SSN)
+		public SavingsAcount AddSavingsAccount(Customer cust, string accountNumber)
 		{
 
+            //skapa ett objekt av savingsAccount
+            SavingsAcount newAcc = new SavingsAcount(accountNumber, 0, 1, "saving");
 
 
+            cust.CustomerAccounts.Add(newAcc);
 
 
-
-
-			return 0;
-			//TODO fix return statement.
+            return newAcc;
 		}
 
 		public string GetAccount(Customer cust, string accountID)
