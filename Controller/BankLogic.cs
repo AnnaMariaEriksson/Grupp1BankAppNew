@@ -54,13 +54,13 @@ namespace Grupp1BankApp
 			return cust;
 		}
 
-		//public List<string> GetCustomer(long SSN)
-		//{
-		//	List<string> customers = new List<string>();
+		public List<string> GetCustomer(long SSN)
+		{
+			List<string> customers = new List<string>();
 
-		//	return customers;
-		//	//TODO fix return statement.
-		//}
+			return customers;
+			//TODO fix return statement.
+		}
 
 		public bool ChangeCustomerName(string name, long SSN)
 		{
@@ -135,9 +135,9 @@ namespace Grupp1BankApp
 
         public static bool AddCreditAccount(string AccNumber,Customer cust)
         {
-
-            Account NewAccount = new CreditAccount(0, 5000, 0.5, 7,AccNumber) ;
-                cust.CustomerAccounts.Add(NewAccount);
+            
+              //  Account NewAccount = new Account(AccNumber, 0, 0.5);
+                //cust.CustomerAccounts.Add(NewAccount);
 
 
             //try
