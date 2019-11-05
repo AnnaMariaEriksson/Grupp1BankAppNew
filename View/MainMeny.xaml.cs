@@ -50,6 +50,9 @@ namespace Grupp1BankApp.View
             this.Frame.Navigate(typeof(RemoveAccount));
         }
 
-       
+        private void withraw_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
