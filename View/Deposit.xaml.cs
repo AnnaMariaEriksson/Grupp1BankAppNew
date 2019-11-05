@@ -32,7 +32,7 @@ namespace Grupp1BankApp.View
             sumText.Visibility = Visibility.Collapsed;
              
            
-            Balance_Text.Text = MainPage.ChoosenAccount.Balance.ToString();
+            Balance_Text.Text = MainPage.ChoosenAccount.balance.ToString();
 
 
 
@@ -51,14 +51,14 @@ namespace Grupp1BankApp.View
 
         private  void Button_Click(object sender, RoutedEventArgs e)
         {
-            
             BankLogic.DepositMoney(MainPage.ChoosenAccount, double.Parse(sum.Text));
             sumValue.Text = sum.Text;
             sumValue.Visibility = Visibility.Visible;
             sumText.Visibility = Visibility.Visible;
-            Thread.Sleep(200);
+        
             var _Frame = Window.Current.Content as Frame;
             _Frame.Navigate(typeof(MainPage));
+            Thread.Sleep(2000);
         }
     }
 }
