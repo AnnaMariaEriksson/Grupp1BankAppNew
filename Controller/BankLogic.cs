@@ -106,10 +106,10 @@ namespace Grupp1BankApp
 		}
 
         
-        public static bool DepositMoney( string account, double amount)
+        public static bool DepositMoney( Account account, double amount)
 		{
             
-            List<Account> accountlist = MainPage.ChoosenCustomer.CustomerAccounts;
+           List<Account> accountlist = MainPage.ChoosenCustomer.CustomerAccounts;
 
             Account SearchChoosenAccount = accountlist.FirstOrDefault(choosen => choosen.AccountNumber == account);
 
@@ -118,47 +118,18 @@ namespace Grupp1BankApp
            
 
             return true;
-			
 		}
 
-		public bool Withdraw(double amount, Account acc, SavingsAcount firstWithDraw)
-        {
-            if (acc.AccountType == "saving")
-            {
-                if (acc.Balance < amount)
-                {
-                    return false;
-                }
-                else if (firstWithDraw.FirstWithDraw == false)
-                {
-                    acc.Balance -= amount;
-                }
-
-                else if (firstWithDraw.FirstWithDraw == true)
-                {
-                    acc.Balance -= amount * 0.02 - amount;
-                }
-            }
-
-            else if (acc.Balance > -5000)
-            {
-                return false;
-            }
-
-            else
+		public bool Withdraw(string account, double amount)
+		{
             
-                acc.Balance -= amount;
-
-            return true;
-            
-        }   
-		
+		}
 
         public static bool AddCreditAccount(string AccNumber,Customer cust)
         {
             
-              //  Account NewAccount = new Account(AccNumber, 0, 0.5);
-                //cust.CustomerAccounts.Add(NewAccount);
+                CreditAccount NewAccount = new CreditAccount(0,5000, 0.5,7, AccNumber,"");
+                cust.CustomerAccounts.Add(NewAccount);
 
 
             //try
