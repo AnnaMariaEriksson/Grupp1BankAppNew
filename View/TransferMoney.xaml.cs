@@ -22,9 +22,34 @@ namespace Grupp1BankApp.View
     /// </summary>
     public sealed partial class TransferMoney : Page
     {
+        Account temp;
         public TransferMoney()
         {
+        
+
+            foreach (Account acc in MainPage.ChoosenCustomer.CustomerAccounts)
+            {
+                if (acc.AccountNumber == MainPage.ChoosenAccount)
+                {
+                    MainPage.ChoosenAccount = acc.AccountNumber;
+                    temp = acc;
+
+                }
+            }
+
             this.InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            temp.Balance -=double.Parse(textsum.Text);
+            foreach(Account acc in MainPage.ChoosenCustomer.CustomerAccounts)
+            {
+                if(acc.AccountNumber == textbox2.Text)
+                {
+                    acc.Balance += double.Parse(textsum.Text);
+                }
+            }
         }
     }
 }
