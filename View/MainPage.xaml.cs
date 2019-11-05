@@ -2,6 +2,7 @@
 using Grupp1BankApp.View;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -27,10 +28,11 @@ namespace Grupp1BankApp
     {
 
         public static  Customer ChoosenCustomer;
-        public static string ChoosenAccount;
+        public static Account ChoosenAccount;
         public static int kebab = 5;
         public static Account ChoosenAccountObject;
-
+        private ObservableCollection<Account> accounts = new ObservableCollection<Account>();
+        ObservableCollection<Account> AcList { get { return accounts; } }
 
 
         public MainPage()
@@ -42,14 +44,19 @@ namespace Grupp1BankApp
                 comboBox.Items.Add(cust.SSN);
                     }
 
-           
-    }
+         
+
+        }
 
         
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            listView.Items.Clear();
-            List<Customer> customerlist = BankLogic.GetCustomers();
+            try
+            {
+                listView.Items.Clear();
+            }
+            catch (Exception) { }
+                List<Customer> customerlist = BankLogic.GetCustomers();
             foreach(Customer cust in customerlist)
             {
                 if(cust.SSN == Search_Field.Text)
@@ -57,20 +64,17 @@ namespace Grupp1BankApp
                     Fnamn.Text = cust.Name;
                     PersonNummer.Text = cust.SSN;
                     ChoosenCustomer = cust;
-                    foreach (Account ac in cust.CustomerAccounts)
+
+                    try
                     {
-                        try
+                        foreach (Account ac in ChoosenCustomer.CustomerAccounts)
                         {
-                            listView.Items.Add(ac.AccountNumber );
-
-                         
-                            
-
-
-
+                            accounts.Add(ac);
                         }
-                        catch (ArgumentException) { }
                     }
+                    catch (System.NullReferenceException) { }
+
+
                 }
                 else
                 {
@@ -94,8 +98,8 @@ namespace Grupp1BankApp
                 List<Account> accountlist = MainPage.ChoosenCustomer.CustomerAccounts;
                 try
                 {
-                    ChoosenAccount = listView.SelectedItems[0].ToString();
-                    ChoosenAccountObject = accountlist.FirstOrDefault(choosen => choosen.AccountNumber == ChoosenAccount);
+                    ChoosenAccount = (Account)listView.SelectedItem;
+                 //   ChoosenAccountObject = accountlist.FirstOrDefault(choosen => choosen.AccountNumber == ChoosenAccount);
                 }
                 catch (System.Runtime.InteropServices.COMException) { }
             }

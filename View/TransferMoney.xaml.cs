@@ -29,9 +29,9 @@ namespace Grupp1BankApp.View
 
             foreach (Account acc in MainPage.ChoosenCustomer.CustomerAccounts)
             {
-                if (acc.AccountNumber == MainPage.ChoosenAccount)
+                if (acc.AccountNumber == MainPage.ChoosenAccount.AccountNumber)
                 {
-                    MainPage.ChoosenAccount = acc.AccountNumber;
+                    MainPage.ChoosenAccount = acc;
                     temp = acc;
 
                 }
