@@ -24,7 +24,11 @@ namespace Grupp1BankApp
             Balance = balance;  
             InterestRate = interestRate;   
         }
-        
+        public string Summary
+        {
+            get { return AccountNumber + " Saldo:" + balance; }
+        }
+
     }
     
 }
