@@ -8,7 +8,7 @@ namespace Grupp1BankApp
 {
     public abstract class Account
     {
-        public  string AccountNumber { get; set; }
+        public string AccountNumber { get; set; }
         public double Balance { get; set; }
         public double InterestRate { get; set; }
 
