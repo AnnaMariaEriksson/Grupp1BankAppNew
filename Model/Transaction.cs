@@ -7,13 +7,12 @@ using System.Threading.Tasks;
 namespace Grupp1BankApp
 {
     
-   public partial class Transactions
+   public class Transaction
     {
-        public Transactions(string AccountID, DateTime Date, Enum TransactionsType, double Amount, double Balance)
+        public Transaction(string AccountID, DateTime Date, double Amount, double Balance)
         {
             accountID = AccountID;
             date = Date;
-            transactionsType = TransactionsType;
             amount = Amount;
             balance = Balance;
         }
@@ -24,8 +23,6 @@ namespace Grupp1BankApp
         public DateTime date
             { get; set; }
 
-        public Enum transactionsType 
-            { get; set; }
 
         public double amount
             { get; set; }

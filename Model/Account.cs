@@ -9,18 +9,15 @@ namespace Grupp1BankApp
     public abstract class Account
     {
 
-        public double interestRate;
-        public double balance;
-        public string accountNumber;
 
         public string AccountType { get; set; }
         public string AccountNumber { get; set; }
         public double Balance { get; set; }
 
         public double InterestRate { get; set; }
-        public List<Transactions> TransactionList { get; set; }
+        public List<Transaction> TransactionList { get; set; }
 
-        List<Transactions> transactionList = new List<Transactions>();
+        List<Transaction> transactionList = new List<Transaction>();
 
         public Account(string accountNumber, double balance, double interestRate, string accountType)
         {
