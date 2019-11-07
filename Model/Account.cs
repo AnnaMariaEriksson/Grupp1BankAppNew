@@ -31,7 +31,7 @@ namespace Grupp1BankApp
         }
         public string Summary
         {
-            get { return AccountNumber + " Saldo:" + balance; }
+            get { return AccountNumber + " Saldo:" + Balance; }
         }
 
     }
