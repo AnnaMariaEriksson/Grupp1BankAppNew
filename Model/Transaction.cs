@@ -6,28 +6,31 @@ using System.Threading.Tasks;
 
 namespace Grupp1BankApp
 {
-    
-   public class Transaction
+    public class Transaction
     {
-        public Transaction(string AccountID, DateTime Date, double Amount, double Balance)
+        public string AccountID
+        { get; set; }
+
+        public DateTime Date
+        { get; set; }
+
+
+        public double Amount
+        { get; set; }
+
+        public double Balance
+        { get; set; }
+
+        public Transaction(string accountID, DateTime date, double amount, double balance)
         {
-            accountID = AccountID;
-            date = Date;
-            amount = Amount;
-            balance = Balance;
+            AccountID = accountID;
+            Date = date;
+            Amount = amount;
+            Balance = balance;
         }
-
-        public string accountID
-            { get; set; }
-
-        public DateTime date
-            { get; set; }
-
-
-        public double amount
-            { get; set; }
-
-        public double balance
-            { get; set; }
+        public string Summary
+        {
+           get { return Date + " Överfört: " + Amount + " Saldo: " + Balance; }   
+        }
     }
 }

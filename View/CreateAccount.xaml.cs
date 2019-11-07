@@ -26,15 +26,33 @@ namespace Grupp1BankApp.View
         {
             this.InitializeComponent();
             Random rand = new Random();
-            AccountNumber.Text = rand.Next(1, 100000).ToString();
+            AccountNumber.Text = "4539 0310 " + rand.Next(1000, 10000).ToString() + " " + rand.Next(1000, 10000).ToString();
             SsnNumber.Text = MainPage.ChoosenCustomer.SSN;
+            comboBox.Items.Add("Savings account");
+            comboBox.Items.Add("Credit account");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            BankLogic.AddCreditAccount(AccountNumber.Text, MainPage.ChoosenCustomer);
-            var _Frame = Window.Current.Content as Frame;
-            _Frame.Navigate(typeof(MainPage));
-        }
+            bool con = false;
+            if(comboBox.SelectedItem.ToString() == "Savings account"){
+                BankLogic.AddSavingsAccount(MainPage.ChoosenCustomer,AccountNumber.Text);
+                con = true;
+            }else if(comboBox.SelectedItem.ToString() == "Credit account")
+            {
+                BankLogic.AddCreditAccount(AccountNumber.Text, MainPage.ChoosenCustomer);
+                con = true;
+
+            }else if(comboBox.SelectedItem.ToString() == "")
+            {
+                con = false;
+            }
+
+            if (con == true)
+            {
+                var _Frame = Window.Current.Content as Frame;
+                _Frame.Navigate(typeof(MainPage));
+            }
+            }
     }
 }

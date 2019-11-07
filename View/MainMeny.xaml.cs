@@ -42,7 +42,7 @@ namespace Grupp1BankApp.View
 
         private void transfer_button_Click(object sender, RoutedEventArgs e)
         {
-          //  this.Frame.Navigate(typeof());
+            this.Frame.Navigate(typeof(TransferMoney));
         }
 
         private void remove_button_Click(object sender, RoutedEventArgs e)
@@ -52,7 +52,7 @@ namespace Grupp1BankApp.View
 
         private void withraw_button_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(WithdrawMoney));
         }
     }
 }
