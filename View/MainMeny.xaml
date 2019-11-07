@@ -13,7 +13,7 @@
         <Button x:Name="button" Height="150" Margin="250,280,0,0" VerticalAlignment="Top" Width="360" FontSize="36" Content="Sätt in pengar" Click="deposit_Click"/>
         <Button x:Name="transfer_button" Content="Överför pengar" Height="150" Margin="0,285,0,0" VerticalAlignment="Top" Width="360" FontSize="36" Click="transfer_button_Click" HorizontalAlignment="Center"/>
         <Button x:Name="transactions_button" Content="Visa transaktioner" Height="150" Margin="1280,285,0,0" VerticalAlignment="Top" Width="360" FontSize="36" Click="transactions_button_Click"/>
-        <Button x:Name="withraw_button" Height="150" Width="360" Content="Ta ut pengar" FontSize="36" Margin="500,535,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="withraw_button" Height="150" Width="360" Content="Ta ut pengar" FontSize="36" Margin="500,535,0,0" VerticalAlignment="Top" Click="withraw_button_Click"/>
         <Button x:Name="withraw_button_Copy" Height="150" Width="360" Content="Skapa kund" FontSize="36" Margin="1030,540,0,0" VerticalAlignment="Top"/>
         <Image x:Name="LogoImage" HorizontalAlignment="Left" Height="165" Margin="1682,861,0,0" VerticalAlignment="Top" Width="169"
                 Source="/Assets/Icon2.png" Canvas.ZIndex="4">
