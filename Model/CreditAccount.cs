@@ -18,14 +18,14 @@ namespace Grupp1BankApp
         public CreditAccount(double balance, int creditLimit, double interestRate, double deptRate, string accountNumber, string accountType)
             : base (accountNumber, balance, interestRate)
         {
-
+             
             this.creditLimit = creditLimit;
             this.deptRate = deptRate;
             this.accountType = accountType;
         }
 
 
-        //get-set metoder
+        //get-set metoder 
         public int CeditLimit
         {
             get
