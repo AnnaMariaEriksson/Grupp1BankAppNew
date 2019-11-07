@@ -14,7 +14,7 @@
             <ColumnDefinition Width="299*"/>
         </Grid.ColumnDefinitions>
         <Rectangle Stroke="Black" Fill="#FFDA680F" FocusVisualPrimaryBrush="Black" MinHeight="450" Margin="0,0,178,0"/>
-        <TextBox x:Name="Search_Field" HorizontalAlignment="Left" Foreground="Black" Margin="30,26,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" PlaceholderText="Personnummer" Width="179" Height="40" PlaceholderForeground="Black" FocusVisualSecondaryBrush="#99FFFFFF" FocusVisualPrimaryBrush="#FFF4ECEC"/>
+        <TextBox x:Name="Search_Field" HorizontalAlignment="Left" Foreground="Black" Margin="30,26,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" PlaceholderText="Personnummer" Width="179" Height="40" PlaceholderForeground="Black" FocusVisualSecondaryBrush="#99FFFFFF" FocusVisualPrimaryBrush="#FFF4ECEC" BeforeTextChanging="Search_Field_BeforeTextChanging"/>
         <TextBlock x:Name="FnamnText" HorizontalAlignment="Left" Foreground="Black" Margin="56,130,0,0" Text="Fullständigt namn:" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FocusVisualPrimaryBrush="#FFD33405"/>
         <TextBox x:Name="Fnamn" HorizontalAlignment="Left" Foreground="Black" Margin="90,155,0,0" Text="Null" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" TextAlignment="Center"/>
         <TextBlock x:Name="Personnummer_info" HorizontalAlignment="Left" Foreground="Black" Margin="65,195,0,0" Text="Personnummer:" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FocusVisualPrimaryBrush="#FFD33405"/>
