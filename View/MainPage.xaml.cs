@@ -135,5 +135,10 @@ namespace Grupp1BankApp
             }
             catch (Exception) { }
         }
+
+        private void Search_Field_BeforeTextChanging(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
+        {
+            args.Cancel = args.NewText.Any(c =>!char.IsDigit(c));
+        }
     }
 }
