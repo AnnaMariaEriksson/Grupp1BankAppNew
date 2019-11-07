@@ -9,11 +9,14 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="1674">
 
     <Grid BorderBrush="#FFDA680F" BorderThickness="10,10,10,10" Width="1674">
-        <ListView Margin="489,253,489,182"/>
-        <ListView x:Name="TransactionList" Margin="481,263,461,76" ItemsSource="{x:Bind transactions}" SelectionChanged="TransactionList_SelectionChanged" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
+
+        <ListView x:Name="TransactionList" Margin="481,263,461,76"  ItemsSource="{x:Bind Translist}" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:Transaction">
+                    <TextBlock Text="{x:Bind  Summary }"></TextBlock> </DataTemplate></ListView.ItemTemplate></ListView>
         <TextBlock x:Name="Text_Transactions" HorizontalAlignment="Left" Margin="614,78,0,0" Text="Transaktioner" TextWrapping="Wrap" VerticalAlignment="Top" Height="98" Width="400" FontSize="60" TextAlignment="Center"/>
         <TextBlock x:Name="Text_ValtKonto" HorizontalAlignment="Left" Margin="535,197,0,0" Text="Valt Konto:" TextWrapping="Wrap" VerticalAlignment="Top" Height="57" Width="183" FontSize="36" TextAlignment="Center"/>
-        <TextBox HorizontalAlignment="Left" Margin="759,207,0,0" Text="&#xD;&#xA;" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="397" IsReadOnly="True" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" TextAlignment="Left"/>
+        <TextBox x:Name="ChoosenText" HorizontalAlignment="Left" Margin="759,207,0,0" Text="&#xD;&#xA;" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="397" IsReadOnly="True" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" TextAlignment="Left"/>
         <Image x:Name="LogoImage" HorizontalAlignment="Left" Height="165" Margin="1682,861,0,0" VerticalAlignment="Top" Width="169"
                 Source="/Assets/Icon2.png" Canvas.ZIndex="4">
         </Image>

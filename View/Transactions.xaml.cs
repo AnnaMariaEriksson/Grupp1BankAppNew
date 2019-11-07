@@ -24,22 +24,21 @@ namespace Grupp1BankApp
     public sealed partial class Transactions : Page
     {
         private ObservableCollection<Transaction> transaction = new ObservableCollection<Transaction>();
+         ObservableCollection<Transaction> Translist { get { return transaction; } }
+
+
         public Transactions()
         {
             this.InitializeComponent();
+            ChoosenText.Text = MainPage.ChoosenAccount.AccountNumber;
+            foreach(Transaction trans in MainPage.ChoosenAccount.TransactionList)
+            {
+                transaction.Add(trans);
+            }
         }
         private void TransactionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            foreach(Account acc in MainPage.ChoosenCustomer.CustomerAccounts)
-            {
-                if(acc.AccountNumber == MainPage.ChoosenAccount.AccountNumber)
-                {
-                   foreach(Transaction trans in acc.TransactionList)
-                    {
-                       transaction.Add(trans);
-                    }
-                }
-            }
+           
         }
     }
 }
