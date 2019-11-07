@@ -11,17 +11,15 @@ namespace Grupp1BankApp
         // Attributen i CreditAccount klassen
         int creditLimit;      
         double deptRate;
-        string accountType;
         
 
         //Construktor
         public CreditAccount(double balance, int creditLimit, double interestRate, double deptRate, string accountNumber, string accountType)
-            : base (accountNumber, balance, interestRate)
+            : base (accountNumber, balance, interestRate, accountType)
         {
              
             this.creditLimit = creditLimit;
             this.deptRate = deptRate;
-            this.accountType = accountType;
         }
 
 
@@ -52,18 +50,7 @@ namespace Grupp1BankApp
             }
         }
 
-        public string AccountType
-        {
-            get
-            {
-                return accountType;
-            }
 
-            set
-            {
-                accountType = value;
-            }
-        }
 
 
 
