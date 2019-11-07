@@ -54,33 +54,20 @@ namespace Grupp1BankApp
 			return cust;
 		}
 
-		public List<string> GetCustomer(long SSN)
-		{
-			List<string> customers = new List<string>();
-
-			return customers;
-			//TODO fix return statement.
-		}
 
 		public bool ChangeCustomerName(string name, long SSN)
 		{
             MainPage.ChoosenCustomer.Name = name;
 
 			return true;
-			//TODO fix return statement.
 		}
 
-		public List<string> RemoveCustomer(long SSN)
-		{
-			List<string> removedCustomers = new List<string>();
-			return removedCustomers;
-		
-		}
+
 
 		public SavingsAcount AddSavingsAccount(Customer cust, string accountNumber)
 		{
 
-            //skapa ett objekt av savingsAccount
+            
             SavingsAcount newAcc = new SavingsAcount(accountNumber, 0, 1, "saving");
 
 
@@ -169,13 +156,5 @@ namespace Grupp1BankApp
             //TODO fix return statement.
         }
 
-
-		public List<string> GetTransactions(long SSN, int accountID)
-		{
-			List<string> transactionList = new List<string>();
-
-			return transactionList;
-			//TODO fix return statement.
-		}
 	}
 }
