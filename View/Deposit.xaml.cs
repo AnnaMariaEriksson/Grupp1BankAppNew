@@ -32,7 +32,7 @@ namespace Grupp1BankApp.View
             sumText.Visibility = Visibility.Collapsed;
              
            
-            Balance_Text.Text = MainPage.ChoosenAccount.balance.ToString();
+            Balance_Text.Text = MainPage.ChoosenAccount.Balance.ToString();
 
 
 
