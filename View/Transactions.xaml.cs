@@ -23,7 +23,7 @@ namespace Grupp1BankApp
     /// </summary>
     public sealed partial class Transactions : Page
     {
-        private ObservableCollection<Transactions> transactions = new ObservableCollection<Transactions>();
+        private ObservableCollection<Transaction> transaction = new ObservableCollection<Transaction>();
         public Transactions()
         {
             this.InitializeComponent();
@@ -34,9 +34,9 @@ namespace Grupp1BankApp
             {
                 if(acc.AccountNumber == MainPage.ChoosenAccount.AccountNumber)
                 {
-                   foreach(Transactions trans in acc.TransactionList)
+                   foreach(Transaction trans in acc.TransactionList)
                     {
-                       transactions.Add(trans);
+                       transaction.Add(trans);
                     }
                 }
             }
