@@ -50,6 +50,9 @@ namespace Grupp1BankApp.View
                     acc.Balance += double.Parse(textsum.Text);
                 }
             }
+
+            Transaction transnew = new Transaction(MainPage.ChoosenAccount.AccountNumber,DateTime.Now,double.Parse(textsum.Text),MainPage.ChoosenAccount.Balance);
+            MainPage.ChoosenAccount.TransactionList.Add(transnew);
         }
     }
 }
