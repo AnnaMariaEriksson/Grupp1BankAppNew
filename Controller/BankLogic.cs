@@ -64,11 +64,13 @@ namespace Grupp1BankApp
 
 
 
-		public SavingsAcount AddSavingsAccount(Customer cust, string accountNumber)
+		public static SavingsAcount AddSavingsAccount(Customer cust, string accountNumber)
 		{
 
-            
-            SavingsAcount newAcc = new SavingsAcount(accountNumber, 0, 1, "saving");
+            List<Transaction> tempList = new List<Transaction>();
+            //skapa ett objekt av savingsAccount
+            SavingsAcount newAcc = new SavingsAcount(accountNumber, 0, 1, "saving",tempList);
+
 
 
             cust.CustomerAccounts.Add(newAcc);
@@ -102,38 +104,42 @@ namespace Grupp1BankApp
             return true;
 		}
 
-        public bool Withdraw(Account acc, SavingsAcount FirstWithDraw, double amount)
+        public static bool Withdraw(Account acc, double amount)
         {
             if (acc.AccountType == "saving")
             {
-                if (acc.Balance < amount)
-                {
-                    return false;
-                }
+                //if (acc.Balance < amount)
+                //{
+                //    return false;
+                //}
 
-                else if (FirstWithDraw.FirstWithDraw == false)
+                //else if (acc.FirstWithDraw == true)
+              //  {
+                    acc.Balance -= amount;
+                //    acc.FirstWithDraw = false;
+                //}
+
+             //else if (acc.FirstWithDraw == false)
+                {
+                //    acc.Balance -= amount * 0.2 - amount;
+                }
+            }
+            else if (acc.AccountType == "credit")
+            {
+                if (acc.Balance >= -5000)
                 {
                     acc.Balance -= amount;
                 }
-
-                else if (FirstWithDraw.FirstWithDraw == true)
-                {
-                    acc.Balance -= amount * 0.2 - amount;
-                }
             }
-
-            else if (acc.Balance <= -5000)
-
-                acc.Balance -= amount;
-
             return true;
                     
         }
 
         public static bool AddCreditAccount(string AccNumber,Customer cust)
         {
-            
-                CreditAccount NewAccount = new CreditAccount(0,5000, 0.5,7, AccNumber,"");
+            List<Transaction> tempList = new List<Transaction>();
+
+            CreditAccount NewAccount = new CreditAccount(0,5000, 0.5,7, AccNumber,"credit",tempList);
                 cust.CustomerAccounts.Add(NewAccount);
 
 
