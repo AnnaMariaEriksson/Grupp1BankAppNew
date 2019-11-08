@@ -16,23 +16,13 @@ namespace Grupp1BankApp
        
             
         }
-       
-      
-
-
-        //public static BankLogic Instance
-        //{
-        //	get { return instance ?? (instance = new BankLogic()); }
-        //}
-
-     
 
 		public static bool AddCustomer(string name, string SSN)
 		{
-            Customer NyCustomer = new Customer(name, SSN, accounts);
-            customerList.Add(NyCustomer); 
+            Customer testCustomer = new Customer(name, SSN, accounts);
+			
 
-            if  (NyCustomer.SSN == SSN)
+            if  (testCustomer.SSN == SSN)
             {
                 return false;
             }
@@ -50,6 +40,8 @@ namespace Grupp1BankApp
 		public static List<Customer> GetCustomers()
 		{
             List<Customer> cust = customerList;
+            Customer anotherCustomer = new Customer("Pelle Karlsson", "19820505", accounts);
+            customerList.Add(anotherCustomer);
 
 			return cust;
 		}
