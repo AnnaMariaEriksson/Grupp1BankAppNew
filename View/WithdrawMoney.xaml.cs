@@ -25,6 +25,8 @@ namespace Grupp1BankApp.View
         public WithdrawMoney()
         {
             this.InitializeComponent();
+            choosentext.Text = MainPage.ChoosenAccount.AccountNumber;
+            balanceText.Text = MainPage.ChoosenAccount.Balance.ToString();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
