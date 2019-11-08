@@ -54,9 +54,14 @@ namespace Grupp1BankApp
         {
             try
             {
-                listView.Items.Clear();
+                foreach (Account ac in accounts)
+                {
+                    accounts.Remove(ac);
+                }
             }
-            catch (Exception) { }
+            catch (InvalidOperationException) {
+               
+            }
                 List<Customer> customerlist = BankLogic.GetCustomers();
             foreach(Customer cust in customerlist)
             {
