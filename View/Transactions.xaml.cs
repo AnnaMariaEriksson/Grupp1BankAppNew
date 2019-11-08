@@ -20,7 +20,7 @@ namespace Grupp1BankApp
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+    /// </summary>m
     public sealed partial class Transactions : Page
     {
         private ObservableCollection<Transaction> transaction = new ObservableCollection<Transaction>();
