@@ -69,7 +69,7 @@ namespace Grupp1BankApp
 
             List<Transaction> tempList = new List<Transaction>();
             //skapa ett objekt av savingsAccount
-            SavingsAcount newAcc = new SavingsAcount(accountNumber, 0, 1, "saving",tempList);
+            SavingsAcount newAcc = new SavingsAcount(accountNumber, 0, 1, "saving",tempList,true);
 
 
 
@@ -108,20 +108,20 @@ namespace Grupp1BankApp
         {
             if (acc.AccountType == "saving")
             {
-                //if (acc.Balance < amount)
-                //{
-                //    return false;
-                //}
-
-                //else if (acc.FirstWithDraw == true)
-              //  {
-                    acc.Balance -= amount;
-                //    acc.FirstWithDraw = false;
-                //}
-
-             //else if (acc.FirstWithDraw == false)
+               
+                if (acc.Balance < amount)
                 {
-                //    acc.Balance -= amount * 0.2 - amount;
+                    return false;
+                }
+
+                if (acc.FirstWithDraw == true)
+                {
+                    acc.Balance -= amount;
+                    acc.FirstWithDraw = false;
+                }
+               else if (acc.FirstWithDraw == false)
+                {
+                    acc.Balance -= amount * 0.2 - amount;
                 }
             }
             else if (acc.AccountType == "credit")
@@ -139,7 +139,7 @@ namespace Grupp1BankApp
         {
             List<Transaction> tempList = new List<Transaction>();
 
-            CreditAccount NewAccount = new CreditAccount(0,5000, 0.5,7, AccNumber,"credit",tempList);
+            CreditAccount NewAccount = new CreditAccount(0,5000, 0.5,7, AccNumber,"credit",tempList,true);
                 cust.CustomerAccounts.Add(NewAccount);
 
 
