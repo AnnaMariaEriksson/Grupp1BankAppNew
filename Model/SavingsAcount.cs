@@ -8,15 +8,15 @@ namespace Grupp1BankApp
 {
     public class SavingsAcount : Account
     {
-        bool firstWithDraw;
+       
 
-        public SavingsAcount(string accountNumber, double balance, double InterestRate, string accountType)
-            : base(accountNumber, balance, InterestRate, accountType)
+        public SavingsAcount(string accountNumber, double balance, double InterestRate, string accountType, List<Transaction> translist)
+            : base(accountNumber, balance, InterestRate, accountType, translist)
         {
-            this.firstWithDraw = false;
+           
         }
 
-        public bool FirstWithDraw { get; set; }
+      
 
 
 

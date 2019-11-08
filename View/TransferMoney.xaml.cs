@@ -22,27 +22,28 @@ namespace Grupp1BankApp.View
     /// </summary>
     public sealed partial class TransferMoney : Page
     {
-        Account temp;
+       // Account temp;
         public TransferMoney()
         {
         
 
-            foreach (Account acc in MainPage.ChoosenCustomer.CustomerAccounts)
-            {
-                if (acc.AccountNumber == MainPage.ChoosenAccount.AccountNumber)
-                {
-                    MainPage.ChoosenAccount = acc;
-                    temp = acc;
+            //foreach (Account acc in MainPage.ChoosenCustomer.CustomerAccounts)
+            //{
+            //    if (acc.AccountNumber == MainPage.ChoosenAccount.AccountNumber)
+            //    {
+            //        MainPage.ChoosenAccount = acc;
+            //        temp = acc;
 
-                }
-            }
-
+            //    }
+            //}
+         
             this.InitializeComponent();
+            YourAccountText.Text = MainPage.ChoosenAccount.AccountNumber;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            temp.Balance -=double.Parse(textsum.Text);
+            MainPage.ChoosenAccount.Balance -=double.Parse(textsum.Text);
             foreach(Account acc in MainPage.ChoosenCustomer.CustomerAccounts)
             {
                 if(acc.AccountNumber == textbox2.Text)
@@ -53,6 +54,8 @@ namespace Grupp1BankApp.View
 
             Transaction transnew = new Transaction(MainPage.ChoosenAccount.AccountNumber,DateTime.Now,double.Parse(textsum.Text),MainPage.ChoosenAccount.Balance);
             MainPage.ChoosenAccount.TransactionList.Add(transnew);
+            var _Frame = Window.Current.Content as Frame;
+            _Frame.Navigate(typeof(MainPage));
         }
     }
 }
