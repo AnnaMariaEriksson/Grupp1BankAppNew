@@ -9,29 +9,28 @@ namespace Grupp1BankApp
     public abstract class Account
     {
 
-        public double interestRate;
-        public double balance;
-        public string accountNumber;
 
         public string AccountType { get; set; }
         public string AccountNumber { get; set; }
         public double Balance { get; set; }
-
+        public bool FirstWithDraw { get; set; }
         public double InterestRate { get; set; }
-        public List<Transactions> TransactionList { get; set; }
+        public List<Transaction> TransactionList { get; set; }
 
-        List<Transactions> transactionList = new List<Transactions>();
+        //List<Transaction> transactionList = new List<Transaction>();
 
-        public Account(string accountNumber, double balance, double interestRate, string accountType)
+        public Account(string accountNumber, double balance, double interestRate, string accountType,List<Transaction> translist)
         {
             AccountNumber = accountNumber;  
             Balance = balance;  
             InterestRate = interestRate;
             AccountType = accountType;
+            TransactionList = translist;
+            this.FirstWithDraw = false;
         }
         public string Summary
         {
-            get { return AccountNumber + " Saldo:" + Balance; }
+            get { return AccountNumber + "     " + Balance ; }
         }
 
     }

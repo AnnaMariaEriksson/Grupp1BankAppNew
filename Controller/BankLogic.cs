@@ -16,23 +16,13 @@ namespace Grupp1BankApp
        
             
         }
-       
-      
-
-
-        //public static BankLogic Instance
-        //{
-        //	get { return instance ?? (instance = new BankLogic()); }
-        //}
-
-     
 
 		public static bool AddCustomer(string name, string SSN)
 		{
-            Customer NyCustomer = new Customer(name, SSN, accounts);
-            customerList.Add(NyCustomer); 
+            Customer testCustomer = new Customer(name, SSN, accounts);
+			
 
-            if  (NyCustomer.SSN == SSN)
+            if  (testCustomer.SSN == SSN)
             {
                 return false;
             }
@@ -50,45 +40,37 @@ namespace Grupp1BankApp
 		public static List<Customer> GetCustomers()
 		{
             List<Customer> cust = customerList;
+            Customer anotherCustomer = new Customer("Pelle Karlsson", "19820505", accounts);
+            customerList.Add(anotherCustomer);
 
 			return cust;
 		}
 
-		public List<string> GetCustomer(long SSN)
-		{
-			List<string> customers = new List<string>();
-
-			return customers;
-			//TODO fix return statement.
-		}
 
 		public bool ChangeCustomerName(string name, long SSN)
 		{
             MainPage.ChoosenCustomer.Name = name;
 
 			return true;
-			//TODO fix return statement.
 		}
 
-		public List<string> RemoveCustomer(long SSN)
-		{
-			List<string> removedCustomers = new List<string>();
-			return removedCustomers;
-		
-		}
 
-		public SavingsAcount AddSavingsAccount(Customer cust, string accountNumber)
+
+		public static SavingsAcount AddSavingsAccount(Customer cust, string accountNumber)
 		{
 
+            List<Transaction> tempList = new List<Transaction>();
             //skapa ett objekt av savingsAccount
-            SavingsAcount newAcc = new SavingsAcount(accountNumber, 0, 1, "saving");
+            SavingsAcount newAcc = new SavingsAcount(accountNumber, 0, 1, "saving",tempList);
+
 
 
             cust.CustomerAccounts.Add(newAcc);
 
 
             return newAcc;
-		}
+		}  
+
 
 		public string GetAccount(Customer cust, string accountID)
 		{
@@ -114,38 +96,42 @@ namespace Grupp1BankApp
             return true;
 		}
 
-        public bool Withdraw(Account acc, SavingsAcount FirstWithDraw, double amount)
+        public static bool Withdraw(Account acc, double amount)
         {
             if (acc.AccountType == "saving")
             {
-                if (acc.Balance < amount)
-                {
-                    return false;
-                }
+                //if (acc.Balance < amount)
+                //{
+                //    return false;
+                //}
 
-                else if (FirstWithDraw.FirstWithDraw == false)
+                //else if (acc.FirstWithDraw == true)
+              //  {
+                    acc.Balance -= amount;
+                //    acc.FirstWithDraw = false;
+                //}
+
+             //else if (acc.FirstWithDraw == false)
+                {
+                //    acc.Balance -= amount * 0.2 - amount;
+                }
+            }
+            else if (acc.AccountType == "credit")
+            {
+                if (acc.Balance >= -5000)
                 {
                     acc.Balance -= amount;
                 }
-
-                else if (FirstWithDraw.FirstWithDraw == true)
-                {
-                    acc.Balance -= amount * 0.2 - amount;
-                }
             }
-
-            else if (acc.Balance <= -5000)
-
-                acc.Balance -= amount;
-
             return true;
                     
         }
 
         public static bool AddCreditAccount(string AccNumber,Customer cust)
         {
-            
-                CreditAccount NewAccount = new CreditAccount(0,5000, 0.5,7, AccNumber,"");
+            List<Transaction> tempList = new List<Transaction>();
+
+            CreditAccount NewAccount = new CreditAccount(0,5000, 0.5,7, AccNumber,"credit",tempList);
                 cust.CustomerAccounts.Add(NewAccount);
 
 
@@ -169,13 +155,5 @@ namespace Grupp1BankApp
             //TODO fix return statement.
         }
 
-
-		public List<string> GetTransactions(long SSN, int accountID)
-		{
-			List<string> transactionList = new List<string>();
-
-			return transactionList;
-			//TODO fix return statement.
-		}
 	}
 }
