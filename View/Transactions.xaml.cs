@@ -20,26 +20,25 @@ namespace Grupp1BankApp
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+    /// </summary>m
     public sealed partial class Transactions : Page
     {
-        private ObservableCollection<Transactions> transactions = new ObservableCollection<Transactions>();
+        private ObservableCollection<Transaction> transaction = new ObservableCollection<Transaction>();
+         ObservableCollection<Transaction> Translist { get { return transaction; } }
+
+
         public Transactions()
         {
             this.InitializeComponent();
+            ChoosenText.Text = MainPage.ChoosenAccount.AccountNumber;
+            foreach(Transaction trans in MainPage.ChoosenAccount.TransactionList)
+            {
+                transaction.Add(trans);
+            }
         }
         private void TransactionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            foreach(Account acc in MainPage.ChoosenCustomer.CustomerAccounts)
-            {
-                if(acc.AccountNumber == MainPage.ChoosenAccount.AccountNumber)
-                {
-                   foreach(Transactions trans in acc.TransactionList)
-                    {
-                       transactions.Add(trans);
-                    }
-                }
-            }
+           
         }
     }
 }
