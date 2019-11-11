@@ -25,7 +25,11 @@ namespace Grupp1BankApp.View
         public MainMeny()
         {
             this.InitializeComponent();
-            textBlock1.Text = "Kontonummer:" +  MainPage.ChoosenAccount.Summary + "kr";
+            try
+            {
+                textBlock1.Text = "Kontonummer:" + MainPage.ChoosenAccount.AccountNumber +" Saldo: " +  MainPage.ChoosenAccount.Balance + " kr";
+            }
+            catch (NullReferenceException) { }
         }
 
         private void deposit_Click(object sender, RoutedEventArgs e)
