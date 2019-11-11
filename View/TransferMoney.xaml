@@ -6,16 +6,18 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="1674">
+
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="1674.4">
 
 
-    <Grid BorderBrush="#FFDA680F" BorderThickness="10,10,10,10" Width="1674">
-        <TextBlock HorizontalAlignment="Left" Margin="399,341,0,0" Text="Ditt konto:" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="300" FontSize="36"/>
-        <TextBlock HorizontalAlignment="Left" Height="60" Margin="399,541,0,0" Text="Summa:" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="36"/>
-        <TextBox x:Name="YourAccountText" HorizontalAlignment="Left" Height="60" Margin="837,341,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True"/>
-        <TextBox x:Name="textsum" HorizontalAlignment="Left" Height="60" Margin="837,541,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
-        <TextBlock HorizontalAlignment="Left" Height="104" Margin="492,133,0,0" Text="Pengaöverföring" TextWrapping="Wrap" VerticalAlignment="Top" Width="682" FontSize="60" TextAlignment="Center"/>
-        <Image x:Name="LogoImage" HorizontalAlignment="Left" Height="165" Margin="1682,861,0,0" VerticalAlignment="Top" Width="169"
+    <Grid BorderBrush="#FFDA680F" BorderThickness="10,10,10,10" Width="1674.4">
+        <TextBlock HorizontalAlignment="Left" Margin="450,350,0,0" Text="Ditt konto:" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="300" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Height="60" Margin="600,550,0,0" Text="Summa:" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="36"/>
+        <TextBox x:Name="YourAccountText" HorizontalAlignment="Left" Height="60" Margin="1038,350,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True"/>
+        <TextBox x:Name="textsum" HorizontalAlignment="Left" Height="60" Margin="1038,550,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
+        <TextBlock HorizontalAlignment="Left" Height="104" Margin="610,39,0,0" Text="Pengaöverföring" TextWrapping="Wrap" VerticalAlignment="Top" Width="682" FontSize="60" TextAlignment="Center"/>
+        <Image x:Name="LogoImage" HorizontalAlignment="Left" Height="165" Margin="1400,840,0,0" VerticalAlignment="Top" Width="169"
+
                 Source="/Assets/Icon2.png" Canvas.ZIndex="4">
         </Image>
         <TextBlock HorizontalAlignment="Left" Margin="394,446,0,0" Text="Överför till:" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="291" FontSize="36"/>
