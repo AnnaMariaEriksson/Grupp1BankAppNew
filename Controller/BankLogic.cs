@@ -29,20 +29,17 @@ namespace Grupp1BankApp
 
 		public static bool AddCustomer(string name, string SSN)
 		{
-            Customer NyCustomer = new Customer(name, SSN, accounts);
-            customerList.Add(NyCustomer); 
-
-            if  (NyCustomer.SSN == SSN)
-            {
-                return false;
-            }
-
-            else
-            {
-                return true;
-            }
-
             
+            foreach (Customer cust in customerList)
+            {
+                if (cust.SSN == SSN)
+                {
+                    return false;
+                }
+            }
+            Customer NyCustomer = new Customer(name, SSN, accounts);
+            customerList.Add(NyCustomer);
+            return true;
         }
 
 		
