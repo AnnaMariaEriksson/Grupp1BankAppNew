@@ -20,6 +20,7 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Grupp1BankApp
 {
+
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
@@ -157,4 +158,5 @@ namespace Grupp1BankApp
             ChoosenCustomer.Name = Fnamn.Text;
         }
     }
+
 }
