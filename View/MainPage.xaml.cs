@@ -87,10 +87,10 @@ namespace Grupp1BankApp
                     listView.Items.Add("Inget konto");
                 }
             }
-           
-            
 
 
+
+            ChoosenCustomer.Name = Fnamn.Text;
 
 
            
@@ -145,6 +145,16 @@ namespace Grupp1BankApp
         private void Search_Field_BeforeTextChanging(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
         {
             args.Cancel = args.NewText.Any(c =>!char.IsDigit(c));
+        }
+
+        private void Fnamn_BeforeTextChanging(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
+        {
+            
+        }
+
+        private void Fnamn_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ChoosenCustomer.Name = Fnamn.Text;
         }
     }
 }

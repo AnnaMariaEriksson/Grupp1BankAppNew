@@ -126,9 +126,10 @@ namespace Grupp1BankApp
             }
             else if (acc.AccountType == "credit")
             {
-                if (acc.Balance >= -5000)
+                if (acc.Balance > -5000)
                 {
                     acc.Balance -= amount;
+
                 }
             }
             return true;
