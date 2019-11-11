@@ -117,6 +117,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Controller\BankLogic.cs" />
+    <Compile Include="Controller\PrintCustomerToFile.cs" />
     <Compile Include="Model\CreditAccount.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="App.xaml.cs">
@@ -173,6 +174,7 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Customers.txt" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
