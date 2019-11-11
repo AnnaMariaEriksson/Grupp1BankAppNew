@@ -39,7 +39,7 @@ namespace Grupp1BankApp
             }
             Customer NyCustomer = new Customer(name, SSN, accounts);
             customerList.Add(NyCustomer);
-			PrintCustomerToFile.Print(customerList);
+			//PrintCustomerToFile.Print(customerList);
             return true;
         }
 
