@@ -14,8 +14,8 @@ namespace Grupp1BankApp
         
 
         //Construktor
-        public CreditAccount(double balance, int creditLimit, double interestRate, double deptRate, string accountNumber, string accountType,List<Transaction> translist)
-            : base (accountNumber, balance, interestRate, accountType, translist)
+        public CreditAccount(double balance, int creditLimit, double interestRate, double deptRate, string accountNumber, string accountType,List<Transaction> translist,bool firstwithraw)
+            : base (accountNumber, balance, interestRate, accountType, translist,firstwithraw)
         {
              
             this.creditLimit = creditLimit;
