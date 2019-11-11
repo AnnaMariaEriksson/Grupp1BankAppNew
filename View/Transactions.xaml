@@ -10,20 +10,20 @@
 
     <Grid BorderBrush="#FFDA680F" BorderThickness="10,10,10,10" Width="1672.8">
 
-        <ListView x:Name="TransactionList" Margin="491,274,471,232"  ItemsSource="{x:Bind Translist}" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5">
+        <ListView x:Name="TransactionList" Margin="491,274,471,232"  ItemsSource="{x:Bind Translist}" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" FontSize="20">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="local:Transaction">
-                    <TextBlock Text="{x:Bind  Summary }"></TextBlock>
+                    <TextBlock FontSize="20" Text="{x:Bind  Summary }"></TextBlock>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
         <TextBlock x:Name="Text_Transactions" HorizontalAlignment="Left" Margin="650,80,0,0" Text="Transaktioner" TextWrapping="Wrap" VerticalAlignment="Top" Height="98" Width="400" FontSize="60" TextAlignment="Center"/>
         <TextBlock x:Name="Text_ValtKonto" HorizontalAlignment="Left" Margin="535,197,0,0" Text="Valt Konto:" TextWrapping="Wrap" VerticalAlignment="Top" Height="57" Width="183" FontSize="36" TextAlignment="Center"/>
-        <TextBox x:Name="ChoosenText" HorizontalAlignment="Left" Margin="759,207,0,0" Text="&#xD;&#xA;" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="397" IsReadOnly="True" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" TextAlignment="Left"/>
+        <TextBox x:Name="ChoosenText" HorizontalAlignment="Left" Margin="759,207,0,0" Text="&#xD;&#xA;" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="397" IsReadOnly="True" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" TextAlignment="Left" FontSize="20"/>
         <Image x:Name="LogoImage" HorizontalAlignment="Left" Height="165" Margin="1400,840,0,0" VerticalAlignment="Top" Width="169"
                 Source="/Assets/Icon2.png" Canvas.ZIndex="4">
         </Image>
-        <Button Content="Button" Height="100" Margin="720,870,0,0" VerticalAlignment="Top" Width="250" FontSize="36"/>
+        <Button Content="Spara till fil" Height="62" Margin="952,843,0,0" VerticalAlignment="Top" Width="240" FontSize="36"/>
 
     </Grid>
 </Page>

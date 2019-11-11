@@ -43,7 +43,7 @@
         <ListView x:Name="listView" BorderBrush="Black" BorderThickness="2,2,2,2" ItemsSource="{x:Bind AcList}" SelectionChanged="listView_SelectionChanged" HorizontalAlignment="Left" Width="200" MinHeight="150" Height="349" VerticalAlignment="Center" Grid.Row="10" Grid.Column="1" Margin="16,0,0,0">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="local:Account">
-                    <TextBlock Text="{x:Bind Summary}"></TextBlock>
+                    <TextBlock Text="{x:Bind AccountNumber}"></TextBlock>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

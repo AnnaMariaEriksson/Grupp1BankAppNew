@@ -12,7 +12,7 @@
         <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Height="101" Margin="0,77,0,0" Text="Välj ett alternativ:" TextWrapping="Wrap" VerticalAlignment="Top" Width="1070" TextAlignment="Center" FontSize="36"/>
 
         <Button x:Name="button" Height="150" Margin="302,274,0,0" VerticalAlignment="Top" Width="360" FontSize="36" Content="Sätt in pengar" Click="deposit_Click"/>
-        <Button x:Name="transfer_button" Content="Överför pengar" Height="150" Margin="987,569,0,0" VerticalAlignment="Top" Width="360" FontSize="36" Click="transfer_button_Click"/>
+        <Button x:Name="transfer_button" Content="Överför pengar" Height="150" Margin="979,569,0,0" VerticalAlignment="Top" Width="360" FontSize="36" Click="transfer_button_Click"/>
         <Button x:Name="transactions_button" Content="Visa transaktioner" Height="150" Margin="977,274,0,0" VerticalAlignment="Top" Width="360" FontSize="36" Click="transactions_button_Click"/>
         <Button x:Name="withraw_button" Height="150" Width="360" Content="Ta ut pengar" FontSize="36" Margin="302,569,0,0" VerticalAlignment="Top" Click="withraw_button_Click"/>
         <Image x:Name="LogoImage" HorizontalAlignment="Left" Height="165" Margin="1400,840,0,0" VerticalAlignment="Top" Width="169"

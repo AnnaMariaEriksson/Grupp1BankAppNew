@@ -45,8 +45,22 @@ namespace Grupp1BankApp
             foreach (Customer cust in BankLogic.GetCustomers()) {
                 comboBox.Items.Add(cust.SSN);
                     }
+            try
+            {
+                Search_Field.Text = ChoosenCustomer.SSN;
 
-         
+            }
+            catch (Exception) { }
+
+            if(Search_Field != null)
+            {
+                try
+                {
+                    button_Click(null, null);
+                }
+                catch (Exception) { }
+            }
+
 
         }
 
