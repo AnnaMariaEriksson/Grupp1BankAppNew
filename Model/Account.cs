@@ -13,20 +13,26 @@ namespace Grupp1BankApp
         public string AccountType { get; set; }
         public string AccountNumber { get; set; }
         public double Balance { get; set; }
-        public bool FirstWithDraw { get; set; }
+        public bool firstWithDraw = true;
         public double InterestRate { get; set; }
         public List<Transaction> TransactionList { get; set; }
 
         //List<Transaction> transactionList = new List<Transaction>();
 
-        public Account(string accountNumber, double balance, double interestRate, string accountType,List<Transaction> translist)
+        public Account(string accountNumber, double balance, double interestRate, string accountType,List<Transaction> translist, bool firstwithraw)
         {
             AccountNumber = accountNumber;  
             Balance = balance;  
             InterestRate = interestRate;
             AccountType = accountType;
             TransactionList = translist;
-            this.FirstWithDraw = false;
+            this.firstWithDraw = firstwithraw;
+        }
+
+        public bool FirstWithDraw
+        {
+            get { return firstWithDraw; }
+            set { firstWithDraw = value; }
         }
         public string Summary
         {

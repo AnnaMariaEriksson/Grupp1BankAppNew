@@ -43,17 +43,24 @@ namespace Grupp1BankApp.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainPage.ChoosenAccount.Balance -=double.Parse(textsum.Text);
-            foreach(Account acc in MainPage.ChoosenCustomer.CustomerAccounts)
+            if (MainPage.ChoosenAccount.Balance > double.Parse(textsum.Text))
             {
-                if(acc.AccountNumber == textbox2.Text)
-                {
-                    acc.Balance += double.Parse(textsum.Text);
-                }
-            }
+                MainPage.ChoosenAccount.Balance -= double.Parse(textsum.Text);
 
-            Transaction transnew = new Transaction(MainPage.ChoosenAccount.AccountNumber,DateTime.Now,double.Parse(textsum.Text),MainPage.ChoosenAccount.Balance);
-            MainPage.ChoosenAccount.TransactionList.Add(transnew);
+                foreach (Account acc in MainPage.ChoosenCustomer.CustomerAccounts)
+                {
+                    if (acc.AccountNumber == textbox2.Text)
+                    {
+                        acc.Balance += double.Parse(textsum.Text);
+                        Transaction transnew = new Transaction(MainPage.ChoosenAccount.AccountNumber, DateTime.Now, double.Parse(textsum.Text), MainPage.ChoosenAccount.Balance);
+                        MainPage.ChoosenAccount.TransactionList.Add(transnew);
+                    }
+                }
+
+            }
+           
+
+          
             var _Frame = Window.Current.Content as Frame;
             _Frame.Navigate(typeof(MainPage));
         }
