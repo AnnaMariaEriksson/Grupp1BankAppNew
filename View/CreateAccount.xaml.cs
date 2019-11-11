@@ -30,6 +30,7 @@ namespace Grupp1BankApp.View
             SsnNumber.Text = MainPage.ChoosenCustomer.SSN;
             comboBox.Items.Add("Savings account");
             comboBox.Items.Add("Credit account");
+            comboBox.SelectedIndex = 0;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

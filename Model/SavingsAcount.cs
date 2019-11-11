@@ -10,8 +10,8 @@ namespace Grupp1BankApp
     {
        
 
-        public SavingsAcount(string accountNumber, double balance, double InterestRate, string accountType, List<Transaction> translist)
-            : base(accountNumber, balance, InterestRate, accountType, translist)
+        public SavingsAcount(string accountNumber, double balance, double InterestRate, string accountType, List<Transaction> translist,bool firstwithraw)
+            : base(accountNumber, balance, InterestRate, accountType, translist,firstwithraw)
         {
            
         }
