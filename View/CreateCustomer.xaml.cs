@@ -35,5 +35,19 @@ namespace Grupp1BankApp.View
             var _Frame = Window.Current.Content as Frame;
             _Frame.Navigate(typeof(MainPage));
         }
+
+        private void SsnText_BeforeTextChanging(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
+        {
+            args.Cancel = args.NewText.Any(c => !char.IsDigit(c));
+            if (!args.Cancel && args.NewText.Length == 1 && SsnText.Text == "")
+                sender.SelectionStart = args.NewText.Length + 1;
+        }
+
+        private void NameText_BeforeTextChanging(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
+        {
+            args.Cancel = args.NewText.Any(c => char.IsDigit(c));
+            if (!args.Cancel && args.NewText.Length == 1 && NameText.Text == "")
+                sender.SelectionStart = args.NewText.Length + 1;
+        }
     }
 }
