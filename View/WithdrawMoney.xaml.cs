@@ -32,8 +32,12 @@ namespace Grupp1BankApp.View
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             BankLogic.Withdraw(MainPage.ChoosenAccount, double.Parse(Textsum.Text));
-            Transaction transnew = new Transaction(MainPage.ChoosenAccount.AccountNumber, DateTime.Now, double.Parse(Textsum.Text), MainPage.ChoosenAccount.Balance);
-            MainPage.ChoosenAccount.TransactionList.Add(transnew);
+            if(MainPage.ChoosenAccount.Balance > -5000)
+            {
+                Transaction transnew = new Transaction(MainPage.ChoosenAccount.AccountNumber, DateTime.Now, double.Parse(Textsum.Text), MainPage.ChoosenAccount.Balance);
+                MainPage.ChoosenAccount.TransactionList.Add(transnew);
+            }
+          
             var _Frame = Window.Current.Content as Frame;
             _Frame.Navigate(typeof(MainPage));
         }
