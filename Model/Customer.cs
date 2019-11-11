@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Grupp1BankApp
 {
-
+	[Serializable]
     public class Customer
     {
         public List<Account> CustomerAccounts = new List<Account>();
