@@ -6,18 +6,18 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="1674">
 
-    <Grid BorderBrush="#FFDA680F" BorderThickness="10,10,10,10">
+    <Grid BorderBrush="#FFDA680F" BorderThickness="10,10,10,10" Width="1674">
         <Image x:Name="LogoImage" HorizontalAlignment="Left" Height="165" Margin="1692,871,0,0" VerticalAlignment="Top" Width="169"
             Source="34601bbc-8674-4593-8fc7-8951b21fbc34" Canvas.ZIndex="4"/>
         <TextBlock HorizontalAlignment="Center" Margin="0,388,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="300" FontSize="36" TextAlignment="Center"><Run Text="Kontonummer"/><Run Text=":"/><LineBreak/><Run/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Height="60" Margin="820,602,0,0" Text="Personnummer:" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="36" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Center" Height="60" Margin="0,613,0,0" Text="Personnummer:" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="36" TextAlignment="Center"/>
         <TextBox x:Name="AccountNumber" HorizontalAlignment="Center" Height="60" Margin="0,484,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True"/>
         <TextBlock HorizontalAlignment="Center" Height="104" Margin="0,43,0,0" Text="Skapa ett konto" TextWrapping="Wrap" VerticalAlignment="Top" Width="682" FontSize="60" TextAlignment="Center"/>
         <Button  x:Name="create_account_button" Content="Spara" Height="132" Margin="0,820,0,0" VerticalAlignment="Top" Width="362" HorizontalAlignment="Center" FontSize="36" Click="Button_Click"/>
         <TextBox x:Name="SsnNumber" HorizontalAlignment="Center" Height="60" Margin="0,687,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True"/>
-        <ComboBox x:Name="comboBox" Margin="954,307,0,0" Width="120"/>
+        <ComboBox x:Name="comboBox" Margin="0,327,0,0" Width="328" HorizontalAlignment="Center"/>
 
     </Grid>
 </Page>
