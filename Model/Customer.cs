@@ -19,15 +19,5 @@ namespace Grupp1BankApp
 	        SSN = ssn;
             CustomerAccounts = accounts;
         }
-
-
-
-
-
-
-
-
-
-
     }
 }
