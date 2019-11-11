@@ -16,11 +16,19 @@ namespace Grupp1BankApp
        
             
         }
+       
+      
+
+
+        //public static BankLogic Instance
+        //{
+        //	get { return instance ?? (instance = new BankLogic()); }
+        //}
+
+     
 
 		public static bool AddCustomer(string name, string SSN)
 		{
-
-
             
             foreach (Customer cust in customerList)
             {
@@ -34,24 +42,14 @@ namespace Grupp1BankApp
             return true;
         }
 
-		
 
-		public static List<Customer> GetCustomers()
-		{
+
+        public static List<Customer> GetCustomers()
+        {
             List<Customer> cust = customerList;
-            Customer anotherCustomer = new Customer("Pelle Karlsson", "19820505", accounts);
-            customerList.Add(anotherCustomer);
 
-			return cust;
-		}
-
-
-		public bool ChangeCustomerName(string name, long SSN)
-		{
-            MainPage.ChoosenCustomer.Name = name;
-
-			return true;
-		}
+            return cust;
+        }
 
 
 
@@ -70,21 +68,6 @@ namespace Grupp1BankApp
             return newAcc;
 		}  
 
-
-		public string GetAccount(Customer cust, string accountID)
-		{
-            string acc = null;
-			foreach (Account ac in cust.CustomerAccounts)
-            {
-                if (accountID == ac.AccountNumber)
-                {
-                    acc =  ac.AccountNumber + " " + ac.Balance + " " + ac.InterestRate;
-                    break;
-                } 
-            }
-            return acc;
-			
-		}
 
         
         public static bool DepositMoney( Account account, double amount)
@@ -135,22 +118,22 @@ namespace Grupp1BankApp
                 cust.CustomerAccounts.Add(NewAccount);
 
 
-            //try
-            //{
-            //    foreach (Account ac in cust.CustomerAccounts)
-            //    {
-            //        if (ac.AccountNumber == AccNumber)
-            //        {
-            //            cust.CustomerAccounts.Remove(NewAccount);
-            //            return false;
-            //        }
+            try
+            {
+                foreach (Account ac in cust.CustomerAccounts)
+                {
+                    if (ac.AccountNumber == AccNumber)
+                    {
+                        cust.CustomerAccounts.Remove(NewAccount);
+                        return false;
+                    }
 
 
-            //    }
-            //}
-            //catch (System.InvalidOperationException) { }
+                }
+            }
+            catch (System.InvalidOperationException) { }
 
-           
+
             return true;
             //TODO fix return statement.
         }
