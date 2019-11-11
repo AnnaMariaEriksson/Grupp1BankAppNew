@@ -117,6 +117,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Controller\BankLogic.cs" />
+    <Compile Include="Controller\PrintCustomerToFile.cs" />
     <Compile Include="Model\CreditAccount.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="App.xaml.cs">
