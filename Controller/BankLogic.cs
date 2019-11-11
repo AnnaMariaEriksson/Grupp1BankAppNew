@@ -96,7 +96,7 @@ namespace Grupp1BankApp
                 }
                else if (acc.FirstWithDraw == false)
                 {
-                    acc.Balance -= amount * 0.2 - amount;
+                  acc.Balance =  acc.Balance - (amount - (amount * 0.2));
                 }
             }
             else if (acc.AccountType == "credit")
