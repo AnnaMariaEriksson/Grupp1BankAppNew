@@ -22,21 +22,35 @@ namespace Grupp1BankApp.View
 	/// </summary>
 	public sealed partial class BankLoan : Page
 	{
-		private Customer customer;
+		
 		public BankLoan()
 		{
 			this.InitializeComponent();
-			ApprovedForLoanLabel.Text = MainPage.ChoosenAccount.Summary;
+			//CustomerAccountInfoLabel.Text = MainPage.ChoosenAccount.Summary;
+			
 		}
 
 		private void ApproveBankloanButton_Click(object sender, RoutedEventArgs e)
 		{
-
+			CustomerAccountInfoLabel.Text = "Lånet har beviljats!";
 		}
 
 		private void DoNotApproveBankloanButton_Click(object sender, RoutedEventArgs e)
 		{
+			CustomerAccountInfoLabel.Text = "Lånet har avslagits.";
+		}
 
+		private void AmountToBorrowField_TextChanged(object sender, TextChangedEventArgs e)
+		{
+			
+		}
+
+		private void CalculateSumButton_Click(object sender, RoutedEventArgs e)
+		{
+			int amount = int.Parse(AmountToBorrowField.Text);
+			int years = int.Parse(PaymentPeriodForLoanField.Text);
+			int sum = int.Parse(SumPerMonthToPayBack.Text);
+			sum = years / amount / 12;
 		}
 	}
 }
