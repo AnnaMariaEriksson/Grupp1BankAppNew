@@ -125,6 +125,9 @@
     </Compile>
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\SavingsAcount.cs" />
+    <Compile Include="View\BankLoan.xaml.cs">
+      <DependentUpon>BankLoan.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\CreateAccount.xaml.cs">
       <DependentUpon>CreateAccount.xaml</DependentUpon>
     </Compile>
@@ -180,6 +183,10 @@
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="View\BankLoan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\CreateAccount.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
