@@ -10,7 +10,7 @@ namespace Grupp1BankApp
 
 		public static void Print(List<Customer> customersList)
 		{
-			string path = "C:\\Users\\anna-\\source\\repos\\Bank\\Customers.txt";
+			string path = "~/Customers.txt";
 
 			using (StreamWriter writer = new StreamWriter(path, true))
 			{

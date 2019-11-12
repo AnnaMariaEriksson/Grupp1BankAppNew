@@ -13,11 +13,10 @@ namespace Grupp1BankApp
         public string Name { get; set; }
         public string SSN { get; set; }
 
-        public Customer(string name, string ssn, List<Account> accounts)
+        public Customer(string name, string ssn)
         {
 	        Name = name;
 	        SSN = ssn;
-            CustomerAccounts = accounts;
         }
     }
 }

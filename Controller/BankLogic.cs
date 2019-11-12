@@ -8,13 +8,18 @@ namespace Grupp1BankApp
 	{
 
         //	private static BankLogic instance;
-        static List<Customer> customerList = new List<Customer>();
-        static List<Account> accounts = new List<Account>();
+        private static List<Customer> customerList = new List<Customer>()
+        {
+	        new Customer("Kalle Karlsson", "19820505"),
+	        new Customer("Pelle Nilsson", "19840227")
+
+        };
+        //static List<Account> accounts = new List<Account>();
         
         public BankLogic()
-		{
-       
-            
+        {
+	        AddSavingsAccount(customerList[0], "1001");
+
         }
        
       
@@ -37,18 +42,16 @@ namespace Grupp1BankApp
                     return false;
                 }
             }
-            Customer NyCustomer = new Customer(name, SSN, accounts);
+            Customer NyCustomer = new Customer(name, SSN);
             customerList.Add(NyCustomer);
 			PrintCustomerToFile.Print(customerList);
             return true;
         }
 
-
-
-        public static List<Customer> GetCustomers()
+		public static List<Customer> GetCustomers()
         {
             List<Customer> cust = customerList;
-
+			
             return cust;
         }
 
