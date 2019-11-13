@@ -35,11 +35,24 @@ namespace Grupp1BankApp
 
         private ObservableCollection<Account> accounts = new ObservableCollection<Account>();
         ObservableCollection<Account> AcList { get { return accounts; } }
-
+       
 
         public MainPage()
         {
             this.InitializeComponent();
+            
+            //test kund
+ 
+            while (BankLogic.runOnce == 1)
+            {
+                BankLogic.AddCustomer("Berit Nillson", "192304237494");
+                BankLogic.AddSavingsAccount(BankLogic.GetCustomers().Find(customer => customer.SSN == "192304237494"),"54535453");
+                BankLogic.AddCreditAccount("685876899980",BankLogic.GetCustomers().Find(customer => customer.SSN == "192304237494"));
+
+                BankLogic.runOnce++;
+            }
+            //
+
             MainFrame.Navigate(typeof(NotSelected_Page));
 
             foreach (Customer cust in BankLogic.GetCustomers()) {
@@ -99,7 +112,11 @@ namespace Grupp1BankApp
                 }
                 else
                 {
-                    listView.Items.Add("Inget konto");
+                    try
+                    {
+                        listView.Items.Add("Inget konto");
+                    }
+                    catch (Exception) { }
                 }
             }
 
@@ -107,7 +124,7 @@ namespace Grupp1BankApp
 
             ChoosenCustomer.Name = Fnamn.Text;
 
-
+            button.IsEnabled = false;
            
             
         }
@@ -137,6 +154,7 @@ namespace Grupp1BankApp
         private void Ssn_Selected(object sender, SelectionChangedEventArgs e)
         {
             Search_Field.Text = comboBox.Text;
+            button.IsEnabled = true;
         }
 
         private void addCustomer_button_Copy_Click(object sender, RoutedEventArgs e)
