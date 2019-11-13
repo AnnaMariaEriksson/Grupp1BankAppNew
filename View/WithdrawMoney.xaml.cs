@@ -32,7 +32,7 @@ namespace Grupp1BankApp.View
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             BankLogic.Withdraw(MainPage.ChoosenAccount, double.Parse(Textsum.Text));
-            if(MainPage.ChoosenAccount.Balance > -5000)
+            if(MainPage.ChoosenAccount.Balance <= -5000)
             {
                 Transaction transnew = new Transaction(MainPage.ChoosenAccount.AccountNumber, DateTime.Now, double.Parse(Textsum.Text), MainPage.ChoosenAccount.Balance);
                 MainPage.ChoosenAccount.TransactionList.Add(transnew);
