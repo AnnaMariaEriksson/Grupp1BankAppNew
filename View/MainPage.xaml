@@ -10,27 +10,22 @@
 
     <Grid Height="1080" VerticalAlignment="Top">
         <Grid.RowDefinitions>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="86*"/>
-            <RowDefinition Height="111*"/>
-            <RowDefinition Height="35*"/>
-            <RowDefinition Height="79*"/>
-            <RowDefinition Height="40*"/>
-            <RowDefinition Height="80*"/>
 
-            <RowDefinition Height="69*"/>
-            <RowDefinition Height="72*"/>
-            <RowDefinition Height="307*"/>
-            <RowDefinition Height="151*"/>
-            <RowDefinition Height="0*"/>
-
-
-
-
-
-
-
-
+             <RowDefinition Height="26*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="366*"/>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="200*"/>
 
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
