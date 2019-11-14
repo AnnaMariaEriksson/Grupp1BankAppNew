@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace Grupp1BankApp
@@ -10,7 +11,9 @@ namespace Grupp1BankApp
 
 		public static void Print(List<Customer> customersList)
 		{
-			string path = "~/Customers.txt";
+			string directory = Directory.GetCurrentDirectory();
+            string filename = "Customers.txt";
+            string path = "C:\\Users\\babyb\\Desktop\\Customers\\Customers.txt";
 
 			using (StreamWriter writer = new StreamWriter(path, true))
 			{

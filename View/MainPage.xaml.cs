@@ -21,136 +21,168 @@ using Windows.UI.Xaml.Navigation;
 namespace Grupp1BankApp
 {
 
-	/// <summary>
-	/// An empty page that can be used on its own or navigated to within a Frame.
-	/// </summary>
-	/// 
-	public sealed partial class MainPage : Page
-	{
+    /// <summary>
+    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// </summary>
+    /// 
+    public sealed partial class MainPage : Page
+    {
 
-		public static Customer ChoosenCustomer;
-		public static Account ChoosenAccount;
-		public static int kebab = 5;
-		public static Account ChoosenAccountObject;
+       
+        public static Customer ChoosenCustomer { get; set; }
+        public static Account ChoosenAccount;
+        public static int kebab = 5;
+        public static Account ChoosenAccountObject;
 
-		private ObservableCollection<Account> accounts = new ObservableCollection<Account>();
-		ObservableCollection<Account> AcList { get { return accounts; } }
+        private ObservableCollection<Account> accounts = new ObservableCollection<Account>();
+        ObservableCollection<Account> AcList { get { return accounts; } }
 
 
-		public MainPage()
-		{
-			this.InitializeComponent();
-			MainFrame.Navigate(typeof(NotSelected_Page));
+        public MainPage()
+        {
+            this.InitializeComponent();
 
-			foreach (Customer cust in BankLogic.GetCustomers())
-			{
-				comboBox.Items.Add(cust.SSN);
-			}
-		}
-		private void button_Click(object sender, RoutedEventArgs e)
-		{
-			try
-			{
-				foreach (Account ac in accounts)
-				{
-					accounts.Remove(ac);
-				}
-			}
-			catch (InvalidOperationException)
-			{
+            //test kund
 
-			}
-			List<Customer> customerlist = BankLogic.GetCustomers();
-			foreach (Customer cust in customerlist)
-			{
-				if (cust.SSN == Search_Field.Text)
-				{
-					Fnamn.Text = cust.Name;
-					PersonNummer.Text = cust.SSN;
-					ChoosenCustomer = cust;
+            while (BankLogic.runOnce <= 1)
+            {
+                BankLogic.AddCustomer("Berit Nillson", "192304237494");
+                BankLogic.AddSavingsAccount(BankLogic.GetCustomers().Find(customer => customer.SSN == "192304237494"), "12345");
+                BankLogic.AddCreditAccount("1234", BankLogic.GetCustomers().Find(customer => customer.SSN == "192304237494"));
 
-					try
-					{
-						foreach (Account ac in ChoosenCustomer.CustomerAccounts)
-						{
-							accounts.Add(ac);
-						}
-					}
-					catch (System.NullReferenceException) { }
-					
-				}
-				else
-				{
-					listView.Items.Add("Inget konto");
-				}
-			}
-			ChoosenCustomer.Name = Fnamn.Text;
-		}
+                BankLogic.runOnce++;
+            }
+            //
 
-		private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
-			try
-			{
-				List<Account> accountlist = MainPage.ChoosenCustomer.CustomerAccounts;
-				try
-				{
-					ChoosenAccount = (Account)listView.SelectedItem;
-					//   ChoosenAccountObject = accountlist.FirstOrDefault(choosen => choosen.AccountNumber == ChoosenAccount);
-				}
-				catch (System.Runtime.InteropServices.COMException) { }
-			}
-			catch (NullReferenceException) { }
-			// test = (Account)sender;            
-			MainFrame.Navigate(typeof(MainMeny));
-		}
+            MainFrame.Navigate(typeof(NotSelected_Page));
 
-		private void addCustomer_button_Click(object sender, RoutedEventArgs e)
-		{
-			MainFrame.Navigate(typeof(CreateCustomer));
-		}
+            foreach (Customer cust in BankLogic.GetCustomers()) {
+                comboBox.Items.Add(cust.SSN);
+            }
+            try
+            {
+                Search_Field.Text = ChoosenCustomer.SSN;
 
-		private void Ssn_Selected(object sender, SelectionChangedEventArgs e)
-		{
-			Search_Field.Text = comboBox.Text;
-		}
+            }
+            catch (Exception) { }
 
-		private void addCustomer_button_Copy_Click(object sender, RoutedEventArgs e)
-		{
-			try
-			{
-				MainFrame.Navigate(typeof(CreateAccount));
-			}
-			catch (Exception) { }
-		}
+            if (Search_Field != null)
+            {
+                try
+                {
+                    button_Click(null, null);
+                }
+                catch (Exception) { }
+            }
 
-		private void RemoveCustomer_button_Click(object sender, RoutedEventArgs e)
-		{
-			try
-			{
-				MainFrame.Navigate(typeof(RemoveAccount));
-			}
-			catch (Exception) { }
-		}
 
-		private void Search_Field_BeforeTextChanging(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
-		{
-			args.Cancel = args.NewText.Any(c => !char.IsDigit(c));
-		}
+        }
 
-		private void Fnamn_BeforeTextChanging(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
-		{
 
-		}
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            if (Search_Field.Text != "" || comboBox.Text != "")
+            {
+                try
 
-		private void Fnamn_TextChanged(object sender, TextChangedEventArgs e)
-		{
-			ChoosenCustomer.Name = Fnamn.Text;
-		}
 
-		private void BorrowMoney_Click(object sender, RoutedEventArgs e)
-		{
-			MainFrame.Navigate(typeof(BankLoan));
-		}
-	}
+                {
+                    foreach (Account ac in AcList)
+                    {
+                        accounts.Remove(ac);
+                    }
+                }
+                catch (InvalidOperationException)
+                {
+
+                }
+
+                try
+                {
+                    ChoosenCustomer = BankLogic.GetCustomers().Find(cust => cust.SSN == Search_Field.Text);
+                }
+                catch (NullReferenceException) { }
+
+                Fnamn.Text = ChoosenCustomer.Name;
+                PersonNummer.Text = ChoosenCustomer.SSN;
+                ChoosenCustomer.Name = Fnamn.Text;
+                button.IsEnabled = false;
+                try
+                {
+                    if (ChoosenCustomer.CustomerAccounts.Count != 0)
+                    {
+                        foreach (Account ac in ChoosenCustomer.CustomerAccounts)
+                        {
+                            accounts.Add(ac);
+                        }
+                    }
+                    else
+                    {
+                        try { List<Transaction> emptytrans = new List<Transaction>(); Account empty = new SavingsAcount("Inget konto", 0, 0, "saving",emptytrans , false); AcList.Add(empty); } catch (Exception) { }
+                    }
+                }
+                catch (System.NullReferenceException) { }
+            }
+            else { button.IsEnabled = false; }
+        }     
+        
+
+        private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                List<Account> accountlist = MainPage.ChoosenCustomer.CustomerAccounts;
+                try
+                {
+                    ChoosenAccount = (Account)listView.SelectedItem;
+                 //   ChoosenAccountObject = accountlist.FirstOrDefault(choosen => choosen.AccountNumber == ChoosenAccount);
+                }
+                catch (System.Runtime.InteropServices.COMException) { }
+            }
+            catch (NullReferenceException) { }
+           // test = (Account)sender;            
+            MainFrame.Navigate(typeof(MainMeny));
+        }
+
+        private void addCustomer_button_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(CreateCustomer));
+        }
+
+        private void Ssn_Selected(object sender, SelectionChangedEventArgs e)
+        {
+            Search_Field.Text = comboBox.Text;
+            ChoosenCustomer = BankLogic.GetCustomers().Find(cust => cust.SSN == comboBox.Text);
+            button.IsEnabled = true;
+        }
+
+        private void addCustomer_button_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MainFrame.Navigate(typeof(CreateAccount));
+            }
+            catch (Exception) { }
+        }
+
+        private void RemoveCustomer_button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MainFrame.Navigate(typeof(RemoveAccount));
+            }
+            catch (Exception) { }
+        }
+
+        private void Search_Field_BeforeTextChanging(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
+        {
+            args.Cancel = args.NewText.Any(c =>!char.IsDigit(c));
+        }
+
+        private void Fnamn_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ChoosenCustomer.Name = Fnamn.Text;
+        }
+    }
 
 }
