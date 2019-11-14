@@ -9,7 +9,6 @@ namespace Grupp1BankApp
 
         //	private static BankLogic instance;
         static List<Customer> customerList = new List<Customer>();
-        static List<Account> accounts = new List<Account>();
         public static int runOnce = 1;
         public BankLogic()
 		{
@@ -33,20 +32,20 @@ namespace Grupp1BankApp
 
 
 
-        public static bool AddCustomer(string name, string SSN)
+        public static Customer AddCustomer(string name, string SSN)
 		{
-            
+            List<Account> accounts = new List<Account>();
             foreach (Customer cust in customerList)
             {
                 if (cust.SSN == SSN)
                 {
-                    return false;
+                    return null;
                 }
             }
             Customer NyCustomer = new Customer(name, SSN, accounts);
             customerList.Add(NyCustomer);
 			//PrintCustomerToFile.Print(customerList);
-            return true;
+            return NyCustomer;
         }
 
 
