@@ -17,7 +17,7 @@ namespace Grupp1BankApp
         public double InterestRate { get; set; }
         public List<Transaction> TransactionList { get; set; }
 
-        //List<Transaction> transactionList = new List<Transaction>();
+       
 
         public Account(string accountNumber, double balance, double interestRate, string accountType,List<Transaction> translist, bool firstwithraw)
         {
