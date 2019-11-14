@@ -1,5 +1,6 @@
 ﻿
 using Grupp1BankApp.View;
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -84,10 +85,9 @@ namespace Grupp1BankApp
             if (Search_Field.Text != "" || comboBox.Text != "")
             {
                 try
-
-
                 {
-                    foreach (Account ac in AcList)
+                    accounts.Clear();
+                    foreach (Account ac in accounts)
                     {
                         accounts.Remove(ac);
                     }
@@ -124,8 +124,7 @@ namespace Grupp1BankApp
                 catch (System.NullReferenceException) { }
             }
             else { button.IsEnabled = false; }
-        }     
-        
+        }
 
         private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -135,14 +134,15 @@ namespace Grupp1BankApp
                 try
                 {
                     ChoosenAccount = (Account)listView.SelectedItem;
-                 //   ChoosenAccountObject = accountlist.FirstOrDefault(choosen => choosen.AccountNumber == ChoosenAccount);
+                    //   ChoosenAccountObject = accountlist.FirstOrDefault(choosen => choosen.AccountNumber == ChoosenAccount);
                 }
                 catch (System.Runtime.InteropServices.COMException) { }
             }
             catch (NullReferenceException) { }
-           // test = (Account)sender;            
+            // test = (Account)sender;            
             MainFrame.Navigate(typeof(MainMeny));
         }
+
 
         private void addCustomer_button_Click(object sender, RoutedEventArgs e)
         {
@@ -183,6 +183,8 @@ namespace Grupp1BankApp
         {
             ChoosenCustomer.Name = Fnamn.Text;
         }
+
+       
     }
 
 }
