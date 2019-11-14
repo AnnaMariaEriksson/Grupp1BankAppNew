@@ -40,5 +40,21 @@ namespace Grupp1BankApp
         {
            
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+            string path = @"C\:transactions\" + MainPage.ChoosenAccount.AccountNumber + @".txt";
+            using (StreamWriter sw = File.CreateText(path))
+            {
+                foreach (Transaction trans in MainPage.ChoosenAccount.TransactionList)
+                {
+                    sw.WriteLine(trans.Summary);
+                }
+            }
+
+          
+           
+        }
     }
 }
