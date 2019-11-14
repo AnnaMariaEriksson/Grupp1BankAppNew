@@ -1,27 +1,25 @@
 ﻿<Page
-    x:Class="Grupp1BankApp.View.BankLoan"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Grupp1BankApp.View"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    <Grid>
-        <Button x:Name="ApproveBankloanButton" Content="Godkänn" Margin="960,565,0,0" VerticalAlignment="Top" Height="77" Width="165" Click="ApproveBankloanButton_Click"/>
-        <TextBlock HorizontalAlignment="Left" Margin="455,89,0,0" Text="Hur mycket att låna?" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="471" FontSize="36"/>
-        <TextBox x:Name="AmountToBorrowField" HorizontalAlignment="Left" Margin="960,81,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Height="56" PlaceholderText="Summa att låna" TextChanged="AmountToBorrowField_TextChanged"/>
-        <TextBlock HorizontalAlignment="Left" Margin="455,192,0,0" Text="Betalningsperiod" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="471" FontSize="36"/>
-        <TextBlock HorizontalAlignment="Left" Margin="455,89,0,0" Text="Hur mycket att låna?" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="471" FontSize="36"/>
-        <TextBlock HorizontalAlignment="Left" Margin="455,89,0,0" Text="Hur mycket att låna?" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="471" FontSize="36"/>
-        <TextBox x:Name="PaymentPeriodForLoanField" HorizontalAlignment="Left" Margin="960,192,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Height="56" PlaceholderText="Fyll i antal år"/>
-        <TextBlock x:Name="SumToPayPerMonthLabel" HorizontalAlignment="Left" Margin="455,292,0,0" Text="Summa per månad" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="471" FontSize="36"/>
-        <TextBox x:Name="SumPerMonthToPayBack" HorizontalAlignment="Left" Margin="960,292,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Height="56" PlaceholderText="Summan per månad visas här"/>
-        <TextBlock x:Name="CustomerInfoLabel" HorizontalAlignment="Left" Margin="455,392,0,0" Text="Kundinfo" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="471" FontSize="36"/>
-        <TextBlock x:Name="CustomerAccountInfoLabel" HorizontalAlignment="Left" Margin="960,392,0,0" Text="Valt konto/Kund" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="471" FontSize="36"/>
-        <Button x:Name="DoNotApproveBankloanButton" Content="Avslå" Margin="1200,565,0,0" VerticalAlignment="Top" Height="72" Width="160" Click="DoNotApproveBankloanButton_Click"/>
-        <Button x:Name="CalculateSumButton" Content="Beräkna lån" Margin="650,565,0,0" VerticalAlignment="Top" Height="77" Width="165" Click="CalculateSumButton_Click"/>
-
+   x:Class="Grupp1BankApp.View.BankLoan"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   xmlns:local="using:Grupp1BankApp.View"
+   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+   mc:Ignorable="d"
+   Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid BorderThickness="10,10,10,10" BorderBrush="#FFDA680F">
+        <Button x:Name="ApproveBankloanButton" Content="Godkänn" Margin="742,705,0,0" VerticalAlignment="Top" Height="100" Width="250" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="455,250,0,0" Text="Hur mycket att låna?" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="471" FontSize="36"/>
+        <TextBox x:Name="AmountToBorrowField" HorizontalAlignment="Left" Margin="960,250,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Height="56" PlaceholderText="Summa att låna" TextChanged="AmountToBorrowField_TextChanged" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
+        <TextBlock HorizontalAlignment="Left" Margin="455,350,0,0" Text="Betalningsperiod" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="471" FontSize="36"/>
+        <TextBox x:Name="PaymentPeriodForLoanField" HorizontalAlignment="Left" Margin="960,350,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Height="56" PlaceholderText="Fyll i antal år" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
+        <TextBlock x:Name="SumToPayPerMonthLabel" HorizontalAlignment="Left" Margin="455,450,0,0" Text="Summa per månad" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="471" FontSize="36"/>
+        <TextBlock x:Name="SumPerMonthToPayBack" HorizontalAlignment="Left" Margin="960,450,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Height="56"/>
+        <Button x:Name="DoNotApproveBankloanButton" Content="Avslå" Margin="1136,705,0,0" VerticalAlignment="Top" Height="100" Width="250" FontSize="36"/>
+        <Button x:Name="CalculateSumButton" Content="Beräkna lån" Margin="350,705,0,0" VerticalAlignment="Top" Height="100" Width="250" Click="CalculateSumButton_Click" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Height="104" Margin="490,59,0,0" Text="Lån" TextWrapping="Wrap" VerticalAlignment="Top" Width="682" FontSize="60" TextAlignment="Center"/>
+        <Image x:Name="LogoImage" HorizontalAlignment="Left" Height="165" Margin="1400,840,0,0" VerticalAlignment="Top" Width="169"
+               Source="/Assets/Icon2.png" Canvas.ZIndex="4">
+        </Image>
     </Grid>
 </Page>
