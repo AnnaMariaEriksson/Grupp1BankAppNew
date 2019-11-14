@@ -13,7 +13,7 @@
             Source="34601bbc-8674-4593-8fc7-8951b21fbc34" Canvas.ZIndex="4"/>
         <TextBlock HorizontalAlignment="Center" Margin="0,388,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="300" FontSize="36" TextAlignment="Center"><Run Text="Kontonummer"/><Run Text=":"/><LineBreak/><Run/></TextBlock>
         <TextBlock HorizontalAlignment="Center" Height="60" Margin="0,613,0,0" Text="Personnummer:" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="36" TextAlignment="Center"/>
-        <TextBox x:Name="AccountNumber" HorizontalAlignment="Center" Height="60" Margin="0,484,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True"/>
+        <TextBox x:Name="AccountNumber" HorizontalAlignment="Center" Height="60" Margin="0,484,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True" TextChanged="AccountNumber_TextChanged"/>
         <TextBlock HorizontalAlignment="Center" Height="104" Margin="0,43,0,0" Text="Skapa ett konto" TextWrapping="Wrap" VerticalAlignment="Top" Width="682" FontSize="60" TextAlignment="Center"/>
         <Button  x:Name="create_account_button" Content="Spara" Height="132" Margin="0,820,0,0" VerticalAlignment="Top" Width="362" HorizontalAlignment="Center" FontSize="36" Click="Button_Click"/>
         <TextBox x:Name="SsnNumber" HorizontalAlignment="Center" Height="60" Margin="0,687,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True"/>

@@ -55,5 +55,10 @@ namespace Grupp1BankApp.View
                 _Frame.Navigate(typeof(MainPage));
             }
             }
+
+        private void AccountNumber_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

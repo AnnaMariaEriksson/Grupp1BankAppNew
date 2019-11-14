@@ -17,7 +17,7 @@
         <TextBox x:Name="NameText" HorizontalAlignment="Left" Height="60" Margin="608,411,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" BeforeTextChanging="NameText_BeforeTextChanging"/>
         <TextBox x:Name="SsnText" HorizontalAlignment="Left" Height="60" Margin="608,611,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" BeforeTextChanging="SsnText_BeforeTextChanging"/>
         <TextBlock HorizontalAlignment="Center" Height="104" Margin="0,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="682" FontSize="60" TextAlignment="Center"><Run Text="S"/><Run Text="kapa kund"/></TextBlock>
-        <Button Content="Spara" Height="132" Margin="0,810,0,0" VerticalAlignment="Top" Width="362" HorizontalAlignment="Center" FontSize="36" Click="Button_Click"/>
+        <Button Content="Spara" Height="132" Margin="0,728,0,0" VerticalAlignment="Top" Width="362" HorizontalAlignment="Center" FontSize="36" Click="Button_Click"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="801,670,0,0" Text="Sparat!" TextWrapping="Wrap" VerticalAlignment="Top" Height="78" Width="296" TextAlignment="Center" FontSize="36" Visibility="Collapsed"/>
     </Grid>
 </Page>
