@@ -14,6 +14,7 @@ namespace Grupp1BankApp
 		{
 
        
+      
             
         }
 
@@ -42,18 +43,16 @@ namespace Grupp1BankApp
                     return null;
                 }
             }
-            Customer NyCustomer = new Customer(name, SSN, accounts);
+            Customer NyCustomer = new Customer(name, SSN);
             customerList.Add(NyCustomer);
 			//PrintCustomerToFile.Print(customerList);
             return NyCustomer;
         }
 
-
-
-        public static List<Customer> GetCustomers()
+		public static List<Customer> GetCustomers()
         {
             List<Customer> cust = customerList;
-
+			
             return cust;
         }
 
