@@ -28,6 +28,10 @@ namespace Grupp1BankApp.View
             try
             {
                 textBlock1.Text = "Kontonummer:" + MainPage.ChoosenAccount.AccountNumber +" Saldo: " +  MainPage.ChoosenAccount.Balance + " kr";
+                if(MainPage.ChoosenAccount.Balance == 0 && MainPage.ChoosenAccount.AccountType == "saving")
+                {
+                    withraw_button.IsEnabled = false;
+                }
             }
             catch (NullReferenceException) { }
         }
