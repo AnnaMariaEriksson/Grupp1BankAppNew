@@ -30,7 +30,8 @@ namespace Grupp1BankApp.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            BankLogic.AddCustomer(NameText.Text, SsnText.Text);
+            
+            MainPage.ChoosenCustomer = BankLogic.AddCustomer(NameText.Text, SsnText.Text);
             textBlock.Visibility = Visibility.Visible;
             var _Frame = Window.Current.Content as Frame;
             _Frame.Navigate(typeof(MainPage));

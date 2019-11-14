@@ -28,26 +28,27 @@ namespace Grupp1BankApp
     public sealed partial class MainPage : Page
     {
 
-        public static  Customer ChoosenCustomer;
+       
+        public static Customer ChoosenCustomer { get; set; }
         public static Account ChoosenAccount;
         public static int kebab = 5;
         public static Account ChoosenAccountObject;
 
         private ObservableCollection<Account> accounts = new ObservableCollection<Account>();
         ObservableCollection<Account> AcList { get { return accounts; } }
-       
+
 
         public MainPage()
         {
             this.InitializeComponent();
-            
+
             //test kund
- 
-            while (BankLogic.runOnce == 1)
+
+            while (BankLogic.runOnce <= 1)
             {
                 BankLogic.AddCustomer("Berit Nillson", "192304237494");
-                BankLogic.AddSavingsAccount(BankLogic.GetCustomers().Find(customer => customer.SSN == "192304237494"),"54535453");
-                BankLogic.AddCreditAccount("685876899980",BankLogic.GetCustomers().Find(customer => customer.SSN == "192304237494"));
+                BankLogic.AddSavingsAccount(BankLogic.GetCustomers().Find(customer => customer.SSN == "192304237494"), "12345");
+                BankLogic.AddCreditAccount("1234", BankLogic.GetCustomers().Find(customer => customer.SSN == "192304237494"));
 
                 BankLogic.runOnce++;
             }
@@ -57,7 +58,7 @@ namespace Grupp1BankApp
 
             foreach (Customer cust in BankLogic.GetCustomers()) {
                 comboBox.Items.Add(cust.SSN);
-                    }
+            }
             try
             {
                 Search_Field.Text = ChoosenCustomer.SSN;
@@ -65,7 +66,7 @@ namespace Grupp1BankApp
             }
             catch (Exception) { }
 
-            if(Search_Field != null)
+            if (Search_Field != null)
             {
                 try
                 {
@@ -77,57 +78,54 @@ namespace Grupp1BankApp
 
         }
 
-        
+
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if (Search_Field.Text != "" || comboBox.Text != "")
             {
-                foreach (Account ac in accounts)
-                {
-                    accounts.Remove(ac);
-                }
-            }
-            catch (InvalidOperationException) {
-               
-            }
-                List<Customer> customerlist = BankLogic.GetCustomers();
-            foreach(Customer cust in customerlist)
-            {
-                if(cust.SSN == Search_Field.Text)
-                {
-                    Fnamn.Text = cust.Name;
-                    PersonNummer.Text = cust.SSN;
-                    ChoosenCustomer = cust;
+                try
 
-                    try
+
+                {
+                    foreach (Account ac in AcList)
+                    {
+                        accounts.Remove(ac);
+                    }
+                }
+                catch (InvalidOperationException)
+                {
+
+                }
+
+                try
+                {
+                    ChoosenCustomer = BankLogic.GetCustomers().Find(cust => cust.SSN == Search_Field.Text);
+                }
+                catch (NullReferenceException) { }
+
+                Fnamn.Text = ChoosenCustomer.Name;
+                PersonNummer.Text = ChoosenCustomer.SSN;
+                ChoosenCustomer.Name = Fnamn.Text;
+                button.IsEnabled = false;
+                try
+                {
+                    if (ChoosenCustomer.CustomerAccounts.Count != 0)
                     {
                         foreach (Account ac in ChoosenCustomer.CustomerAccounts)
                         {
                             accounts.Add(ac);
                         }
                     }
-                    catch (System.NullReferenceException) { }
-
-
-                }
-                else
-                {
-                    try
+                    else
                     {
-                        listView.Items.Add("Inget konto");
+                        try { List<Transaction> emptytrans = new List<Transaction>(); Account empty = new SavingsAcount("Inget konto", 0, 0, "saving",emptytrans , false); AcList.Add(empty); } catch (Exception) { }
                     }
-                    catch (Exception) { }
                 }
+                catch (System.NullReferenceException) { }
             }
-
-
-
-            ChoosenCustomer.Name = Fnamn.Text;
-
-            button.IsEnabled = false;
-           
-            
-        }
+            else { button.IsEnabled = false; }
+        }     
+        
 
         private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -154,6 +152,7 @@ namespace Grupp1BankApp
         private void Ssn_Selected(object sender, SelectionChangedEventArgs e)
         {
             Search_Field.Text = comboBox.Text;
+            ChoosenCustomer = BankLogic.GetCustomers().Find(cust => cust.SSN == comboBox.Text);
             button.IsEnabled = true;
         }
 
@@ -178,11 +177,6 @@ namespace Grupp1BankApp
         private void Search_Field_BeforeTextChanging(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
         {
             args.Cancel = args.NewText.Any(c =>!char.IsDigit(c));
-        }
-
-        private void Fnamn_BeforeTextChanging(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
-        {
-            
         }
 
         private void Fnamn_TextChanged(object sender, TextChangedEventArgs e)

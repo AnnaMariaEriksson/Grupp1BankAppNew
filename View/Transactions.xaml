@@ -23,7 +23,7 @@
         <Image x:Name="LogoImage" HorizontalAlignment="Left" Height="165" Margin="1400,840,0,0" VerticalAlignment="Top" Width="169"
                 Source="/Assets/Icon2.png" Canvas.ZIndex="4">
         </Image>
-        <Button Content="Spara till fil" Height="62" Margin="952,843,0,0" VerticalAlignment="Top" Width="240" FontSize="36"/>
+        <Button Content="Spara till fil" Height="62" Margin="952,843,0,0" VerticalAlignment="Top" Width="240" FontSize="36" Click="Button_Click"/>
 
     </Grid>
 </Page>
