@@ -10,21 +10,21 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="1674.4">
 
 
-    <Grid BorderBrush="#FFDA680F" BorderThickness="10,10,10,10" Width="1674.4">
-        <TextBlock HorizontalAlignment="Left" Margin="450,350,0,0" Text="Ditt konto:" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="300" FontSize="36"/>
-        <TextBlock HorizontalAlignment="Left" Height="60" Margin="600,550,0,0" Text="Summa:" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="36"/>
-        <TextBox x:Name="YourAccountText" HorizontalAlignment="Left" Height="60" Margin="1038,350,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True"/>
-        <TextBox x:Name="textsum" HorizontalAlignment="Left" Height="60" Margin="1038,550,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
-        <TextBlock HorizontalAlignment="Left" Height="104" Margin="610,39,0,0" Text="Pengaöverföring" TextWrapping="Wrap" VerticalAlignment="Top" Width="682" FontSize="60" TextAlignment="Center"/>
+    <Grid BorderBrush="#FFDA680F" BorderThickness="10,10,10,10" Width="1672.8">
+        <TextBlock HorizontalAlignment="Left" Margin="400,350,0,0" Text="Ditt konto:" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="300" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Height="60" Margin="400,550,0,0" Text="Summa:" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="36"/>
+        <TextBox x:Name="YourAccountText" HorizontalAlignment="Left" Height="60" Margin="850,350,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" IsReadOnly="True"/>
+        <TextBox x:Name="textsum" HorizontalAlignment="Left" Height="60" Margin="850,550,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
+        <TextBlock HorizontalAlignment="Left" Height="104" Margin="499,45,0,0" Text="Pengaöverföring" TextWrapping="Wrap" VerticalAlignment="Top" Width="682" FontSize="60" TextAlignment="Center"/>
         <Image x:Name="LogoImage" HorizontalAlignment="Left" Height="165" Margin="1400,840,0,0" VerticalAlignment="Top" Width="169"
 
                 Source="/Assets/Icon2.png" Canvas.ZIndex="4">
         </Image>
-        <TextBlock HorizontalAlignment="Left" Margin="394,446,0,0" Text="Överför till:" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="291" FontSize="36"/>
-        <TextBox x:Name="textbox2" HorizontalAlignment="Left" Height="60" Margin="837,446,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
-        <TextBlock HorizontalAlignment="Left" Height="60" Margin="394,631,0,0" Text="Överförd summa:" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" FontSize="36"/>
-        <TextBlock HorizontalAlignment="Left" Height="60" Margin="837,631,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="36"/>
-        <Button Content="Slutför" Height="130" Margin="0,801,0,0" VerticalAlignment="Top" Width="329" HorizontalAlignment="Center" Click="Button_Click" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="400,450,0,0" Text="Överför till:" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="291" FontSize="36"/>
+        <TextBox x:Name="textbox2" HorizontalAlignment="Left" Height="60" Margin="850,450,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5"/>
+        <TextBlock HorizontalAlignment="Left" Height="60" Margin="400,650,0,0" Text="Överförd summa:" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Height="60" Margin="850,650,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="36"/>
+        <Button Content="Slutför" Height="130" Margin="0,850,0,0" VerticalAlignment="Top" Width="329" HorizontalAlignment="Center" Click="Button_Click" FontSize="36"/>
 
 
 

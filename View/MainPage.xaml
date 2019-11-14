@@ -8,9 +8,10 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Height="1080" VerticalAlignment="Top">
         <Grid.RowDefinitions>
-            <RowDefinition Height="26*"/>
+
+             <RowDefinition Height="26*"/>
             <RowDefinition Height="46*"/>
             <RowDefinition Height="59*"/>
             <RowDefinition Height="20*"/>
@@ -25,14 +26,17 @@
             <RowDefinition Height="47*"/>
             <RowDefinition Height="47*"/>
             <RowDefinition Height="200*"/>
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="247*"/>
-            <ColumnDefinition Width="1673*"/>
+            <ColumnDefinition Width="93*"/>
+
+            <ColumnDefinition Width="547*"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Rectangle Stroke="Black" Fill="#FFDA680F" FocusVisualPrimaryBrush="Black" MinHeight="450" Margin="0,0,0,-1" HorizontalAlignment="Right" MinWidth="120" Width="246" Grid.RowSpan="15" Grid.Column="1"/>
+
+        <Rectangle Stroke="Black" Fill="#FFDA680F" FocusVisualPrimaryBrush="Black" MinHeight="450" Margin="0,0,0,-1" HorizontalAlignment="Center" MinWidth="120" Width="247" Grid.RowSpan="15" Grid.Column="1"/>
         <TextBox x:Name="Search_Field" Foreground="Black" Text="" TextWrapping="Wrap" VerticalAlignment="Top" PlaceholderText="Personnummer" Height="40" PlaceholderForeground="Black" FocusVisualSecondaryBrush="#99FFFFFF" FocusVisualPrimaryBrush="#FFF4ECEC" BeforeTextChanging="Search_Field_BeforeTextChanging" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Width="179" Grid.Row="1" Grid.Column="1" Margin="26,0,0,0"/>
         <TextBlock x:Name="FnamnText" HorizontalAlignment="Left" Foreground="Black" Margin="48,0,0,0" Text="Fullständigt namn:" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" FocusVisualPrimaryBrush="#FFD33405" Height="19" Width="123" TextAlignment="Center" Grid.Row="3" Grid.Column="1"/>
         <TextBox x:Name="Fnamn" Foreground="Black" Margin="50,0,0,0" Text="Null" TextWrapping="Wrap" FontSize="14" TextAlignment="Center" VerticalAlignment="Top" TextChanged="Fnamn_TextChanged" Height="32" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" Width="132"/>
@@ -41,19 +45,33 @@
         <Frame x:Name="MainFrame"  Content="Frame" Foreground="Orange" Grid.Column="2" Grid.RowSpan="15"/>
         <Button x:Name="button" Content="Välj" Margin="94,2,0,0" Foreground="Orange" VerticalAlignment="Top" Click="button_Click" Background="Black" FocusVisualPrimaryBrush="#FFFFA604" FocusVisualSecondaryBrush="#99FF0000" AutomationProperties.IsRequiredForForm="True" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" Height="32" Width="42" Grid.Row="8" Grid.Column="1"/>
         <ListView x:Name="listView" BorderBrush="Black" BorderThickness="2,2,2,2" ItemsSource="{x:Bind AcList}" SelectionChanged="listView_SelectionChanged" HorizontalAlignment="Left" Width="200" MinHeight="150" Height="349" VerticalAlignment="Center" Grid.Row="10" Grid.Column="1" Margin="16,0,0,0">
+
+        
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="local:Account">
-                    <TextBlock Text="{x:Bind Summary}"></TextBlock>
+                    <TextBlock Text="{x:Bind AccountNumber}"></TextBlock>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
 
 
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="70,8,0,0" Text="Välj konto:" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" TextAlignment="Center" Height="19" Grid.Row="9" Grid.Column="1"/>
-        <Button x:Name="addCustomer_button" Content="Skapa kund" Margin="18,10,0,0" VerticalAlignment="Top" Width="195" Click="addCustomer_button_Click" Height="32" Grid.Row="11" Grid.Column="1"/>
-        <ComboBox x:Name="comboBox" Margin="26,0,0,0" IsEditable="True" SelectionChanged="Ssn_Selected" FocusVisualPrimaryBrush="#FFFDFAFA" Height="32" Grid.Row="2" Grid.Column="1" Width="188"/>
-        <Button x:Name="addCustomer_button_Copy" Content="Skapa konto" Margin="18,2,0,0" VerticalAlignment="Top" Width="195" Click="addCustomer_button_Copy_Click" Height="32" Grid.Row="12" Grid.Column="1"/>
-        <Button x:Name="addCustomer_button_Copy1" Content="Ta bort konto" Margin="18,5,0,0" VerticalAlignment="Top" Width="195" Click="RemoveCustomer_button_Click" Height="32" Grid.Row="13" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="47,21,0,0" Text="Välj konto:" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" TextAlignment="Center" Height="19" Grid.Row="4" Grid.Column="1"/>
+        <Button x:Name="addCustomer_button" Content="Skapa kund" Click="addCustomer_button_Click" Grid.Row="9" Grid.Column="1" Margin="10,10,39,257" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <CompositeTransform ScaleY="1"/>
+            </Button.RenderTransform>
+        </Button>
+        <ComboBox x:Name="comboBox" Margin="29,6,0,0" IsEditable="True" SelectionChanged="Ssn_Selected" FocusVisualPrimaryBrush="#FFFDFAFA" Height="32" Grid.Row="1" Grid.Column="1" Width="176"/>
+        <Button x:Name="addCustomer_button_Copy" Content="Skapa konto" Click="addCustomer_button_Copy_Click" Grid.Row="9" Grid.Column="1" Margin="10,63,39,204" VerticalAlignment="Stretch" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Stretch">
+            <Button.RenderTransform>
+                <CompositeTransform ScaleY="1"/>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="addCustomer_button_Copy1" Content="Ta bort konto" Click="RemoveCustomer_button_Click" Grid.Row="9" Grid.Column="1" Margin="10,116,39,154" VerticalAlignment="Stretch" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Stretch">
+            <Button.RenderTransform>
+                <CompositeTransform ScaleY="1"/>
+            </Button.RenderTransform>
+        </Button>
 
     </Grid>
 </Page>
