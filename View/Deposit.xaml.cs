@@ -47,8 +47,7 @@ namespace Grupp1BankApp.View
             sumText.Visibility = Visibility.Visible;
             Transaction transnew = new Transaction(MainPage.ChoosenAccount.AccountNumber, DateTime.Now, double.Parse(sumValue.Text), MainPage.ChoosenAccount.Balance);
             MainPage.ChoosenAccount.TransactionList.Add(transnew);
-            var _Frame = Window.Current.Content as Frame;
-            _Frame.Navigate(typeof(MainPage));
+            this.Frame.Navigate(typeof(MainMeny));
             //Thread.Sleep(2000);
         }
     }
