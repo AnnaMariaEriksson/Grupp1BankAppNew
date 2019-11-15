@@ -39,7 +39,7 @@
         <TextBlock x:Name="PersonNummer" HorizontalAlignment="Left" Foreground="Black" Text="Null" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" Height="19" Width="113" Grid.Row="6" Grid.Column="1" Margin="68,0,0,0" />
         <Frame x:Name="MainFrame"  Content="Frame" Foreground="Orange" Grid.Column="2" Grid.RowSpan="15"/>
         <Button x:Name="button" Content="Välj" Margin="0,3,0,0" Foreground="Orange" VerticalAlignment="Top" Click="button_Click" Background="Black" FocusVisualPrimaryBrush="#FFFFA604" FocusVisualSecondaryBrush="#99FF0000" AutomationProperties.IsRequiredForForm="True" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" Height="32" Width="42" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Center"/>
-        <ListView x:Name="listView" BorderBrush="Black" BorderThickness="2,2,2,2" ItemsSource="{x:Bind AcList}" SelectionChanged="listView_SelectionChanged" HorizontalAlignment="Left" Width="200" MinHeight="150" Height="349" VerticalAlignment="Center" Grid.Row="10" Grid.Column="1" Margin="22,0,0,0" Tapped="listView_Tapped">
+        <ListView x:Name="listView" BorderBrush="Black" BorderThickness="2,2,2,2" ItemsSource="{x:Bind AcList}" SelectionChanged="listView_SelectionChanged" HorizontalAlignment="Left" Width="200" MinHeight="150" Height="349" VerticalAlignment="Center" Grid.Row="10" Grid.Column="1" Margin="22,0,0,0" Tapped="listView_Tapped" >
 
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="local:Account">

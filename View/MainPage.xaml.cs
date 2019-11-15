@@ -184,7 +184,13 @@ namespace Grupp1BankApp
             ChoosenCustomer.Name = Fnamn.Text;
         }
 
-       
+    
+
+        private void listView_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            ChoosenAccount = (Account)listView.SelectedItem;
+            MainFrame.Navigate(typeof(MainMeny));
+        }
     }
 
 }

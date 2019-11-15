@@ -22,7 +22,7 @@ namespace Grupp1BankApp.View
 	/// </summary>
 	public sealed partial class BankLoan : Page
 	{
-		
+        public double amount;
 		public BankLoan()
 		{
 			this.InitializeComponent();
@@ -38,12 +38,22 @@ namespace Grupp1BankApp.View
 
 		private void CalculateSumButton_Click(object sender, RoutedEventArgs e)
 		{
-			double amount = int.Parse(AmountToBorrowField.Text.ToString());
+			double amount1 = int.Parse(AmountToBorrowField.Text.ToString());
 			double years = int.Parse(PaymentPeriodForLoanField.Text.ToString());
-            amount = amount / years;
-            amount = amount / 12 * 0.02;
-			SumPerMonthToPayBack.Text = amount.ToString();
+            amount = amount1;
+            double amount2 = amount1;
+            amount2 = amount2 / years;//10000 1 år
+            double depth = amount2 / 12;//833 per månad
+            amount2 = amount2 / 12 * 0.2; // ränta på 833
+            double newamount = depth + amount2;
+			SumPerMonthToPayBack.Text = newamount.ToString();
 
 		}
-	}
+
+        private void ApproveBankloanButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainPage.ChoosenAccount.Balance += amount;
+            this.Frame.Navigate(typeof(MainMeny));
+        }
+    }
 }
