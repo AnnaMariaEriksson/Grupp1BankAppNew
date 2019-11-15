@@ -52,7 +52,9 @@ namespace Grupp1BankApp.View
                     if (acc.AccountNumber == textbox2.Text)
                     {
                         acc.Balance += double.Parse(textsum.Text);
+                        
                         Transaction transnew = new Transaction(MainPage.ChoosenAccount.AccountNumber, DateTime.Now, double.Parse(textsum.Text), MainPage.ChoosenAccount.Balance);
+                        acc.TransactionList.Add(transnew);
                         MainPage.ChoosenAccount.TransactionList.Add(transnew);
                     }
                 }

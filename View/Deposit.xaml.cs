@@ -31,17 +31,7 @@ namespace Grupp1BankApp.View
             sumValue.Visibility = Visibility.Collapsed;
             sumText.Visibility = Visibility.Collapsed;
              
-           
             Balance_Text.Text = MainPage.ChoosenAccount.Balance.ToString();
-
-
-
-
-
-
-
-
-
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
