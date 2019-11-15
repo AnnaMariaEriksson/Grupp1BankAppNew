@@ -35,10 +35,13 @@ namespace Grupp1BankApp
         public static int kebab = 5;
         public static Account ChoosenAccountObject;
 
-        private ObservableCollection<Account> accounts = new ObservableCollection<Account>();
+        private static ObservableCollection<Account> accounts = new ObservableCollection<Account>();
         ObservableCollection<Account> AcList { get { return accounts; } }
 
-
+        public static void RemoveMenyAccount(int ac)
+        {
+            accounts.RemoveAt(ac);
+        }
         public MainPage()
         {
             this.InitializeComponent();
@@ -102,10 +105,18 @@ namespace Grupp1BankApp
                     ChoosenCustomer = BankLogic.GetCustomers().Find(cust => cust.SSN == Search_Field.Text);
                 }
                 catch (NullReferenceException) { }
-
-                Fnamn.Text = ChoosenCustomer.Name;
-                PersonNummer.Text = ChoosenCustomer.SSN;
-                ChoosenCustomer.Name = Fnamn.Text;
+                try
+                {
+                    Fnamn.Text = ChoosenCustomer.Name;
+                    PersonNummer.Text = ChoosenCustomer.SSN;
+                    ChoosenCustomer.Name = Fnamn.Text;
+                }
+                catch (Exception)
+                {
+                    var _Frame = Window.Current.Content as Frame;
+                    _Frame.Navigate(typeof(MainPage));
+                }
+                
                 button.IsEnabled = false;
                 try
                 {
@@ -181,7 +192,9 @@ namespace Grupp1BankApp
 
         private void Fnamn_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ChoosenCustomer.Name = Fnamn.Text;
+            
+           
+         
         }
 
     
@@ -190,6 +203,16 @@ namespace Grupp1BankApp
         {
             ChoosenAccount = (Account)listView.SelectedItem;
             MainFrame.Navigate(typeof(MainMeny));
+        }
+
+        private void Fnamn_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            bool isDigitPresent = Fnamn.Text.Any(c => char.IsDigit(c));
+            if (isDigitPresent == false)
+            {
+                ChoosenCustomer.Name = Fnamn.Text;
+                button.IsEnabled = true;
+            }
         }
     }
 

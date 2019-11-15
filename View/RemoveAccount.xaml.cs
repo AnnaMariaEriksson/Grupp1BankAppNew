@@ -43,10 +43,14 @@ namespace Grupp1BankApp.View
 
         private void RemoveAccountButton_Click(object sender, RoutedEventArgs e)
 		{
-            int ac = MainPage.ChoosenCustomer.CustomerAccounts.FindIndex(choosen => choosen.AccountNumber == ChoosenAccount.ToString());
-            MainPage.ChoosenCustomer.CustomerAccounts.RemoveAt(ac); 
-            RemoveAccountButton.Content = "Removed!";
-            accounts.Remove(ChoosenAccount.ToString());
+            try
+            {
+                int ac = MainPage.ChoosenCustomer.CustomerAccounts.FindIndex(choosen => choosen.AccountNumber == ChoosenAccount.ToString());
+                MainPage.ChoosenCustomer.CustomerAccounts.RemoveAt(ac);
+                MainPage.RemoveMenyAccount(ac);
+                accounts.Remove(ChoosenAccount.ToString());
+            }
+            catch (Exception) { }
         }
 
 	

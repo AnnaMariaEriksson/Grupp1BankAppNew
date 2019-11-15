@@ -41,14 +41,21 @@ namespace Grupp1BankApp.View
 
         private  void Button_Click(object sender, RoutedEventArgs e)
         {
+           
             BankLogic.DepositMoney(MainPage.ChoosenAccount, double.Parse(sum.Text));
+            Transaction transnew = new Transaction(MainPage.ChoosenAccount.AccountNumber, DateTime.Now, double.Parse(sum.Text), MainPage.ChoosenAccount.Balance);
             sumValue.Text = sum.Text;
             sumValue.Visibility = Visibility.Visible;
             sumText.Visibility = Visibility.Visible;
-            Transaction transnew = new Transaction(MainPage.ChoosenAccount.AccountNumber, DateTime.Now, double.Parse(sumValue.Text), MainPage.ChoosenAccount.Balance);
+            
             MainPage.ChoosenAccount.TransactionList.Add(transnew);
             this.Frame.Navigate(typeof(MainMeny));
             //Thread.Sleep(2000);
+        }
+
+        private void sum_BeforeTextChanging(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
+        {
+            args.Cancel = args.NewText.Any(c => !char.IsDigit(c));
         }
     }
 }

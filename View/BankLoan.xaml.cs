@@ -38,22 +38,40 @@ namespace Grupp1BankApp.View
 
 		private void CalculateSumButton_Click(object sender, RoutedEventArgs e)
 		{
+            
 			double amount1 = int.Parse(AmountToBorrowField.Text.ToString());
 			double years = int.Parse(PaymentPeriodForLoanField.Text.ToString());
-            amount = amount1;
-            double amount2 = amount1;
-            amount2 = amount2 / years;//10000 1 år
-            double depth = amount2 / 12;//833 per månad
-            amount2 = amount2 / 12 * 0.2; // ränta på 833
-            double newamount = depth + amount2;
-			SumPerMonthToPayBack.Text = newamount.ToString();
-
+            if (amount1 > 0)
+            {
+                amount = amount1;
+                double amount2 = amount1;
+                amount2 = amount2 / years;//10000 1 år
+                double depth = amount2 / 12;//833 per månad
+                amount2 = amount2 / 12 * 0.2; // ränta på 833
+                double newamount = depth + amount2;
+                SumPerMonthToPayBack.Text = newamount.ToString();
+            }
 		}
 
-        private void ApproveBankloanButton_Click(object sender, RoutedEventArgs e)
+        private void LoanClick(object sender, RoutedEventArgs e)
         {
-            MainPage.ChoosenAccount.Balance += amount;
-            this.Frame.Navigate(typeof(MainMeny));
+            Transaction transnew = new Transaction(MainPage.ChoosenAccount.AccountNumber, DateTime.Now, amount, MainPage.ChoosenAccount.Balance);
+            if (amount > 0)
+            {
+                MainPage.ChoosenAccount.Balance += amount;
+                MainPage.ChoosenAccount.TransactionList.Add(transnew);
+                this.Frame.Navigate(typeof(MainMeny));
+            }
+        }
+
+        private void AmountToBorrowField_BeforeTextChanging(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
+        {
+            args.Cancel = args.NewText.Any(c => !char.IsDigit(c));
+        }
+
+        private void PaymentPeriodForLoanField_BeforeTextChanging(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
+        {
+            args.Cancel = args.NewText.Any(c => !char.IsDigit(c));
         }
     }
 }

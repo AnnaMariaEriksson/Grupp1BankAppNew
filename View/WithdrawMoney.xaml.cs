@@ -31,15 +31,19 @@ namespace Grupp1BankApp.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            BankLogic.Withdraw(MainPage.ChoosenAccount, double.Parse(Textsum.Text));
-            if(MainPage.ChoosenAccount.Balance <= -5000)
+            Transaction transnew = new Transaction(MainPage.ChoosenAccount.AccountNumber, DateTime.Now, double.Parse(Textsum.Text), MainPage.ChoosenAccount.Balance);
+
+
+            if (BankLogic.Withdraw(MainPage.ChoosenAccount, double.Parse(Textsum.Text)) == true)
             {
-                Transaction transnew = new Transaction(MainPage.ChoosenAccount.AccountNumber, DateTime.Now, double.Parse(Textsum.Text), MainPage.ChoosenAccount.Balance);
                 MainPage.ChoosenAccount.TransactionList.Add(transnew);
             }
-          
-            var _Frame = Window.Current.Content as Frame;
-            _Frame.Navigate(typeof(MainPage));
+            this.Frame.Navigate(typeof(MainMeny));
+        }
+
+        private void Textsum_BeforeTextChanging(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
+        {
+            args.Cancel = args.NewText.Any(c => !char.IsDigit(c));
         }
     }
 }

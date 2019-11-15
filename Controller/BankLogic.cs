@@ -77,18 +77,22 @@ namespace Grupp1BankApp
         
         public static bool DepositMoney( Account account, double amount)
 		{
+            if (amount > 0)
+            {
+                account.Balance += amount;
 
-            account.Balance += amount;
-
-            return true;
+                return true;
+            }
+            return false;
 		}
 
         public static bool Withdraw(Account acc, double amount)
         {
+            
             if (acc.AccountType == "saving")
             {
                
-                if (acc.Balance < amount)
+                if (amount > acc.Balance || amount < 0)
                 {
                     return false;
                 }

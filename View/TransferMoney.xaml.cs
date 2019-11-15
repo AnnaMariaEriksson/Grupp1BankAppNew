@@ -25,18 +25,6 @@ namespace Grupp1BankApp.View
        // Account temp;
         public TransferMoney()
         {
-        
-
-            //foreach (Account acc in MainPage.ChoosenCustomer.CustomerAccounts)
-            //{
-            //    if (acc.AccountNumber == MainPage.ChoosenAccount.AccountNumber)
-            //    {
-            //        MainPage.ChoosenAccount = acc;
-            //        temp = acc;
-
-            //    }
-            //}
-         
             this.InitializeComponent();
             YourAccountText.Text = MainPage.ChoosenAccount.AccountNumber;
         }
@@ -51,11 +39,12 @@ namespace Grupp1BankApp.View
                 {
                     if (acc.AccountNumber == textbox2.Text)
                     {
+                       
+                        Transaction transnew = new Transaction(MainPage.ChoosenAccount.AccountNumber, DateTime.Now, double.Parse(textsum.Text), acc.Balance);
                         acc.Balance += double.Parse(textsum.Text);
-                        
-                        Transaction transnew = new Transaction(MainPage.ChoosenAccount.AccountNumber, DateTime.Now, double.Parse(textsum.Text), MainPage.ChoosenAccount.Balance);
+                        Transaction transnewchoosen = new Transaction(MainPage.ChoosenAccount.AccountNumber, DateTime.Now, double.Parse(textsum.Text), MainPage.ChoosenAccount.Balance);
                         acc.TransactionList.Add(transnew);
-                        MainPage.ChoosenAccount.TransactionList.Add(transnew);
+                        MainPage.ChoosenAccount.TransactionList.Add(transnewchoosen);
                     }
                 }
 
@@ -65,6 +54,16 @@ namespace Grupp1BankApp.View
           
             var _Frame = Window.Current.Content as Frame;
             _Frame.Navigate(typeof(MainPage));
+        }
+
+        private void textbox2_BeforeTextChanging(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
+        {
+            args.Cancel = args.NewText.Any(c => !char.IsDigit(c));
+        }
+
+        private void textsum_BeforeTextChanging(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
+        {
+            args.Cancel = args.NewText.Any(c => !char.IsDigit(c));
         }
     }
 }
