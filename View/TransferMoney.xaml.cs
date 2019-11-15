@@ -43,7 +43,7 @@ namespace Grupp1BankApp.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (MainPage.ChoosenAccount.Balance > double.Parse(textsum.Text))
+            if (MainPage.ChoosenAccount.Balance >= double.Parse(textsum.Text))
             {
                 MainPage.ChoosenAccount.Balance -= double.Parse(textsum.Text);
 
