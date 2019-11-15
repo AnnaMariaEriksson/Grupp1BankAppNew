@@ -62,5 +62,10 @@ namespace Grupp1BankApp.View
         {
             this.Frame.Navigate(typeof(WithdrawMoney));
         }
+
+        private void LoanClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BankLoan));
+        }
     }
 }

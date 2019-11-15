@@ -39,10 +39,12 @@ namespace Grupp1BankApp.View
 		private void CalculateSumButton_Click(object sender, RoutedEventArgs e)
 		{
 			double amount = int.Parse(AmountToBorrowField.Text.ToString());
-			double years = int.Parse(PaymentPeriodForLoanField.Text.ToString());
-            amount = amount / years;
-            amount = amount / 12 * 0.2;
-			SumPerMonthToPayBack.Text = amount.ToString();
+			int years = int.Parse(PaymentPeriodForLoanField.Text.ToString());
+            int months = years * 12;
+            double depth = amount * 0.2;
+            amount = amount / months;
+            amount = +depth;
+			SumPerMonthToPayBack.Text = Math.Round(amount,3).ToString();
 		}
 	}
 }
