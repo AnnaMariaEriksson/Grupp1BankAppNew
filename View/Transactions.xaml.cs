@@ -40,5 +40,28 @@ namespace Grupp1BankApp
         {
            
         }
+        public async void PrintToFile()
+        {
+            Windows.Storage.StorageFolder storageFolder =
+            Windows.Storage.ApplicationData.Current.LocalFolder;
+            Windows.Storage.StorageFile sampleFile =
+            await storageFolder.CreateFileAsync(MainPage.ChoosenAccount.AccountNumber + ".txt",
+            Windows.Storage.CreationCollisionOption.ReplaceExisting);
+            string result = "Transactioner:\n";
+            foreach(Transaction trans in MainPage.ChoosenAccount.TransactionList)
+            {
+                result += trans.Summary;
+            }
+            await Windows.Storage.FileIO.WriteTextAsync(sampleFile, result);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            PrintToFile();
+            SaveToFile.IsEnabled = false;
+          
+           
+        }
     }
 }

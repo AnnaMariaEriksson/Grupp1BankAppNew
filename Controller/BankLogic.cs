@@ -9,15 +9,21 @@ namespace Grupp1BankApp
 
         //	private static BankLogic instance;
         static List<Customer> customerList = new List<Customer>();
-        static List<Account> accounts = new List<Account>();
-        
+        public static int runOnce = 1;
         public BankLogic()
 		{
-       
-            
-        }
+
        
       
+            
+        }
+
+        public static void AddtocustomerList(Customer cust) {
+
+            customerList.Add(cust);
+        
+        
+        }
 
 
         //public static BankLogic Instance
@@ -25,30 +31,28 @@ namespace Grupp1BankApp
         //	get { return instance ?? (instance = new BankLogic()); }
         //}
 
-     
 
-		public static bool AddCustomer(string name, string SSN)
+
+        public static Customer AddCustomer(string name, string SSN)
 		{
-            
+            List<Account> accounts = new List<Account>();
             foreach (Customer cust in customerList)
             {
                 if (cust.SSN == SSN)
                 {
-                    return false;
+                    return null;
                 }
             }
-            Customer NyCustomer = new Customer(name, SSN, accounts);
+            Customer NyCustomer = new Customer(name, SSN);
             customerList.Add(NyCustomer);
 			//PrintCustomerToFile.Print(customerList);
-            return true;
+            return NyCustomer;
         }
 
-
-
-        public static List<Customer> GetCustomers()
+		public static List<Customer> GetCustomers()
         {
             List<Customer> cust = customerList;
-
+			
             return cust;
         }
 
@@ -96,7 +100,7 @@ namespace Grupp1BankApp
                 }
                else if (acc.FirstWithDraw == false)
                 {
-                    acc.Balance -= amount * 0.2 - amount;
+                  acc.Balance =  acc.Balance - (amount - (amount * 0.2));
                 }
             }
             else if (acc.AccountType == "credit")
@@ -119,20 +123,20 @@ namespace Grupp1BankApp
                 cust.CustomerAccounts.Add(NewAccount);
 
 
-            try
-            {
-                foreach (Account ac in cust.CustomerAccounts)
-                {
-                    if (ac.AccountNumber == AccNumber)
-                    {
-                        cust.CustomerAccounts.Remove(NewAccount);
-                        return false;
-                    }
+            //try
+            //{
+            //    foreach (Account ac in cust.CustomerAccounts)
+            //    {
+            //        if (ac.AccountNumber == AccNumber)
+            //        {
+            //            cust.CustomerAccounts.Remove(NewAccount);
+            //            return false;
+            //        }
 
 
-                }
-            }
-            catch (System.InvalidOperationException) { }
+            //    }
+            //}
+            //catch (System.InvalidOperationException) { }
 
 
             return true;
