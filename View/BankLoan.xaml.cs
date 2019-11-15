@@ -41,7 +41,7 @@ namespace Grupp1BankApp.View
 			double amount = int.Parse(AmountToBorrowField.Text.ToString());
 			double years = int.Parse(PaymentPeriodForLoanField.Text.ToString());
             amount = amount / years;
-            amount = amount / 12 * 0.2;
+            amount = amount / 12 * 0.02;
 			SumPerMonthToPayBack.Text = amount.ToString();
 		}
 	}
