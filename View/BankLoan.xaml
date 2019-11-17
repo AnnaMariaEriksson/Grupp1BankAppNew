@@ -11,10 +11,10 @@
         <Button x:Name="ApproveBankloanButton" Content="Ta lån" Margin="938,700,0,0" VerticalAlignment="Top" Height="100" Width="250" FontSize="36" Click="LoanClick"/>
         <TextBlock HorizontalAlignment="Left" Margin="455,250,0,0" Text="Hur mycket att låna?" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="471" FontSize="36"/>
         <TextBox x:Name="AmountToBorrowField" HorizontalAlignment="Left" Margin="960,250,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Height="56" PlaceholderText="Summa att låna" TextChanged="AmountToBorrowField_TextChanged" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" BeforeTextChanging="AmountToBorrowField_BeforeTextChanging"/>
-        <TextBlock HorizontalAlignment="Left" Margin="455,350,0,0" Text="Betalningsperiod" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="471" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="455,350,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="471" FontSize="36"><Run Text="Betalningsperiod"/><Run Text=" i antal år"/></TextBlock>
         <TextBox x:Name="PaymentPeriodForLoanField" HorizontalAlignment="Left" Margin="960,350,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Height="56" PlaceholderText="Fyll i antal år" BorderBrush="#FFDA680F" BorderThickness="5,5,5,5" BeforeTextChanging="PaymentPeriodForLoanField_BeforeTextChanging"/>
-        <TextBlock x:Name="SumToPayPerMonthLabel" HorizontalAlignment="Left" Margin="455,450,0,0" Text="Summa per månad" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="471" FontSize="36"/>
-        <TextBlock x:Name="SumPerMonthToPayBack" HorizontalAlignment="Left" Margin="960,450,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Height="56"/>
+        <TextBlock x:Name="SumToPayPerMonthLabel" HorizontalAlignment="Left" Margin="456,469,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="498" FontSize="36"><Run Text="Summa per månad"/><Run Text=" + 2% ränta"/></TextBlock>
+        <TextBlock x:Name="SumPerMonthToPayBack" HorizontalAlignment="Left" Margin="970,464,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Height="56"/>
         <Button x:Name="CalculateSumButton" Content="Beräkna lån" Margin="546,700,0,0" VerticalAlignment="Top" Height="100" Width="250" Click="CalculateSumButton_Click" FontSize="36"/>
         <TextBlock HorizontalAlignment="Left" Height="104" Margin="490,59,0,0" Text="Lån" TextWrapping="Wrap" VerticalAlignment="Top" Width="682" FontSize="60" TextAlignment="Center"/>
         <Image x:Name="LogoImage" HorizontalAlignment="Left" Height="165" Margin="1400,840,0,0" VerticalAlignment="Top" Width="169"

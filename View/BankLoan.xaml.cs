@@ -47,7 +47,7 @@ namespace Grupp1BankApp.View
                 double amount2 = amount1;
                 amount2 = amount2 / years;//10000 1 år
                 double depth = amount2 / 12;//833 per månad
-                amount2 = amount2 / 12 * 0.2; // ränta på 833
+                amount2 = amount2 / 12 * 0.02; // ränta på 833
                 double newamount = depth + amount2;
                 SumPerMonthToPayBack.Text = newamount.ToString();
             }
