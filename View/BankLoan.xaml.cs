@@ -55,10 +55,11 @@ namespace Grupp1BankApp.View
 
         private void LoanClick(object sender, RoutedEventArgs e)
         {
-            Transaction transnew = new Transaction(MainPage.ChoosenAccount.AccountNumber, DateTime.Now, amount, MainPage.ChoosenAccount.Balance);
+           
             if (amount > 0)
             {
                 MainPage.ChoosenAccount.Balance += amount;
+                Transaction transnew = new Transaction(MainPage.ChoosenAccount.AccountNumber, DateTime.Now, amount, MainPage.ChoosenAccount.Balance);
                 MainPage.ChoosenAccount.TransactionList.Add(transnew);
                 this.Frame.Navigate(typeof(MainMeny));
             }

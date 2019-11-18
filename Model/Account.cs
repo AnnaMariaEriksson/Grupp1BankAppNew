@@ -37,6 +37,12 @@ namespace Grupp1BankApp
         public string Summary
         {
             get { return AccountNumber + "     " + Balance ; }
+
+        }
+
+        public string AccSummary
+        {
+            get { return AccountNumber + " " + AccountType; }
         }
 
     }

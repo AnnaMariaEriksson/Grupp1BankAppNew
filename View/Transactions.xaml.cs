@@ -45,7 +45,7 @@ namespace Grupp1BankApp
             Windows.Storage.StorageFolder storageFolder =
             Windows.Storage.ApplicationData.Current.LocalFolder;
             Windows.Storage.StorageFile sampleFile =
-            await storageFolder.CreateFileAsync(MainPage.ChoosenAccount.AccountNumber + ".txt",
+            await storageFolder.CreateFileAsync(MainPage.ChoosenCustomer.Name + " " + MainPage.ChoosenAccount.AccountNumber + ".txt",
             Windows.Storage.CreationCollisionOption.ReplaceExisting);
             string result = "Transactioner:\n";
             foreach(Transaction trans in MainPage.ChoosenAccount.TransactionList)

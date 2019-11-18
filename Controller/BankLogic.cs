@@ -104,14 +104,22 @@ namespace Grupp1BankApp
                 }
                else if (acc.FirstWithDraw == false)
                 {
-                  acc.Balance =  acc.Balance - (amount - (amount * 0.2));
+                    //acc.Balance =  acc.Balance - (amount - (amount * 0.2));
+                    double bal = amount / 100;
+                    double balcalc = bal * 2;
+                    double calc = amount * 0.2;
+                    double calc2 = amount - calc;
+                    acc.Balance = acc.Balance - balcalc;
                 }
             }
             else if (acc.AccountType == "credit")
             {
                 if (acc.Balance > -5000)
                 {
-                    acc.Balance -= amount;
+                    CreditAccount acc2 = (CreditAccount)acc;
+                    double bal = amount / 100;
+                    double depth = bal * acc2.DeptRate;
+                    acc.Balance -= amount + depth;
 
                 }
             }

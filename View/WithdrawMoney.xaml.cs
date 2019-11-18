@@ -31,11 +31,12 @@ namespace Grupp1BankApp.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Transaction transnew = new Transaction(MainPage.ChoosenAccount.AccountNumber, DateTime.Now, double.Parse(Textsum.Text), MainPage.ChoosenAccount.Balance);
+           
 
 
             if (BankLogic.Withdraw(MainPage.ChoosenAccount, double.Parse(Textsum.Text)) == true)
             {
+                Transaction transnew = new Transaction(MainPage.ChoosenAccount.AccountNumber, DateTime.Now, double.Parse(Textsum.Text), MainPage.ChoosenAccount.Balance);
                 MainPage.ChoosenAccount.TransactionList.Add(transnew);
             }
             this.Frame.Navigate(typeof(MainMeny));

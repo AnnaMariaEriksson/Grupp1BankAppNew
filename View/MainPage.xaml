@@ -43,7 +43,7 @@
 
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="local:Account">
-                    <TextBlock Text="{x:Bind AccountNumber}"></TextBlock>
+                    <TextBlock Text="{x:Bind AccSummary }"></TextBlock>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
