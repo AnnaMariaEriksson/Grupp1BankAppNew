@@ -32,7 +32,7 @@ namespace Grupp1BankApp
        
         public static Customer ChoosenCustomer { get; set; }
         public static Account ChoosenAccount;
-        public static int kebab = 5;
+        public static int kebab = 5; 
         public static Account ChoosenAccountObject;
 
         private static ObservableCollection<Account> accounts = new ObservableCollection<Account>();
