@@ -18,5 +18,5 @@ namespace Grupp1BankApp
 	        Name = name;
 	        SSN = ssn;
         }
-    }
+    } 
 }
